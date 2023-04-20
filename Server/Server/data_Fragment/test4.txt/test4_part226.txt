@@ -1,0 +1,36 @@
+cGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 2 Financial Markets and Institutions 51
+bre22619_ch02_032-055.indd 51 10/06/16 03:41 PM
+Greece was in the worst shape. It had accumulated €350 billion (about $460 billion) 
+of government debt. Greece is a member of the single-currency euro club, so it had no 
+control over its currency and could not just print more euros to service its debts. In 
+2011 it defaulted on debts totaling €100 billion.
+Greece was still on shaky ground in early 2016, despite a series of rescue packages 
+from the European Union, the European Central Bank, and the International Monetary 
+Fund. Spain, Portugal, Ireland, and other European countries that had also worried 
+investors avoided default and seemed to be recovering. But unemployment in many 
+European countries remained stubbornly high and economic growth anemic.
+What lessons can you, as a student of finance, draw from these financial crises? 
+Here are three. First, note the sorry consequences for the economy when financial 
+markets and institutions do not carry out the functions described in this chapter. For 
+example, the crisis was amplified by the sudden disappearance of liquidity in many 
+markets, including the market for MBSs. That meant that potential buyers of the illiquid assets could not know for sure what they were worth. Thus, the informational function of financial markets was also compromised.
+Second, why were Bear Stearns, Lehman, Merrill Lynch, and the other distressed 
+firms so fragile? One reason is that they were mostly financed with borrowed money, 
+much of it short-term debt that had to be refinanced frequently. Investment banks like 
+Lehman typically were financed with more than 95% debt and less than 5% equity 
+capital. Thus a 5% fall in their asset values could wipe out their equity “cushions” and 
+leave the banks insolvent. Regulators since the crisis have therefore required banks to 
+finance with much more equity. This requirement has also affected payout to shareholders. A U.S. bank’s dividend payments can be stopped by regulators if the bank’s 
+equity capital ratio is not up to snuff. We cover decisions about debt versus equity 
+financing and payout in Chapters 16 and 17.
+Third, some causes of the crisis can be traced back to agency problems noted in 
+Chapter 1. Managers in the mortgage business were probably at least dimly aware that 
+promoting and selling massive amounts of subprime MBSs was likely to end badly. 
+They didn’t wake up in the morning thinking, “Hey, maybe I can cause a financial 
+crisis,” but their incentives did call for trying to squeeze out one more fat bonus before 
+the game ended. Their incentives were not aligned with shareholders’. The value of 
+their firms suffered accordingly.
+SUMMARY
+The ultimate source of financing is individuals’ savings. The savings may flow through 
+financial markets and intermediaries. The intermediaries include mutual funds

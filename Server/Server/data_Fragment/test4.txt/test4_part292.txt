@@ -1,0 +1,11 @@
+erm debt, even though this short-term debt is listed under current liabilities. We were interested only in the 
+items of working capital that arose from the firm’s operations.
+10 We can check the logic linking free cash flow to the statement of cash flows as follows:
+11 J. R. Graham, C. R. Harvey, and S. Rajgopal, “The Economic Implications of Corporate Financial Reporting,” 
+Journal of Accounting and Economics 40 (2005), pp. 3–73.
+ Increase in cash balance from Table 3.4 −$ 206
++ Cash used for financing activities from Table 3.4 7,075
++ Interest payments 830
+ Free cash flow $7,699
+Final PDF to printer
+Brealey, Ric

@@ -1,0 +1,18 @@
+n, and marketing that 
+managers from these other areas are inevitably drawn into planning and analyzing the 
+projects. If the firm has staff members specializing in corporate planning, they are 
+naturally involved in capital budgeting too. For this reason, we will use the term financial manager to refer to anyone responsible for an investment or financing decision. 
+Often we will use the term collectively for all the managers drawn into such decisions.
+Now let’s go beyond job titles. What is the essential role of the financial manager? 
+Figure 1.2 gives one answer. The figure traces how money flows from investors to the 
+corporation and back again to investors. The flow starts when cash is raised from 
+investors (arrow 1 in the figure). The cash could come from banks or from securities 
+sold to investors in financial markets. The cash is then used to pay for the real assets 
+(investment projects) needed for the corporation’s business (arrow 2). Later, as the 
+business operates, the assets generate cash inflows (arrow 3). That cash is either 
+reinvested (arrow 4a) or returned to the investors who furnished the money in the first 
+place (arrow 4b). Of course, the choice between arrows 4a and 4b is constrained by the 
+promises made when cash was raised at arrow 1. For example, if the firm borrows 
+money from a bank at arrow 1, it must repay this money plus interest at arrow 4b.
+You can see examples of arrows 4a and 4b in Table 1.1. Facebook financed its 
+investments 

@@ -1,0 +1,4 @@
+. Issuers were not content 
+with the simple pass-through MBS described earlier. They 
+issued complicated packages of securities called tranches.
+The most senior tranches were given first call on all cas

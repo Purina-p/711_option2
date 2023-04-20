@@ -1,0 +1,43 @@
+ because these absorb cash but do not show up in the income statement. 
+Conversely, any additions to current liabilities need to be added to net income because 
+these release cash. For example, you can see that the increase of $86 million in accounts 
+3.3
+statement of cash flows
+Financial statement that 
+shows the firm’s cash 
+receipts and cash payments 
+over a period of time.
+Period: 2 3 4
+ Sales (income statement) 100 120 0
+− Investment in receivables (balance sheet) 100 −100 + 120 = 20 −120
+= Cash received 0 +100 +120
+The following table provides a similar reconciliation of the difference between the revenues shown in the income statement and the cash inflow:
+In the income statement the accountant records sales of $100 in period 1 and $120 in 
+period 2. The fact that the firm has to wait for payment is recognized in the balance sheet as 
+an investment in receivables. The cash that the company receives is equal to the sales 
+shown in the income statement less the investment in receivables. ■
+Consider a firm that spends $200 to produce goods in period 1. In period 2, 
+it sells half of those goods for $150, but it doesn’t collect payment until one 
+period later. In period 3, it sells the other half of the goods for $150, and it 
+collects payment on these sales in period 4. Calculate the profits and the cash 
+flows for this firm in periods 1 to 4.
+3.3 Self-Test
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+68 Part One Introduction
+bre22619_ch03_056-085.indd 68 10/24/16 04:23 PM
+receivable is deducted from income. In addition, Home Depot increased inventories by 
+$22 million. This increase in inventory levels also absorbed cash and must be deducted 
+from net income when calculating cash flows. On the other hand, Home Depot does 
+not pay all its bills immediately. These delayed payments show up as payables. 
+In 2014, Home Depot had larger bills outstanding than a year earlier: Accounts 
+payable increased by $94 million. Delaying these payments freed up extra cash.
+We have pointed out that depreciation is not a cash payment; it is simply the accountant’s allocation to the current year of the original cost of the capital equipment. 
+However, cash does flow out the door when the firm actually buys and pays for 
+new capital equipment. Therefore, these capital expenditures are set out in the second 
+section of the cash-flow statement. You can see that Home Depot spent $1,289 million 
+on new capital equipment. Notice that (gross) property, plant, and equipment on 
+Home Depot’s balance sheet increased by precisely this amount. On the other hand, 
+Hom

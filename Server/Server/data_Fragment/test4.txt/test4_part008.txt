@@ -1,0 +1,14 @@
+ to reduce pollution. The catalysts include platinum, which is traded on the 
+New York Mercantile Exchange (NYMEX).
+In March a manufacturer of catalytic converters is planning production for October. 
+How much per ounce should the company budget for purchases of platinum in that 
+month? Easy: The company’s CFO looks up the futures price of platinum on the New 
+York Mercantile Exchange—$972 per ounce for delivery in October (this was the 
+closing price for platinum in March 2016, for delivery in October). The CFO can lock 
+in that price if she wishes. The details of such a trade are covered in Chapter 24.
+Interest Rates The CFO of Catalytic Concepts has to raise $400 million in new 
+financing. She considers an issue of long-term bonds. What will the interest rate on the 
+bonds be? To find out, the CFO looks up interest rates on existing bonds traded in 
+financial markets.
+The results are shown in Table 2.2. Notice how the interest rate climbs as credit 
+quality deteriorates: The largest, safest companies, which are rated AAA (“tri

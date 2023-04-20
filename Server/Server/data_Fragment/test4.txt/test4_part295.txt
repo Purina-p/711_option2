@@ -1,0 +1,34 @@
+mulated large debts and had also 
+guaranteed the debts of other companies in which it had an ownership stake. 
+To present a fair view of the firm, Enron should have recognized these potential 
+liabilities on its balance sheet. But the firm created and placed paper firms—
+so-called special-purpose entities (SPEs)—in the middle of its transactions and 
+excluded these liabilities from its financial statements.
+The collapse of Enron illustrates how dishonest managers with creamy compensation packages may be tempted to conceal the truth from investors. If the company had 
+been more transparent to outsiders—that is, if they could have assessed its true profitability and prospects—its problems would have shown up right away in a falling stock 
+price. This in turn would have generated extra scrutiny from security analysts, bond 
+rating agencies, lenders, and investors.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+72
+bre22619_ch03_056-085.indd 72 10/07/16 03:18 PM
+With transparency, corporate troubles generally lead to corrective action. But the 
+top management of a troubled and opaque company may be able to maintain its stock 
+price and postpone the discipline of the market. Market discipline caught up with 
+Enron only a month or two before bankruptcy.
+Enron was not the only company to be mired in accounting scandals in the early 
+years of the century. Firms such as Global Crossing, Qwest Communications, and 
+WorldCom misstated profits by billions of dollars. Overseas, the Italian dairy company Parmalat falsified the existence of a bank account to the tune of $5.5 billion, and 
+the French media and entertainment company Vivendi came close to bankruptcy after 
+it was accused of accounting fraud. In response to these scandals, Congress passed the 
+Sarbanes-Oxley Act, widely known as SOX. A major goal of SOX is to increase transparency and ensure that companies and their accountants provide directors, lenders, 
+and shareholders with the information they need to monitor progress.
+SOX created the Public Accounting Oversight Board to oversee the auditing of 
+public companies; it banned accounting firms from offering other services to companies whose accounts they audit; it prohibited any individual from heading a firm’s 
+audit for more than 5 years; and it required that the board’s audit committee consist of 
+directors who are independent of the company’s management. Sarbanes-Oxley also 
+required that management certify that the financial statements present a fair view of 
+the firm’s financial position and demonstrate that the firm has adequate controls and 
+procedures for financial reporting. All this has come at a price. Managers and investors worry that the costs of SOX and the burden of meeting detailed, inflexible regulations are pushing some corporations to return from public to private owner

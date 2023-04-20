@@ -1,0 +1,7 @@
+
+Taxable Income ($)
+Single Taxpayers Married Taxpayers Filing Joint Returns Tax Rate (%)
+0–9,275 0–18,550 0
+9,276–37,650 18,551–75,300 0
+37,651–91,150 75,301–151,900 15
+91,151–190,150 151,901–231,450 15

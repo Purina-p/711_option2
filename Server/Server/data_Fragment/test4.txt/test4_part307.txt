@@ -1,0 +1,18 @@
+ is either 15% or 18.8% (15% plus a potential 3.8% surcharge), but the highest 
+income investors pay an effective rate of 23.8%.
+Financial managers need to worry about the tax treatment of investment income 
+because tax policy will affect the prices individuals are willing to pay for the company’s stock or bonds. We will return to these issues in Part 5 of the text.
+The tax rates in Table 3.7 and Table 3.8 apply to individuals. But financial institutions are major investors in corporate securities. These institutions often have special 
+tax provisions. For example, pension funds are not taxed on interest or dividend 
+income or on capital gains.
+*These rates apply to capital gains and dividends on assets held for at least one year.
+**In addition to these nominal rates, an additional 3.8% surtax is assessed on net investment income for taxpayers 
+with total income over $200,000 (single filers) or $250,000 (married filing jointly).
+What are the average and marginal tax rates for a single taxpayer with a taxable 
+income of $80,000? What are the average and marginal tax rates for married 
+taxpayers filing joint returns if their joint taxable income is also $80,000?
+3.6 Self-Test
+TABLE 3.8 Tax rates on 
+investment income* 
+corresponding to 2016 tax 
+brackets**

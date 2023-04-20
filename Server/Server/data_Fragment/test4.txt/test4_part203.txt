@@ -1,0 +1,31 @@
+thquakes can 
+damage thousands of homes at once. The potential losses are so great that property insurance companies buy 
+reinsurance against such catastrophes.
+14 ETFs are in this respect like closed-end mutual funds (see footnote 3). But ETFs do not have managers with 
+the discretion to try to “pick winners.” ETF portfolios are tied down to indexes or fixed baskets of securities. 
+ETF issuers make sure that the ETF price tracks the price of the underlying index or basket.
+BEYOND THE PAGE
+mhhe.com/brealey9e
+How ETFs work
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+46 Part One Introduction
+bre22619_ch02_032-055.indd 46 10/06/16 03:41 PM
+different from investing in an open-end mutual fund. In that case you have to send 
+money to the fund in exchange for newly issued shares. And, if you want to withdraw 
+the investment, you have to notify the fund, which redeems your shares and sends you 
+a check. Also, many of the larger ETFs charge lower fees than mutual funds. State 
+Street Global Advisors charges just .11% a year for managing the Standard & Poor’s 
+500 Index Spider. For a $100,000 investment, the fee is only .0011 × 100,000 = $110.
+Financial markets provide other mechanisms for sharing risks. For example, a 
+wheat farmer and a baking company are each exposed to fluctuations in the price of 
+wheat after the harvest. The farmer worries about low prices, the baker about high 
+prices. They can both rest easier if the baker can agree with the farmer to buy wheat in 
+the future at a fixed price. Of course, it would be difficult, to say the least, if the baker 
+and the farmer had to contact an Internet dating service to get together to make a deal. 
+Fortunately, no dating service is needed: Each can trade in commodity markets, the 
+farmer as a seller and the baker as a buyer.
+Liquidity
+Markets and intermediaries also provide liquidity, that is, the ability to turn an investment back into cash when needed. Suppose you deposit $5,000 in

@@ -1,0 +1,11 @@
+sed by financing activities. Second, we add back interest payments 
+when computing free cash flow, as those payments are part of the distributions made to 
+investors.10
+It is often useful to ask what Home Depot’s free cash flow would have been if the 
+company had been financed entirely by equity. In that case, all the free cash flow would 
+belong to the shareholders. However, if Home Depot no longer paid out $830 million as 
+interest, pretax income would be increased by that amount, and the company would pay an 
+additional .35 × 830 = $290.50 million in tax. Thus, if the company was financed solely 
+by equity, free cash flow would have been $7,699 − $290.50 = $7,408.50 million. ■
+9
+ For this reason, when we calculated cash flow from operations, we ignored the change in holdings of shortt

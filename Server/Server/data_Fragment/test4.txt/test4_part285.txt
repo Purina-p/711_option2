@@ -1,0 +1,13 @@
+ payments also ought to be listed in this section. However, it is usual to include 
+interest in the first section with cash flow from operations. This is because, unlike dividends, interest payments 
+are not discretionary. The firm must pay interest when a payment comes due, so these payments are treated as a 
+business expense rather than as a financing decision.
+TABLE 3.4 Home Depot’s 
+statement of cash flows (figures 
+in $ millions)
+Cash Provided by Operations
+Net income $6,345
+Depreciation 1,786
+Changes in working capital items
+Decrease (increase) in accounts receivable −86
+Decrease (inc

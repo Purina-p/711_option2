@@ -1,0 +1,38 @@
+ach month, find the firm’s sales, net income, and net cash flow, 
+and fill in the following table. (LO3-3)
+Sales Net Income Cash Flow
+April a. b. c.
+May d. e. f.
+June g. h. i.
+INCOME STATEMENT OF QUICK BURGER CORP., 2016
+(Figures in $ millions)
+Net sales $27,567
+Costs 17,569
+Depreciation 1,402
+Earnings before interest and taxes (EBIT) $ 8,596
+Interest expense 517
+Pretax income 8,079
+Taxes 2,614
+Net income $ 5,465
+21. Income versus Cash Flow. Ponzi Products produced 100 chain-letter kits this quarter, resulting 
+in a total cash outlay of $10 per unit. It will sell 50 of the kits next quarter at a price of $11, and 
+the other 50 kits in the third quarter at a price of $12. It takes a full quarter for Ponzi to collect 
+its bills from its customers. (Ignore possible sales in earlier or later quarters.) (LO3-3)
+a. What is the net income for Ponzi next quarter?
+b. What are the cash flows for the company this quarter?
+c. What are the cash flows for the company in the third quarter?
+d. What is Ponzi’s net working capital in the next quarter?
+22. Income versus Cash Flow. Value Added Inc. buys $1 million of sow’s ears at the beginning of 
+January but doesn’t pay immediately. Instead, it agrees to pay the bill in March. It processes the 
+ears into silk purses, which it sells for $2 million in February. However, it will not collect 
+payment on the sales until April. (LO3-3)
+a. What is the firm’s net income in February?
+b. What is its net income in March?
+c. What is the firm’s net new investment in working capital in January?
+d. What is its net new investment in working capital in April?
+e. What is the firm’s cash flow in January?
+f. What is the firm’s cash flow in February?
+g. What is the cash flow in March?
+h. What is the cash flow in April?
+23. Free Cash Flow. Free cash flow measures the cash available for distribution to debtholders and 
+shareholders. Look at Secti

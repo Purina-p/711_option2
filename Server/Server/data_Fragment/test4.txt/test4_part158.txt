@@ -1,0 +1,6 @@
+and why you are calculating the 
+yield to maturity of a bond in Chapter 6, the net present 
+value of a capital investment in Chapter 9, or the 
+weighted-average cost of capital for a company in 
+Chapter 13.
+This chapter does three things. First, it surveys financial m

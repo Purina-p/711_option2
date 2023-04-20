@@ -1,0 +1,49 @@
+isis
+BEYOND THE PAGE
+mhhe.com/brealey9e
+Time line of the 
+financial crisis
+BEYOND THE PAGE
+mhhe.com/brealey9e
+The rise and fall of 
+Lehman Brothers
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+50
+bre22619_ch02_032-055.indd 50 10/24/16 03:38 PM
+Few developed economies escaped the crisis. As well as suffering from a collapse in 
+their own housing markets, a number of foreign banks had made large investments in 
+U.S. subprime mortgages and had to be rescued by their governments. Many European 
+governments were already heavily in debt and, as the cost of the bank bailouts mounted, 
+investors began to worry about the ability of the governments to repay their debts. 
+Thus in Europe, the banking crisis became entwined with a sovereign debt crisis.
+The invention of MBSs also made mortgages liquid. They 
+are actively traded among banks, insurance companies, 
+mutual funds, pension funds, and endowments.
+The MBS market has grown explosively. With the growth 
+came more and more complexity. Issuers were not content 
+with the simple pass-through MBS described earlier. They 
+issued complicated packages of securities called tranches.
+The most senior tranches were given first call on all cash 
+flows from the mortgage portfolio and were viewed as almost 
+risk-free. Bond-rating agencies gave their highest, triple-A ratings to the senior tranches, even for MBSs based on subprime mortgages for homeowners with weak credit. Many 
+investors in triple-A tranches lost a lot of money in the crisis of 
+2007–2009. We discuss bond ratings in Chapter 6.
+The MBS market survived. It is still by far the largest source 
+of mortgage financing. By 2015, the aggregate MBSs outstanding exceeded $2 trillion. MBSs are part of a broader 
+market for asset-backed securities, which include securities 
+that work like MBSs but are based on portfolios of other types 
+of assets, including car loans, bank loans to businesses, and 
+financing for commercial real estate.
+Mortgage-backed securities (MBSs) provide another example of how financial markets convey savings to finance 
+investment in real assets. In this case, the real assets 
+are homes, which homeowners finance in part with mortgage loans.
+In the old days—the 1960s, for example—most mortgage 
+loans were made by local banks, savings banks, and savings 
+and loan institutions (S&Ls), which accepted deposits and savings accounts and made mortgage and other local loans. We 
+will use an S&L as the example. The flow of savings would be 
+as described by the figure in Panel a, at the bottom of this box.
+The typical mortgage was long term, up to 30 years maturity, with a fixed interest rate. The S&Ls’ liabilities—chiefly savings accounts—had much shorter maturities, perhaps a year 
+o

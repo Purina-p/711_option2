@@ -1,0 +1,35 @@
+duction process that enables it to produce 
+cars 20% more efficiently than any rival. It has invested $10 billion in building its new plant. 
+To finance the investment, Jupiter borrowed $4 billion and raised the remaining funds by 
+selling new shares of stock in the firm. There are currently 100 million shares of stock 
+outstanding. Investors are very excited about Jupiter’s prospects. They believe that the flow 
+of profits from the new plant justifies a stock price of $75.
+If these are Jupiter’s only assets, the book-value balance sheet immediately after it has 
+made the investment is as follows:
+Example 3.1 ⊲
+BOOK-VALUE BALANCE SHEET FOR JUPITER MOTORS
+(Figures in $ billions)
+Assets
+Liabilities and 
+Shareholders’ Equity
+Auto plant 10 Debt 4
+Shareholders’ equity 6
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 3 Accounting and Finance 63
+bre22619_ch03_056-085.indd 63 10/07/16 03:18 PM
+5
+ Jupiter has borrowed $4 billion to finance its investment, but if the interest rate has changed in the meantime, 
+the debt could be worth more or less than $4 billion.
+MARKET-VALUE BALANCE SHEET FOR JUPITER MOTORS
+(Figures in $ billions)
+Assets
+Liabilities and 
+Shareholders’ Equity
+Auto plant 11.5 Debt 4
+Shareholders’ equity 7.5
+Investors are placing a market value on Jupiter’s equity of $7.5 billion ($75 per share 
+times 100 million shares). We assume that the debt outstanding is worth $4 billion.5 Therefore, if you owned all Jupiter’s shares and all its debt, the value of your holdings would be 
+$7.5 + 

@@ -1,0 +1,8 @@
+hing revenues and expenses is known as accrual accounting.
+Of course, the accountant does not ignore the actual timing of the cash expenditures 
+and payments. So the cash outlay in the first period will be treated not as an expense 
+but as an investment in inventories. Subsequently, in period 2, when the goods are 
+taken out of inventory and sold, the accountant shows a reduction in inventories.
+To go from the cost of goods sold in the income statement to the cash outflows, 
+we need to subtract the investment in inventories that is shown in the balance sheet:
+Perio

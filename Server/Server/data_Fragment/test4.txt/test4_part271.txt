@@ -1,0 +1,8 @@
+100.
++$100 (collect payment)
+-$60 (pay for goods)
+1 2 3 Period
+6
+ We discuss depreciation rules in Chapter 9.
+It would be misleading to say that the firm was running at a loss in period 1 
+(when cash flow was negative) o

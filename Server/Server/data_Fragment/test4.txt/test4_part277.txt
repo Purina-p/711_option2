@@ -1,0 +1,5 @@
+d out 60 80 0
+$100
+(collect payment)
+$120
+(

@@ -1,0 +1,34 @@
+ and nothing if he lost. If you thought that the probability of a Trump victory was 55% (say), you would have been prepared to pay up to 
+$.55 for his contract. Someone who was relatively pessimistic 
+about Trump’s chances would have been happy to sell you 
+such a contract because that sale would turn a profit if he were 
+to lose. With many participants buying and selling, the market 
+price of a contract revealed the collective wisdom of the crowd.
+Take a look at the accompanying figure from the Iowa 
+Electronic Markets. It shows the contract prices for the various 
+contenders for the Republican nomination between January 
+and May 2016. You can see that as Ted Cruz beat Trump in a 
+series of primaries and caucuses during March, the price of 
+Finance in Practice Prediction Markets
+0
+0.20
+0.40
+0.60
+0.80
+1.00
+25-Jan-16
+02-Feb-16
+10-Feb-16
+10-Feb-16
+18-Feb-16
+26-Feb-16
+05-Mar-16
+13-Mar-16
+21-Mar-16
+29-Mar-16
+06-Apr-16
+14-Apr-16
+22-Apr-16
+30-Apr-16
+08-May-16
+15-May-

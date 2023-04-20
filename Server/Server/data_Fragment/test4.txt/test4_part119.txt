@@ -1,0 +1,52 @@
+ifferent tax systems, and special regulations imposed by foreign institutions and 
+governments. Finally, we look at risk management and the specialized securities, 
+including futures and options, which managers can use to hedge or lay off risks.
+That’s enough material to start, but as you reflect on this chapter, you can see 
+certain themes emerging that you will encounter again and again throughout this book:
+1. Corporate finance is about adding value.
+2. The opportunity cost of capital sets the standard for investments.
+3. A safe dollar is worth more than a risky one.
+4. Smart investment decisions create more value than smart financing decisions.
+5. Good governance matters.
+1.9 Snippets of Financial History
+Now let’s lighten up a little. In this book we are going to describe how financial 
+decisions are made today. But financial markets also have an interesting history. Look 
+at the nearby box, which lays out bits of this history, starting in prehistoric times, when 
+the growth of bacteria anticipated the mathematics of compound interest, and continuing nearly to the present. We have keyed each of these episodes to the chapter of the 
+book that discusses its topic.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+undertaking of great advantage but nobody to know what it 
+is.” Within 5 hours he had raised £2,000; within 6 hours he 
+was on his way out of the country. Readers nearly two centuries later could only wonder at the naïve or foolhardy 
+investors in these ventures—that is, until they had a chance 
+to participate in the follies unearthed by the financial crisis 
+of 2008–2009. (Chapter 2)
+1792 Formation of the New York Stock Exchange The New 
+York Stock Exchange (NYSE) was founded in 1792 when a 
+group of brokers met under a buttonwood tree* and 
+arranged to trade shares with one another at agreed rates 
+of commission. Today the NYSE is the largest stock 
+exchange in the world, trading on average about 1.5 billion 
+shares a day. (Chapter 7)
+1929 Stock Market Crashes Common stocks are risky investments. In September 1929 stock prices in the United 
+States reached an all-time high, and the economist Irving 
+Fisher forecast that they were at “a permanently high plateau.” Some 3 years later, stock prices were almost 90% 
+lower, and it was to be a quarter of a century before the 
+prices of September 1929 were seen again. Eighty years 
+later, history came close to repeating itself. After stock 
+prices peaked in July 2007, they slumped over the next 20 
+months by 54%. (Chapter 11)
+1960s Eurodollar Market In the 1950s the Soviet Union transferred its dollar holdings from the United States to a 
+Russian-owned bank in Paris. This bank was best known 
+by its telex address, eurobank, and consequently dollars 
+held outside the United States came to be known as eurodollars. In the 1960s, U.S. taxes and regulation made it 
+much cheaper to borrow and lend dollars in Europe than in 
+the United States, and a huge market in eurodollars arose. 
+(Chapter 14)
+1971 Corporate Bankruptcies Every generation of investors 
+is shocked and surprised by a major corporate bankruptcy. 
+In 1971 the Penn Central Railroad, a pillar of American 
+industry, suddenly collapsed. At that time, it was the largest corporate bankruptcy in history. In 2008, the investment bank Lehman Brothers smashed Penn Central’
