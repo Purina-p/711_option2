@@ -125,7 +125,7 @@ namespace Server
                 string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data");
                 FolderPath = Path.GetFullPath(FolderPath);
                 string filePath = Path.Combine(FolderPath, fileName);
-
+              
                 //读取文件内容发给cache
                 string fileContent = File.ReadAllText(filePath,Encoding.UTF8);
                 StreamWriter writer = new StreamWriter(stream, Encoding.UTF8);
@@ -189,6 +189,9 @@ namespace Server
 
 
         }        
+
+        //文件切片--基于Rabin函数
+
     }
 
 }
