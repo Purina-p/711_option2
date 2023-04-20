@@ -172,9 +172,16 @@ namespace Server
                 target = Path.GetFullPath(target);
                 string filePath = Path.Combine(target, _selectFileName);
 
+                //切片文件目标路径
+                string target_fragment = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment");
+                target_fragment = Path.GetFullPath(target_fragment);
+                string filePath_fragment = Path.Combine(target_fragment, _selectFileName);
+
+
                 if (!File.Exists(filePath))
                 {
                     File.Copy(filePath_A, filePath, true);
+                    RabinKarpFileSplitter(filePath_A, filePath_fragment);
                     listBox2.Items.Add(_selectFileName);
 
                 }
@@ -190,7 +197,72 @@ namespace Server
 
         }        
 
-        //文件切片--基于Rabin函数
+        //文件切片--Rabin函数
+        private void RabinKarpFileSplitter(string inputFilePath,string OutputDirectory)
+        {
+            //创建文件夹来接收切片文件
+            if(!Directory.Exists(OutputDirectory))
+            {
+                Directory.CreateDirectory(OutputDirectory);
+            }
+
+            //Rabin-Krap的算法参数
+            const ulong Q = 1000003;//大参数：用于取模运算避免哈希溢出
+            const ulong D = 256;//基数：用于计算哈希值
+            const int BlockSize = 2 * 1024;//2kb文件块大小
+
+            // 预计算值，计算每个窗口的hash然后对他进行快速更新
+            ulong Dm = (ulong)Math.Pow(D, BlockSize - 1) % Q;
+
+            // 将输入文件的字节读取到字节数组中
+            byte[] inputFileBytes = File.ReadAllBytes(inputFilePath);
+
+            // 初始化变量
+            ulong hash = 0;
+            int fileCounter = 0;
+
+            // 计算第一个文件片的哈希值
+            for (int i = 0; i < BlockSize && i < inputFileBytes.Length; i++)
+            {
+                hash = (hash * D + inputFileBytes[i]) % Q;
+            }
+
+            int startIndex = 0;
+            for (int i = BlockSize; i < inputFileBytes.Length; i++)
+            {
+                // 检查哈希值是否满足分割条件（即哈希值是BlockSize的整数倍）
+                if (hash % BlockSize == 0)
+                {
+                    // 保存文件切片
+                    string outputPath = Path.Combine(OutputDirectory, $"{Path.GetFileNameWithoutExtension(inputFilePath)}_part{fileCounter:000}.dat");
+                    using (FileStream fs = new FileStream(outputPath, FileMode.Create))
+                    {
+                        fs.Write(inputFileBytes, startIndex, i - startIndex);
+                    }
+
+                    fileCounter++;
+                    startIndex = i;
+                }
+
+                //计算下一个块的值
+                //lastByte1 * D * Dm：这部分是当前哈希值中与lastByte1相关的部分。我们用D和Dm来调整其权重，使其与lastByte1在哈希值中的位置相对应
+                //lastByte2 * Dm：这部分是当前哈希值中与lastByte2相关的部分。我们用Dm来调整其权重，使其与lastByte2在哈希值中的位置相对应
+                byte lastByte1 = inputFileBytes[i - BlockSize];
+                byte lastByte2 = inputFileBytes[i - BlockSize + 1];
+                hash = ((hash - lastByte1 * D * Dm - lastByte2 * Dm) * D * D + inputFileBytes[i] * D + inputFileBytes[i + 1]) % Q;
+            }
+
+            // 保存最后一个文件切片
+            string lastOutputPath = Path.Combine(OutputDirectory, $"{Path.GetFileNameWithoutExtension(inputFilePath)}_part{fileCounter:000}.dat");
+            using (FileStream fs = new FileStream(lastOutputPath, FileMode.Create))
+            {
+                fs.Write(inputFileBytes, startIndex, inputFileBytes.Length - startIndex);
+            }
+
+        }
+
+
+
 
     }
 
