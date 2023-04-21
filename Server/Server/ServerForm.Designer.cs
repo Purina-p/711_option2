@@ -36,6 +36,8 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -114,11 +116,31 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "File";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(309, 360);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 15);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "label7";
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 15;
+            this.listBox3.Location = new System.Drawing.Point(19, 387);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(655, 439);
+            this.listBox3.TabIndex = 9;
+            // 
             // ServerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 409);
+            this.ClientSize = new System.Drawing.Size(700, 837);
+            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox2);
@@ -146,5 +168,7 @@
         private Button button1;
         private Label label5;
         private Label label6;
+        private Label label7;
+        private ListBox listBox3;
     }
 }
