@@ -1,1 +1,175 @@
-eeds $9,27
+.
+In principle, individuals or firms with cash surpluses could take out newspaper 
+advertisements or surf the web looking for counterparties with cash shortages. But it is 
+usually cheaper and more convenient to use financial markets and intermediaries. It is 
+not just a matter of avoiding the cost of searching for the right counterparty. Follow-up 
+is needed. For example, banks don’t just lend money and walk away. They monitor the 
+borrower to make sure that the loan is used for its intended purpose and that the borrower’s credit stays solid.
+Risk Transfer and Diversification
+Financial markets and intermediaries allow investors and businesses to reduce 
+and reallocate risk. Insurance companies are an obvious example. When you buy 
+homeowner’s insurance, you greatly reduce the risk of loss from fire, theft, or accidents. But your policy is not a very risky bet for the insurance company. It diversifies 
+by issuing thousands of policies, and it expects losses to average out over the policies.13
+The insurance company allows you to pool risk with thousands of other homeowners.
+Investors should diversify too. For example, you can buy shares in a mutual fund 
+that holds hundreds of stocks. In fact, you can buy index funds that invest in all the 
+stocks in the popular market indexes. For example, the Vanguard 500 Index Fund holds 
+the stocks in the Standard & Poor’s Composite stock market index. (The “S&P 500” 
+tracks the performance of the largest U.S. stocks. It is the index most used by professional investors.) If you buy this fund, you are insulated from the company-specific 
+risks of the 500 companies in the index. These risks are averaged out by diversification. Of course you are still left with the risk that the level of the stock market as a 
+whole will fall. In fact, we will see in Chapter 11 that investors are mostly concerned 
+with market risk, not the specific risks of individual companies.
+Index mutual funds are one way to invest in widely diversified portfolios at low 
+cost. Another route is provided by exchange-traded funds (ETFs), which are portfolios 
+of stocks that can be bought or sold in a single trade. For example, Standard & Poor’s 
+Depositary Receipts (SPDRs, or “spiders”) invest in portfolios that match Standard & 
+Poor’s stock market indexes. The total amount invested in the spider that tracks the 
+benchmark S&P 500 index was $134 billion in early 2016.
+ETFs are in some ways more efficient than mutual funds. To buy or sell an ETF, 
+you simply make a trade, just as if you bought or sold shares of stock.14  This is 
+13 Unfortunately for insurance companies, the losses don’t always average out. Hurricanes and earthquakes can 
+damage thousands of homes at once. The potential losses are so great that property insurance companies buy 
+reinsurance against such catastrophes.
+14 ETFs are in this respect like closed-end mutual funds (see footnote 3). But ETFs do not have managers with 
+the discretion to try to “pick winners.” ETF portfolios are tied down to indexes or fixed baskets of securities. 
+ETF issuers make sure that the ETF price tracks the price of the underlying index or basket.
+BEYOND THE PAGE
+mhhe.com/brealey9e
+How ETFs work
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+46 Part One Introduction
+bre22619_ch02_032-055.indd 46 10/06/16 03:41 PM
+different from investing in an open-end mutual fund. In that case you have to send 
+money to the fund in exchange for newly issued shares. And, if you want to withdraw 
+the investment, you have to notify the fund, which redeems your shares and sends you 
+a check. Also, many of the larger ETFs charge lower fees than mutual funds. State 
+Street Global Advisors charges just .11% a year for managing the Standard & Poor’s 
+500 Index Spider. For a $100,000 investment, the fee is only .0011 × 100,000 = $110.
+Financial markets provide other mechanisms for sharing risks. For example, a 
+wheat farmer and a baking company are each exposed to fluctuations in the price of 
+wheat after the harvest. The farmer worries about low prices, the baker about high 
+prices. They can both rest easier if the baker can agree with the farmer to buy wheat in 
+the future at a fixed price. Of course, it would be difficult, to say the least, if the baker 
+and the farmer had to contact an Internet dating service to get together to make a deal. 
+Fortunately, no dating service is needed: Each can trade in commodity markets, the 
+farmer as a seller and the baker as a buyer.
+Liquidity
+Markets and intermediaries also provide liquidity, that is, the ability to turn an investment back into cash when needed. Suppose you deposit $5,000 in a savings bank on 
+February 1. During that month, the bank uses your deposit and other new deposits to 
+make a 6-month construction loan to a real estate developer. On March 1, you realize 
+that you need your $5,000 back. The bank can give it to you. Because the bank has 
+thousands of depositors, and other sources of financing if necessary, it can make an 
+illiquid loan to the developer financed by liquid deposits made by you and other customers. If you lend your money for 6 months directly to the real estate developer, you 
+will have a hard time retrieving it 1 month later.15
+The shares of public companies are liquid because they are traded more or less continuously in the stock market. An Italian investor who puts $60,000 into Bank of 
+America shares can recover that money on short notice. (A $60,000 sell order is a drop 
+in the bucket compared with the normal trading volume of Bank of America shares.) 
+Mutual funds can redeem their shares for cash on short notice because the funds invest 
+in traded securities, which can be sold as necessary.
+Of course, liquidity is a matter of degree. Foreign exchange markets for major currencies are exceptionally liquid. Bank of America or Deutsche Bank could buy $200 million 
+worth of yen or euros in the blink of an eye, with hardly any effect on foreign exchange 
+rates. U.S. Treasury securities are also very liquid, and the shares of the largest companies on the major international stock exchanges are only slightly less so.
+Liquidity is most important when you’re in a hurry. If you try to sell $500,000 
+worth of the shares of a small, thinly traded company all at once, you will probably 
+knock down the price to some extent. If you’re patient and don’t surprise other investors with a large, sudden sell order, you may be able to unload your shares on better 
+terms. It’s the same problem that you may face in selling real estate. A house or condominium is not a liquid asset in a panic sale. If you’re determined to sell in an afternoon, you’re not going to get full value.
+The Payment Mechanism
+Think how inconvenient life would be if you had to pay for every purchase in cash or 
+if Boeing had to ship truckloads of hundred-dollar bills around the country to pay its 
+suppliers. Checking accounts, credit cards, and electronic transfers allow individuals 
+liquidity
+The ability to sell an asset 
+on short notice at close to 
+the market value.
+15 Of course, the bank can’t repay all depositors simultaneously. To do so, it would have to sell off its loans to 
+the real estate developer and other borrowers. These loans are not liquid. This raises the specter of bank runs, 
+where doubts about a bank’s ability to pay off its depositors cause a rush of withdrawals, with each depositor 
+trying to get his or her money out first. Bank runs are rare because bank deposits are backed up by the U.S. 
+Federal Deposit Insurance Corporation, which insures bank accounts up to $250,000 per account.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 2 Financial Markets and Institutions 47
+bre22619_ch02_032-055.indd 47 10/06/16 03:41 PM
+and firms to send and receive payments quickly and safely over long distances. Banks 
+are the obvious providers of payment services, but they are not alone. For example, if 
+you buy shares in a money market mutual fund, your money is pooled with that of 
+other investors and used to buy safe, short-term securities. You can then write checks 
+on this mutual fund investment, just as if you had a bank deposit.
+Information Provided by Financial Markets
+In well-functioning financial markets, you can see what securities and commodities are 
+worth, and you can see—or at least estimate—the rates of return that investors can expect 
+on their savings. The information provided by financial markets is often essential to a 
+financial manager’s job. Here are three examples of how this information can be used.
+Commodity Prices Catalytic converters are used in the exhaust systems of cars and 
+light trucks to reduce pollution. The catalysts include platinum, which is traded on the 
+New York Mercantile Exchange (NYMEX).
+In March a manufacturer of catalytic converters is planning production for October. 
+How much per ounce should the company budget for purchases of platinum in that 
+month? Easy: The company’s CFO looks up the futures price of platinum on the New 
+York Mercantile Exchange—$972 per ounce for delivery in October (this was the 
+closing price for platinum in March 2016, for delivery in October). The CFO can lock 
+in that price if she wishes. The details of such a trade are covered in Chapter 24.
+Interest Rates The CFO of Catalytic Concepts has to raise $400 million in new 
+financing. She considers an issue of long-term bonds. What will the interest rate on the 
+bonds be? To find out, the CFO looks up interest rates on existing bonds traded in 
+financial markets.
+The results are shown in Table 2.2. Notice how the interest rate climbs as credit 
+quality deteriorates: The largest, safest companies, which are rated AAA (“triple-A”), 
+can raise long-term debt at a 2.59% interest rate. The interest rates for AA, A, and 
+BBB rise to 2.62%, 3.03%, and 4.32%, respectively. BBB companies are still regarded 
+as investment grade, that is, good quality, but the next step down takes the investor into 
+junk bond territory. The interest rate for BB debt climbs to 5.62%. Single-B companies 
+are riskier still, so investors demand 8.32%.
+There will be more on bond ratings and interest rates in Chapter 6. But you can see 
+how a financial manager can use information from fixed-income markets to forecast 
+the interest rate on new debt financing. For example, if Catalytic Concepts can qualify 
+as a BBB-rated company, and interest rates are as shown in Table 2.2, it should be able 
+to raise new debt financing for approximately 4.32%.
+Company Values How much was Callaway Golf worth in March 2016? How about 
+Alaska Air Group, Entergy, Yum! Brands, or GE? Table 2.3 shows the market capitalization of each company. We simply multiply the number of shares outstanding by the 
+price per share in the stock market. Investors valued Callaway Golf at $821 million 
+and GE at $283 billion.
+TABLE 2.2 Interest rates on 
+long-term corporate bonds, 
+March 2016. The interest rate is 
+lowest for top-quality (AAA) 
+issuers. The rate rises as credit 
+quality declines.
+Credit Rating Interest Rate
+AAA 2.59%
+AA 2.62
+A 3.03
+BBB 4.32
+BB 5.62
+B 8.32
+Source: Thomson Reuters.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+48 Part One Introduction
+bre22619_ch02_032-055.indd 48 10/06/16 03:41 PM
+Stock prices and company values summarize investors’ collective assessment 
+of how well a company is doing, both its current performance and its future prospects. Thus an increase in stock price sends a positive signal from investors to 
+managers.16 That is why top management’s compensation is linked to stock prices. A 
+manager who owns shares in his or her company will be motivated to increase the 
+company’s market value. This reduces agency costs by aligning the interests of managers and stockholders.
+This is one important advantage of going public. A private company can’t use its 
+stock price as a measure of performance. It can still compensate managers with shares, 
+but the shares will not be valued in a financial market.
+Cost of Capital Financial managers look to financial markets to measure, or at 
+least estimate, the cost of capital for the firm’s investment projects. The cost of capital 
+is the minimum acceptable rate of return on the project. Investment projects offering 
+rates of return higher than their cost of capital are worthwhile because they add value; 
+they make both the firm and its shareholders better off financially. Projects offering 
+rates of return less than the cost of capital subtract value and should not be 
+undertaken.17
+Thus the hurdle rate for investments inside the corporation is actually set outside 
+the corporation. The expected rate of return on investments in financial markets determines the opportunity cost of capital.
+The opportunity cost of capital is generally not the interest rate that the firm pays on 
+a loan from a bank or insurance compan

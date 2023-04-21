@@ -1,0 +1,222 @@
+million by issuing long-term debt. 
+But it paid out $2,530 million to stockholders in the form of dividends and used 
+another $7,000 million to repurchase stock.7
+To summarize, the cash-flow statement tells us that Home Depot generated $8,127 
+million from operations, spent $1,258 million on new investments, and used $7,075 
+million in financing activities. Home Depot earned and raised less cash than it spent. 
+7
+ You might think that interest payments also ought to be listed in this section. However, it is usual to include 
+interest in the first section with cash flow from operations. This is because, unlike dividends, interest payments 
+are not discretionary. The firm must pay interest when a payment comes due, so these payments are treated as a 
+business expense rather than as a financing decision.
+TABLE 3.4 Home Depot’s 
+statement of cash flows (figures 
+in $ millions)
+Cash Provided by Operations
+Net income $6,345
+Depreciation 1,786
+Changes in working capital items
+Decrease (increase) in accounts receivable −86
+Decrease (increase) in inventories −22
+Decrease (increase) in other current assets −121
+Increase (decrease) in accounts payable 94
+Increase (decrease) in other current liabilities 131
+ Total decrease (increase) in working capital −$ 4
+Cash provided by operations $8,127
+Cash Flows from Investments
+Cash provided by (used for) disposal of (additions to) property, 
+plant, and equipment
+−$1,289
+Sales (acquisitions) of other long-term assets 31
+Cash provided by (used for) investments −$1,258
+Cash Provided by (Used for) Financing Activities
+Increase (decrease) in short-term debt $ 295
+Increase (decrease) in long-term debt 2,178
+Dividends −2,530
+Repurchases of stock −7,000
+Other −18
+Cash provided by (used for) financing activities −$7,075
+Net increase (decrease) in cash and cash equivalents −$ 206
+Source: Calculated from data in Tables 3.1 and 3.3.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 3 Accounting and Finance 69
+bre22619_ch03_056-085.indd 69 10/07/16 03:18 PM
+Therefore, its cash balance decreased by $206 million. To calculate this change in 
+cash balance, we subtract the uses of cash from the sources:
+In Millions
+ Cash flow from operations $8,127
+− Cash flow for new investment −1,258
++ Cash provided by new financing −7,075
+= Change in cash balance −$ 206
+Look back at Table 3.1 and you will see that cash accounts on the balance sheet did 
+indeed decrease by $206 million in 2014.8
+8
+ Home Depot’s published statement of cash flows differs from the cash-flow statement that we derived from 
+the balance sheet and income statement. This is a common occurrence, particularly if the company has engaged 
+in mergers or divestitures during the year.
+Free Cash Flow
+The value of a company depends on how much cash it can generate for investors after 
+it has paid for any new capital investments. This cash is called the company’s 
+free cash flow. Free cash flow is available to be paid out to investors as interest or 
+dividends or to repay debt or buy back stock.
+free cash flow
+Cash available for 
+distribution to investors 
+after firm pays for new 
+investments or additions to 
+working capital.
+Free Cash Flow for Home Depot
+Let’s use Home Depot’s income and cash-flow statements to calculate its free cash flow in 
+2014. We start with the earnings produced by the firm’s ongoing operations. This is equal to 
+Net income + debt interest = $6,345 + $830 = $7,175 million
+We need to make two adjustments to this figure for those parts of the income statement 
+that do not involve cash coming in or going out. First, we must add back depreciation 
+because depreciation is not a cash outflow, even though it is treated as an expense in the 
+income statement. Second, accounting income is not cash in the bank. For example, the firm 
+may need to lay out money to buy materials ahead of time, or its customers may not pay for 
+their purchases immediately. Therefore, to measure the cash from ongoing operations, we 
+need to subtract those additions to net working capital shown in the top panel of the statement of cash flows. This gives us cash flow from operations:
+Cash flow from operations = (net income + interest) + depreciation − additions to
+net working capital 
+ = $7,175 + $1,786 − $4 = $8,957 million
+Example 3.3 ⊲
+Would the following activities increase or decrease the firm’s cash balance?
+a. Inventories are increased.
+b. The firm reduces its accounts payable.
+c. The firm issues additional common stock.
+d. The firm buys new equipment.
+3.4 Self-Test
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+70 Part One Introduction
+bre22619_ch03_056-085.indd 70 10/07/16 03:18 PM
+Accounting Practice and Malpractice
+Managers of public companies face constant scrutiny. Much of that scrutiny focuses 
+on earnings. Security analysts forecast earnings per share, and investors then wait to 
+see whether the company can meet or beat the forecasts. A shortfall, even if it is only a 
+cent or two, can be a big disappointment. Investors might judge that if you could not 
+find that extra cent or two of earnings, the firm must be in a really bad way.
+Managers complain about this pressure, but do they do anything about it? Unfortunately, the answer appears to be yes, according to Graham, Harvey, and Rajgopal, who 
+surveyed about 400 senior managers.11 Most of the managers said that accounting 
+earnings were the single most important number reported to investors. Most admitted 
+to adjusting their firms’ operations and investments to produce the earnings that investors were looking for. For example, 80% were prepared to decrease discretionary 
+spending on R&D, advertising, or plant maintenance to meet earnings targets.
+Of course, managers may not need to adjust the firm’s operations if they can instead 
+adjust their accounting methods. U.S. accounting rules are spelled out by the Financial 
+Accounting Standards Board (FASB) and its generally accepted accounting principles 
+(GAAP). Yet, inevitably, rules and principles leave room for discretion, and managers 
+under pressure to perform are tempted to take advantage of this leeway to satisfy 
+3.4
+This cash is not all available to be paid out to investors, for the company needs some of 
+the cash for new capital expenditures. So the capital that is free for distribution is
+Free cash flow = cash flow from operations − capital expenditures
+= $8,957 − $1,258 = $7,699 million
+Notice that free cash flow differs from the addition-to-cash balances found in the statement of cash flows (Table 3.4). First, when we calculate free cash flow, we ignore altogether 
+items in the last panel of Table 3.4, “Cash provided by financing activities.”9 This is because 
+free cash flow measures how much cash the company’s operations generate for possible 
+distribution to investors. The available amount should not be confused with the amount that 
+the company actually raised by financing activities. Second, we add back interest payments 
+when computing free cash flow, as those payments are part of the distributions made to 
+investors.10
+It is often useful to ask what Home Depot’s free cash flow would have been if the 
+company had been financed entirely by equity. In that case, all the free cash flow would 
+belong to the shareholders. However, if Home Depot no longer paid out $830 million as 
+interest, pretax income would be increased by that amount, and the company would pay an 
+additional .35 × 830 = $290.50 million in tax. Thus, if the company was financed solely 
+by equity, free cash flow would have been $7,699 − $290.50 = $7,408.50 million. ■
+9
+ For this reason, when we calculated cash flow from operations, we ignored the change in holdings of shortterm debt, even though this short-term debt is listed under current liabilities. We were interested only in the 
+items of working capital that arose from the firm’s operations.
+10 We can check the logic linking free cash flow to the statement of cash flows as follows:
+11 J. R. Graham, C. R. Harvey, and S. Rajgopal, “The Economic Implications of Corporate Financial Reporting,” 
+Journal of Accounting and Economics 40 (2005), pp. 3–73.
+ Increase in cash balance from Table 3.4 −$ 206
++ Cash used for financing activities from Table 3.4 7,075
++ Interest payments 830
+ Free cash flow $7,699
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 3 Accounting and Finance 71
+bre22619_ch03_056-085.indd 71 10/07/16 03:18 PM
+investors. Investors worry about the fact that some companies seem particularly prone 
+to inflate their earnings by playing fast and loose with accounting practice. They refer 
+to such companies as having “low-quality” earnings, and they place a correspondingly 
+lower value on the firms’ stock.
+Here are some examples of ambiguities in accounting rules that have been used by 
+companies to conceal unflattering information:
+∙ Revenue recognition. As we saw earlier, firms record a sale when it is made, not 
+when the customer actually pays. But the date of sale is not always obvious. 
+Suppose it is November and you are concerned that if your firm does not meet its 
+sales target, you can forget about your annual bonus. You contact your main 
+customers, and they agree to increase their December orders as long as they have 
+the right to return any unsold goods. Your firm then books these shipments as 
+“sales,” even though there is a high likelihood that many of the goods will be 
+returned. That is almost certainly illegal and will get you into serious trouble. 
+But suppose instead that you tell your customers that the price of your product 
+may rise in the new year and suggest that they place an extra order in December. 
+This practice, known as “channel stuffing,” increases this year’s sales at the 
+expense of next year’s sales.
+ Many companies have been thought to use channel stuffing to overstate their 
+earnings, but very blatant instances are liable to attract the SEC’s attention. 
+For example, in 2002 the pharmaceutical giant, Bristol Myers Squibb, disclosed 
+that wholesalers were holding hundreds of millions of dollars in excessive 
+inventories of its products and the company’s earnings for 2002 might be just half 
+of its 2001 earnings as wholesalers worked down these inventories. Following an 
+investigation by the SEC, the company agreed to pay $150 million to settle 
+accusations that this channel stuffing had improperly inflated its sales and earnings. 
+In Chapter 1, we mentioned Hewlett-Packard’s disastrous acquisition of the British 
+company Autonomy. Hewlett-Packard paid $11.1 billion for Autonomy. Just over a 
+year later, it wrote down the value of the company by $8.8 billion, alleging that 
+Autonomy had used channel stuffing to greatly inflate its revenues.
+∙ Cookie-jar reserves. The giant mortgage-pass-through firm Freddie Mac earned the 
+Wall Street nickname “Steady Freddie” for its unusually smooth and predictable 
+pattern of earnings growth, at least until 2008 when it suddenly collapsed in the 
+wake of the meltdown in subprime mortgages. Unfortunately, it emerged in 2003 
+that Freddie achieved this predictability in part by misusing its reserve accounts. 
+Normally, such accounts are intended to allow for the likely impact of events 
+that might reduce earnings, such as the failure of customers to pay their bills. 
+But Freddie seemed to “overreserve” against such contingencies so that it could 
+“release” those reserves and bolster income in a bad year. Its steady growth was 
+largely a matter of earnings management.
+∙ Off–balance sheet assets and liabilities. Before its bankruptcy in 2001 (at that time, 
+the second largest in U.S. history), Enron had accumulated large debts and had also 
+guaranteed the debts of other companies in which it had an ownership stake. 
+To present a fair view of the firm, Enron should have recognized these potential 
+liabilities on its balance sheet. But the firm created and placed paper firms—
+so-called special-purpose entities (SPEs)—in the middle of its transactions and 
+excluded these liabilities from its financial statements.
+The collapse of Enron illustrates how dishonest managers with creamy compensation packages may be tempted to conceal the truth from investors. If the company had 
+been more transparent to outsiders—that is, if they could have assessed its true profitability and prospects—its problems would have shown up right away in a falling stock 
+price. This in turn would have generated extra scrutiny from security analysts, bond 
+rating agencies, lenders, and investors.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+72
+bre22619_ch03_056-085.indd 72 10/07/16 03:18 PM
+With transparency, corporate troubles generally lead to corrective action. But the 
+top management of a troubled and opaque company may be able to maintain its stock 
+price and postpone the discipline of the market. Market discipline caught up with 
+Enron only a month or two before bankruptcy.
+Enron was not the only company to be mired in accounting scandals in the early 
+years of the century. Firms such as Global Crossing, Qwest Communications, and 
+WorldCom misstated profits by billions of dollars. Overseas, the Italian dairy company Parmalat falsified the existence of a bank account to the tune of $5.5 billion, and 
+the French media and entertainment company Vivendi came close to bankruptcy after 
+it was accused of accounting fraud. In response to these scandals, Congress passed the 
+Sarbanes-Oxley Act, widely known as SOX. A major goal of SOX is to increase transparency and ensure that companies and their accountants provide directors, lenders, 
+and shareholders with the information they need to monitor progress.
+SOX created the Public Accounting Oversight Board to oversee the auditing of 
+public companies; it banned accounting firms from offering other services to companies whose accounts they audit; it prohibited any individual from heading a firm’s 
+audit for more than 5 years; and it required that the board’s audit committee consist of 
+directors who are independent of the company’s management. Sarbanes-Oxley also 
+required that management certify that the financial statements present a fair view of 
+the firm’s financial position and demonstrate that the firm has adequate controls and 
+procedures for financial reporting. All this has come at a price. Managers and investors worry that the costs of SOX and the bur

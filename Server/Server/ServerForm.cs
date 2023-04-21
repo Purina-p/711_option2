@@ -130,7 +130,7 @@ namespace Server
                 string folderPath_Cache = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment_Cache");
                 folderPath_Cache = Path.GetFullPath(folderPath_Cache);
 
-                //判断我村没存过这个文件夹，如果没有，建一个存碎片
+                //建一个存servercache的碎片
                 if (!Directory.Exists(folderPath_Cache))
                 {
                     Directory.CreateDirectory(folderPath_Cache);
@@ -184,7 +184,8 @@ namespace Server
                         stream.Write(fileContent, 0, fileContent.Length);
 
                         //将发送的内容保存到server端的cache备份中
-                        string serverCacheFilePath = Path.Combine(folderPath_Cache, Path.GetFileName(filePath));
+                        string uniqueFileName = Path.GetFileNameWithoutExtension(filePath) + "_" + fragmentHash + Path.GetExtension(filePath);
+                        string serverCacheFilePath = Path.Combine(folderPath_Cache, uniqueFileName);
                         File.WriteAllBytes(serverCacheFilePath, fileContent);
 
                         //复用率
@@ -289,17 +290,20 @@ namespace Server
                 target_fragment = Path.GetFullPath(target_fragment);
                 string filePath_fragment = Path.Combine(target_fragment, _selectFileName);
 
+                //切片
+                RabinKarpFileSplitter(filePath_A, filePath_fragment);
+                File.Copy(filePath_A, filePath, true);
 
-                if (!File.Exists(filePath))
+
+                if (!listBox2.Items.Contains(_selectFileName))
                 {
-                    File.Copy(filePath_A, filePath, true);
-                    RabinKarpFileSplitter(filePath_A, filePath_fragment);
+
                     listBox2.Items.Add(_selectFileName);
                     
                 }
                 else
                 {
-                    Invoke(new Action(() => label5.Text="already have"));
+                    Invoke(new Action(() => label5.Text="File Replaced"));
                 }                
 
             }
@@ -311,10 +315,10 @@ namespace Server
         {
             
             //Rabin-Krap的算法参数
-            const int WindowSize = 11; // 滑动窗口大小-->导致切片大小
-            const ulong Q = 10007; // 大质数，用于取模运算-->降低hash冲突，
-            const ulong D = 256; // 基数，用于计算哈希值-->无所dawei
-            const int BlockSize = 2 * 1024; // 2KB文件块大小
+            const int WindowSize = 41; // 滑动窗口大小-->导致切片大小
+            const ulong Q = 10067; // 大质数，用于取模运算-->降低hash冲突，
+            const ulong D = 128; // 基数，用于计算哈希值-->无所dawei
+            //const int BlockSize = 2 * 1024; // 2KB文件块大小
 
             //存hash列表对比的文件夹--记得删
             string HashPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\Rabin_Test");
@@ -334,14 +338,7 @@ namespace Server
 
             // 初始化变量
             ulong hash = 0;
-            ulong Dm = 1;
-
-            // 预计算值，计算每个窗口的hash然后对他进行快速更新
-            //for (int i = 0; i < WindowSize - 1; i++)
-            {
-                //Dm = (Dm * D) % Q;
-            }
-
+            
             // 计算滑动窗口的初始哈希值
             for (int i = 0; i < WindowSize; i++)
             {
@@ -354,11 +351,13 @@ namespace Server
             // 从滑动窗口的结束位置开始遍历输入文件的字节
             for (int i = WindowSize; i < inputFileBytes.Length; i++)
             {
-                // 从输入文件字节数组中获取哈希值计算所需的上一个字节
-                byte lastByte = inputFileBytes[i - WindowSize];
+                //重新计算当前滑动窗口的hash
+                hash = 0;
+                for (int j = i - WindowSize + 1; j <= i; j++)
+                {
+                    hash = (hash * D + inputFileBytes[j]) % Q;
+                }
 
-                // 计算当前滑动窗口的哈希值
-                hash = ((hash - lastByte) * D + inputFileBytes[i]) % Q;
 
                 // 判断当前哈希值是否满足分割条件,或者已经到达文件末尾
                 if (hash == 0 || i == inputFileBytes.Length - 1)
@@ -369,6 +368,7 @@ namespace Server
                     {
                         fileSplit.Write(inputFileBytes, startIndex, i - startIndex + 1);
                     }
+
 
                     // 计算文件片段的 MD5 哈希值
                     byte[] fragmentBytes = new byte[i - startIndex + 1];
