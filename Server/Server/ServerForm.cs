@@ -9,7 +9,6 @@ namespace Server
     public partial class ServerForm : Form
     {
         private string _selectFileName;
-        private List<string> fragmentHash;
 
         public ServerForm()
         {
@@ -127,8 +126,8 @@ namespace Server
                 string folderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment", fileName);
                 folderPath = Path.GetFullPath(folderPath);
 
-                //在cache端申请的时候，我把申请的碎片文件夹存下来
-                string folderPath_Cache = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment_Cache", fileName);
+                //在cache端申请的时候，直接把传过去的文件打进大文件夹下
+                string folderPath_Cache = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment_Cache");
                 folderPath_Cache = Path.GetFullPath(folderPath_Cache);
 
                 //判断我村没存过这个文件夹，如果没有，建一个存碎片
@@ -136,7 +135,7 @@ namespace Server
                 {
                     Directory.CreateDirectory(folderPath_Cache);
                 }
-
+                
                 //获取文件夹中的所有文件
                 string[] filePaths = Directory.GetFiles(folderPath);
                 Invoke(new Action(() => label6.Text = folderPath));
@@ -148,19 +147,48 @@ namespace Server
                     //string fileContent = File.ReadAllText(filePath,Encoding.UTF8);--文件切片后不能读text->bytes
                     byte[] fileContent = File.ReadAllBytes(filePath);
 
-                    //发送文件内容长度
-                    byte[] fileContentLengthBytes = BitConverter.GetBytes(fileContent.Length);
-                    stream.Write(fileContentLengthBytes, 0, 4);
+                    //计算hash
+                    string fragmentHash = CalculateMD5Hash(fileContent);
 
-                    //发送内容
-                    stream.Write(fileContent, 0, fileContent.Length);
+                    //检查cache端是否有相同的
+                    string[] serverCacheFilePaths = Directory.GetFiles(folderPath_Cache);
+                    string matchingServerCacheFilePath = null;
 
-                    //将发送的内容保存到server端的cache备份中
-                    string serverCacheFilePath = Path.Combine(folderPath_Cache, Path.GetFileName(filePath));
-                    File.WriteAllBytes(serverCacheFilePath, fileContent);
+                    foreach (string serverCachePath in serverCacheFilePaths)
+                    {
+                        byte[] existContent= File.ReadAllBytes(serverCachePath);
+                        string existContentHash = CalculateMD5Hash(existContent);
+
+                        if (existContentHash == fragmentHash)
+                        {
+                            matchingServerCacheFilePath = serverCachePath;
+                        }
+
+                    }
+
+
+                    if (matchingServerCacheFilePath == null)
+                    {
+                        //发送文件内容长度
+                        byte[] fileContentLengthBytes = BitConverter.GetBytes(fileContent.Length);
+                        stream.Write(fileContentLengthBytes, 0, 4);
+                        //发送内容
+                        stream.Write(fileContent, 0, fileContent.Length);
+                        //将发送的内容保存到server端的cache备份中
+                        string serverCacheFilePath = Path.Combine(folderPath_Cache, Path.GetFileName(filePath));
+                        File.WriteAllBytes(serverCacheFilePath, fileContent);
+                    }
+                    else
+                    {
+                        //发送hash
+                        byte[] fragmentHashBytes = Encoding.UTF8.GetBytes(fragmentHash);
+                        byte[] fragmentHashLengthBytes = BitConverter.GetBytes(fragmentHashBytes.Length);
+                        stream.Write(fragmentHashLengthBytes, 0, 4);
+                        stream.Write(fragmentHashBytes, 0, fragmentHashBytes.Length);
+                    }
 
                 }
-                          
+
                 stream.Flush();
                 stream.Close();
              
@@ -168,7 +196,28 @@ namespace Server
 
             //同步清理缓存区
             else if(command == 2){
+                string folderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment_Cache");
+                folderPath = Path.GetFullPath(folderPath);
+                try
+                {
+                    //获取当前文件夹下的所有文件
+                    string[] files = Directory.GetFiles(folderPath);
 
+                    if (files.Length != 0)
+                    {
+                        //遍历删除所有文件
+                        foreach (string file in files)
+                        {
+                            File.Delete(file);
+                            string fileName = Path.GetFileName(file);
+                        }
+                    }
+                    
+                }
+                catch (Exception ex)
+                {
+                    BeginInvoke(new Action(() => label4.Text = "cache cleard unsuccessfully"));
+                }
             }
         }
        
@@ -214,7 +263,7 @@ namespace Server
                 if (!File.Exists(filePath))
                 {
                     File.Copy(filePath_A, filePath, true);
-                    fragmentHash = RabinKarpFileSplitter(filePath_A, filePath_fragment);
+                    RabinKarpFileSplitter(filePath_A, filePath_fragment);
                     listBox2.Items.Add(_selectFileName);
                     
                 }
@@ -228,7 +277,7 @@ namespace Server
         }
 
         //文件切片--Rabin函数,同时记录返回我的hash列表
-        private List<string> RabinKarpFileSplitter(string inputFilePath, string OutputDirectory)
+        private void RabinKarpFileSplitter(string inputFilePath, string OutputDirectory)
         {
             //创建文件夹来接收切片文件
             if (!Directory.Exists(OutputDirectory))
@@ -280,27 +329,11 @@ namespace Server
                     using (FileStream fileSplites = new FileStream(outputPath, FileMode.Create))
                     {
                         fileSplites.Write(inputFileBytes, startIndex, i - startIndex + 1);
-                    }
-
-                    //在这里计算片段MD5的hash值
-
-                    //计算片段的hash值
-                    byte[] fragmentBytes = new byte[i - startIndex + 1];
-
-                    //从这个列表中复制片段
-                    Array.Copy(inputFileBytes, startIndex, fragmentBytes, 0, i - startIndex + 1);
-
-                    //使用MD5 calculateHash
-                    string fragmentHash = CalculateMD5Hash(fragmentBytes);
-
-                    //将片段的hash添加到fragmentHashes列表中
-                    fragmentHashes.Add(fragmentHash);
-
+                    }                    
                     fileCounter++;
                     startIndex = i + 1;
                 }
             }
-            return fragmentHashes;
         }        
 
         //rabin函数算的hash值不一定能保证唯一性，所以在循环里有调用了一次MD5的函数来计算hash，来返回列表

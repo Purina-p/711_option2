@@ -1,0 +1,235 @@
+I
+f a corporation needs to issue more shares of stock, 
+then its financial manager had better understand how 
+the stock market works. If it wants to take out a bank 
+loan, the financial manager had better understand how 
+banks and other financial institutions work. If the firm 
+contemplates a capital investment, such as a factory 
+expansion or a new product launch, the financial manager needs to think clearly about the cost of the capital 
+that the firm raises from outside investors. As we pointed 
+out in Chapter 1, the opportunity cost of capital for the 
+firm is the rate of return that its stockholders expect to 
+get by investing on their own in financial markets. This 
+means that the financial manager must understand how 
+prices are determined in the financial markets in order 
+to make wise investment decisions.
+Financial markets and institutions are the firm’s financial environment. You don’t have to know everything 
+about that environment to begin the study of financial 
+management, but a general understanding provides 
+useful context for the work ahead. For example, it will 
+help you to understand why you are calculating the 
+yield to maturity of a bond in Chapter 6, the net present 
+value of a capital investment in Chapter 9, or the 
+weighted-average cost of capital for a company in 
+Chapter 13.
+This chapter does three things. First, it surveys financial markets and institutions. We will cover the stock and 
+bond markets, banks and insurance companies, and 
+mutual and pension funds. Second, we will set out the 
+functions of financial markets and institutions and look 
+at how they help corporations and the economy. Third, 
+we will discuss the financial crisis of 2007–2009 and 
+the eurozone crisis that followed. An understanding of 
+what happens when financial markets do not function 
+well is important for understanding why and how financial markets and institutions matter.
+Read this chapter before you visit the New York Stock Exchange. Alexander Baxevanis/Flickr/CC BY 2.0
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+34 Part One Introduction
+bre22619_ch02_032-055.indd 34 10/06/16 03:41 PM
+The Importance of Financial Markets 
+and Institutions
+In the previous chapter, we explained why corporations need to be good at finance in 
+order to survive and prosper. All corporations face important investment and financing 
+decisions. But, of course, those decisions are not made in a vacuum. They are made in 
+a financial environment. That environment has two main segments: financial markets 
+and financial institutions.
+Businesses have to go to financial markets and institutions for the financing they 
+need to grow. When they have a surplus of cash, and no need for immediate financing, 
+they have to invest the cash, for example, in bank accounts or in securities. Let’s take 
+Apple Computer Inc. as an example.
+Table 2.1 presents a time line for Apple and examples of the sources of financing 
+tapped by Apple from its start-up in a California garage in 1976 to its cash-rich status 
+in 2016. The initial investment in Apple stock was $250,000. Apple was also able to 
+get short-term financing from parts suppliers who did not demand immediate payment. 
+Apple got the parts, assembled and sold the computers, and afterward paid off its 
+accounts payable to the suppliers. (We discuss accounts payable in Chapter 19.) Then, 
+2.1
+TABLE 2.1 Examples of 
+financing decisions by Apple 
+Computer
+April 1976: Apple Computer 
+Inc. founded
+Mike Makkula, Apple’s first chairman, invests $250,000 in 
+Apple shares.
+1976: First 200 computers 
+sold
+Parts suppliers give Apple 30 days to pay. (Financing from 
+accounts payable.)
+1978–79 Apple raises $3.5 million from venture capital investors.
+December 1980: Initial 
+public offering
+Apple raises $91 million, after fees and expenses, by selling 
+shares to public investors.
+May 1981 Apple sells 2.6 million additional shares at $31.25 per share.
+April 1987 Apple pays its first dividend at an annual rate of $.12 per share.
+Early 1990s Apple carries out several share repurchase programs.
+1994 Apple issues $300 million of debt at an interest rate of 6.5%.
+1996–97: Apple reports a 
+$740 million loss in the 
+second quarter of 1996. Lays 
+off 2,700 employees in 1997.
+Dividend is suspended in February 1996. Apple sells $661 
+million of debt to private investors in June 1996. The 
+borrowing provides “sufficient liquidity” to execute Apple’s 
+strategic plans and to “return the company to profitability.”
+September 1997: Acquires 
+assets of Power Computing 
+Corp.
+Acquisition is financed with $100 million of Apple stock.
+2004: Apple is healthy and 
+profitable, thanks to iMac, 
+iPod, and other products.
+Apple pays off the $300 million in long-term debt issued in 
+1994, leaving the company with no long-term debt 
+outstanding.
+2005–13 Apple’s profits grow rapidly. It invests in marketable securities, 
+which accumulate to $147 billion by June 2013.
+2012–13 Apple announces plans to pay out $100 billion to 
+shareholders over the next 3 years. It also borrows a record 
+$17 billion.
+2013–15 Apple’s Capital Return Program distributes cash to 
+shareholders by paying dividends and repurchasing shares. 
+The planned total distribution is $200 billion by 2017.
+2015 Apple issues $14.5 billion in dollar-denominated debt, 
+€4.8 billion in euro debt, as well as debt issued in U.K. 
+pounds, Swiss francs, and Japanese yen.
+February 2016 Apple’s market capitalization, the total market value of all 
+its outstanding shares, is $521 billion, far in excess of the 
+$119 billion cumulative investment by Apple’s shareholders. 
+The cumulative investment includes $92 billion of retained 
+earnings.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 2 Financial Markets and Institutions 35
+bre22619_ch02_032-055.indd 35 10/06/16 03:41 PM
+as Apple grew, it was able to obtain several rounds of financing by selling Apple shares 
+to private venture capital investors. (We discuss venture capital in Chapter 15.) In 
+December 1980, it raised $91 million in an initial public offering (IPO) of its shares to 
+public investors. There was also a follow-up share issue in May 1981.1
+After Apple became a public company, it could raise financing from many sources, 
+and it was able to pay for acquisitions by issuing more shares. We show a few examples in Table 2.1.
+Apple started paying cash dividends to shareholders in 1987, and it also distributed 
+cash to investors by stock repurchases in the early 1990s. But Apple hit a rough patch 
+in 1996 and 1997, and regular dividends were eliminated. The company had to borrow 
+$661 million from a group of private investors in order to cover its losses and finance 
+its recovery plan. However, the rough patch ended with the release of the iMac in 1998 
+and the iPod in 2001. Apple’s profitability increased rapidly, and it was able to finance 
+its growth by plowing back earnings into operations. These retained earnings had 
+grown to $92 billion by September 2015.
+As the twenty-first century progressed, Apple’s profits grew so fast that it piled up 
+a cash mountain, which grew to more than $200 billion by 2016. It resumed cash dividends and started a massive program of share repurchases. Its Capital Return Program, 
+which began in 2012, will distribute $200 billion in cash to its shareholders by 2017.
+Apple is well known for its product innovations, including the Macintosh computer, 
+the iPhone, and the iPad. Apple is not special because of financing. In fact, the story of 
+its financing is not too different from that of many other successful companies. But 
+access to financing was vital to Apple’s growth and profitability. Would we have iMac 
+computers, iPhones, or iPads if Apple had been forced to operate in a country with a 
+primitive financial system? Definitely not. A prosperous economy requires a wellfunctioning financial system.
+A modern financial system offers financing in many different forms, depending on 
+the company’s age, its growth rate, and the nature of its business. For example, Apple 
+relied on venture capital financing in its early years and only later floated its shares in 
+public stock markets. Still later, as the company matured, it turned to other forms of 
+financing, including the examples given in Table 2.1. But the table does not begin to 
+cover the range of financing channels open to modern corporations. We will encounter 
+many other channels later in the book, and new channels are opening up regularly. The 
+nearby box describes one recent financial innovation, micro-lending funds that make 
+small loans to businesspeople in the poorer parts of the world.
+The Flow of Savings to Corporations
+The money that corporations invest in real assets comes ultimately from savings 
+by investors. But there can be many stops on the road between savings and corporate investment. The road can pass through financial markets, financial intermediaries, or both.
+Let’s start with the simplest case of a small, closely held corporation, like Apple in 
+its earliest years. The orange arrows in Figure 2.1 show the flow of savings from shareholders in this simple setting. There are two possible paths: The firm can sell new 
+shares, or it can reinvest cash back into the firm’s operations. Reinvestment means 
+additional savings by existing shareholders. The reinvested cash could have been paid 
+out to those shareholders and spent by them on personal consumption. By not taking 
+and spending the cash, shareholders have reinvested their savings in the corporation. 
+2.2
+1
+ Many of the shares sold in the 1981 issue were previously held by Apple employees. Sale of these shares 
+allowed the employees to cash out and diversify some of their Apple holdings but did not raise additional 
+financing for Apple.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+The interest rates on these micro loans are relatively high; 
+this is because the cost of writing and administering such 
+small loans is high and the loans are made in nations with 
+weak currencies. However, default rates on the loans are only 
+about 4%. “There is a deep pride in keeping up with payments,” says Deidre Wagner, an executive vice president of 
+Starbucks, who invested $100,000 in a microfinance fund in 
+2003. “In some instances, when an individual is behind on 
+payments, others in the village may make up the difference.” 
+Investors and borrowers know that when the micro loans are 
+repaid, the money gets recycled into new loans, giving still 
+more borrowers a chance to move up the economic ladder.
+Source: Adapted from Eric Uhlfelder, “Micro Loans, Solid Returns,” BusinessWeek, May 9, 2005, pp. 100–102.
+Vahid Hujdur had dreams of opening his own business. With 
+about $200 of his own money and a $1,500 loan, he was able 
+to rent space in the old section of Sarajevo, and he began 
+repairing and selling discarded industrial sewing machines. 
+After just 8 years, Hujdur has 10 employees building, installing, 
+and fixing this industrial machinery. Hujdur didn’t get his initial 
+loan from a local bank. “They were asking for guarantees that 
+were impossible to get,” he recalls. Instead, the capital came 
+from LOKmicro, a local financial institution specializing in 
+microfinance—the lending of small amounts to the poor in 
+developing nations to help them launch small enterprises.
+Microfinance institutions get capital from individual and 
+institutional investors via microfinance funds, which collect 
+the investors’ money, vet the local lenders, offer them management assistance, and administer investors’ accounts.
+Finance in Practice Micro Loans, Solid Returns
+36
+bre22619_ch02_032-055.indd 36 10/06/16 03:41 PM
+Cash retained and reinvested in the firm’s operations is cash saved and invested 
+on behalf of the firm’s shareholders.
+Of course, a small corporation has other financing choices. It could take out a bank 
+loan, for example. The bank in turn may have raised money by attracting savings 
+accounts. In this case, investors’ savings flow through the bank to the firm.
+Now consider a large, public corporation, for example, Apple Computer in 
+September 2015. What’s different? Scale, for one thing: Apple’s annual revenues for 
+the previous 12 months were $234 billion, and its balance sheet showed total assets of 
+$290 billion. The scope of Apple’s activities has also expanded: It now has dozens of 
+product lines and operates worldwide. Because of this scale and scope, Apple attracts 
+investors’ savings by a variety of different routes. It can do so because it is a large, 
+profitable, public firm.
+The flow of savings to large public corporations is shown in Figure 2.2. Notice two 
+key differences from Figure 2.1. First, public corporations can draw savings from investors worldwide. Second, the savings flow through financial markets, financial intermediaries, or both. Suppose, for example, that Bank of America raises $900 million by a 
+new issue of shares. An Italian investor buys 4,000 of the new shares for $15 per share. 
+Now Bank of America takes that $60,000, along with money raised by the rest of the 
+issue, and makes a $300 million loan to Apple. The Italian investor’s savings end up 
+flowing through financial markets (the stock market), to a financial intermediary (Bank 
+of America), and finally to Apple.
+Of course, our Italian friend’s $60,000 doesn’t literally arrive at Apple in an envelope marked “From L. DaVinci.” Investments by the purchasers of the Bank of 
+America’s stock issue are pooled, not segregated. Signor DaVinci would own a share 
+of all of Bank of America’s assets, not just one loan to Apple. Nevertheless, investors’ 
+savings are flowing through the financial markets and the bank to finance Apple’s 
+capital investments.
+FIGURE 2.1 Flow of savings 
+to investment in a closely held 
+corporation. Investors use 
+savings to buy additional shares. 
+Investors also save when the 
+corporation reinvests on their 
+behalf.
+Investment
+in real assets
+Corporation
+Shareholders
+in closely
+held corporation
+Cash raised from Inve

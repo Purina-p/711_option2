@@ -145,21 +145,17 @@ namespace Cache
                     _stream_cs.Write(fileNameLengthBytes, 0, 4);
                     _stream_cs.Write(fileNameBytes, 0, fileNameLength);
                     _stream_cs.Flush();
-                    Invoke(new Action(() => label1.Text = "1"));
-
                     //读取server传来的文件内容--filefragment--------
 
                     //把所有server发来的文件片按hash命名存在一个大文件夹下
                     string cacheFoldPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\CacheData");
                     cacheFoldPath = Path.GetFullPath(cacheFoldPath);
-                    Invoke(new Action(() => label1.Text = "2"));
 
 
                     if (!Directory.Exists(cacheFoldPath))
                     {
                         Directory.CreateDirectory(cacheFoldPath);
                     }
-                    Invoke(new Action(() => label1.Text = "3"));
 
 
                     while (true)
@@ -181,12 +177,12 @@ namespace Cache
                         string fileHashName = CalculateMD5Hash(fileContentBytes);
 
                         //创建文件存储内容
-                        string filePath_fragment = Path.Combine(cacheFoldPath, fileHashName);
+                        string filePath_fragment = Path.Combine(cacheFoldPath, fileHashName+".dat");
 
                         //创建文件存储文件片段并用hash值命名
                         using (FileStream fileStream = new FileStream(filePath_fragment, FileMode.Append))
                         {
-                            Invoke(new Action(() => listBox1.Items.Add(fileHashName)));
+                            Invoke(new Action(() => listBox1.Items.Add(fileHashName+".dat")));
                             fileStream.Write(fileContentBytes, 0, fileContentBytes.Length);
                         }
                     }
@@ -237,22 +233,7 @@ namespace Cache
                 return stringBuilder.ToString();
             }
         }
-
-        //读取文件时防止都不全
-        private void ReadFromStream(NetworkStream stream, byte[] buffer, int offset, int count)
-        {
-            int bytesRead = 0;
-            while (bytesRead < count)
-            {
-                int n = stream.Read(buffer, offset + bytesRead, count - bytesRead);
-                if (n == 0)
-                {
-                    throw new InvalidOperationException("无法读取数据");
-                }
-                bytesRead += n;
-            }
-        }
-
+       
         //清除cache
         private void button1_Click(object sender, EventArgs e)
         {
@@ -260,6 +241,7 @@ namespace Cache
             string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\CacheData");
             FolderPath = Path.GetFullPath(FolderPath);
 
+            //本地清除
             try
             {
                 //获取当前文件夹下的所有文件
@@ -288,6 +270,23 @@ namespace Cache
             {
                 BeginInvoke(new Action(() => label4.Text = "cache cleard unsuccessfully"));
             }
+
+            //告诉server，让server清除
+            try
+            {
+                using(TcpClient serverConnection = GetServerConnection())
+                {
+                    NetworkStream stream_clean = serverConnection.GetStream();
+                    stream_clean.WriteByte(command);
+                    stream_clean.Flush();
+                }
+
+            }
+            catch(Exception ex)
+            {
+                BeginInvoke(new Action(() => label4.Text = "Failed to send clear cache command to server."));
+            }
+
 
         }
 
