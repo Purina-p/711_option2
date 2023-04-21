@@ -145,11 +145,17 @@ namespace Cache
                     _stream_cs.Write(fileNameLengthBytes, 0, 4);
                     _stream_cs.Write(fileNameBytes, 0, fileNameLength);
                     _stream_cs.Flush();
-                    //读取server传来的文件内容--filefragment--------
+
+
+
+                    ////////////////////////////////读取server传来的文件内容--filefragment--------
 
                     //把所有server发来的文件片按hash命名存在一个大文件夹下
                     string cacheFoldPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\CacheData");
                     cacheFoldPath = Path.GetFullPath(cacheFoldPath);
+
+                    //存储拼接好的文件
+                    MemoryStream File_Full = new MemoryStream();
 
 
                     if (!Directory.Exists(cacheFoldPath))
@@ -160,31 +166,79 @@ namespace Cache
 
                     while (true)
                     {
-                        // 读取文件内容长度
-                        byte[] fileContentLengthBytes = new byte[4];
-                        int bytesRead = _stream_cs.Read(fileContentLengthBytes, 0, 4);
-                        if (bytesRead == 0)
+
+                        //先读取Flag
+                        byte[] FlagBytes= new byte[4];
+                        _stream_cs.Read(FlagBytes, 0, 4);
+                        int Flag = BitConverter.ToInt32(FlagBytes, 0);
+                        Invoke(new Action(() => label1.Text = "Connect to 0"));
+                        if (Flag == 0 )//发hash
                         {
-                            break;
+                            //读取hash的长度
+                            byte[] hashLengBytes = new byte[4];
+                            _stream_cs.Read(hashLengBytes, 0, 4);
+                            int hashLength = BitConverter.ToInt32(hashLengBytes,0);
+                            Invoke(new Action(() => label1.Text = "Connect to 1"));
+                            //读hash
+                            byte[] hashBytes = new byte[hashLength];
+                            _stream_cs.Read(hashBytes, 0, hashLength);
+                            string Hash = Encoding.UTF8.GetString(hashBytes);
+                            Invoke(new Action(() => label1.Text = "Connect to 2"));
+                            //获取文件夹中的所有文件
+                            string[] filePaths = Directory.GetFiles(cacheFoldPath);
+                            Invoke(new Action(() => label1.Text = "Connect to 3"));
+                            foreach (string HashNameFile in filePaths)
+                            {
+                                Invoke(new Action(() => label1.Text = "Connect to 4"));
+
+                                string Hash_file = Path.GetFileNameWithoutExtension(HashNameFile);
+                                if(Hash_file== Hash)
+                                {
+                                    byte[] fileContentBytes = File.ReadAllBytes(HashNameFile);
+                                    File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
+                                    Invoke(new Action(() => label1.Text = "Connect to 5"));
+                                    break;
+
+                                }                               
+                            }
+                            Invoke(new Action(() => label1.Text = "Connect to 6"));
+
                         }
-                        int fileContentLength = BitConverter.ToInt32(fileContentLengthBytes, 0);
-
-                        //读文件内容
-                        byte[] fileContentBytes = new byte[fileContentLength];
-                        _stream_cs.Read(fileContentBytes, 0, fileContentLength);
-
-                        //计算hash
-                        string fileHashName = CalculateMD5Hash(fileContentBytes);
-
-                        //创建文件存储内容
-                        string filePath_fragment = Path.Combine(cacheFoldPath, fileHashName+".dat");
-
-                        //创建文件存储文件片段并用hash值命名
-                        using (FileStream fileStream = new FileStream(filePath_fragment, FileMode.Append))
+                        else
                         {
-                            Invoke(new Action(() => listBox1.Items.Add(fileHashName+".dat")));
-                            fileStream.Write(fileContentBytes, 0, fileContentBytes.Length);
+                            Invoke(new Action(() => label1.Text = "Connect to 7"));
+
+                            // 读取文件内容长度
+                            byte[] fileContentLengthBytes = new byte[4];
+                            int bytesRead = _stream_cs.Read(fileContentLengthBytes, 0, 4);
+                            if (bytesRead == 0)
+                            {
+                                break;
+                            }
+                            int fileContentLength = BitConverter.ToInt32(fileContentLengthBytes, 0);
+                            Invoke(new Action(() => label1.Text = "Connect to 8"));
+                            //读文件内容
+                            byte[] fileContentBytes = new byte[fileContentLength];
+                            _stream_cs.Read(fileContentBytes, 0, fileContentLength);
+                            Invoke(new Action(() => label1.Text = "Connect to 9"));
+                            //计算hash
+                            string fileHashName = CalculateMD5Hash(fileContentBytes);
+
+                            //创建文件存储内容--存储在本地
+                            string filePath_fragment = Path.Combine(cacheFoldPath, fileHashName + ".dat");
+                            Invoke(new Action(() => label1.Text = "Connect to 10"));
+                            //创建文件存储文件片段并用hash值命名
+                            using (FileStream fileStream = new FileStream(filePath_fragment, FileMode.Append))
+                            {
+                                Invoke(new Action(() => listBox1.Items.Add(fileHashName + ".dat")));
+                                fileStream.Write(fileContentBytes, 0, fileContentBytes.Length);
+                            }
+                            Invoke(new Action(() => label1.Text = "Connect to 11"));
+                            //拼接整块
+                            File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
+                            Invoke(new Action(() => label1.Text = "Connect to 12"));
                         }
+
                     }
 
                     // 获取文件内容的字节长度

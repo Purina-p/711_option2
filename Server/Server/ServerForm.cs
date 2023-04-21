@@ -172,27 +172,39 @@ namespace Server
 
                     if (matchingServerCacheFilePath == null)
                     {
+                        //给他打个标签--发内容的--1
+                        byte[] Flag = BitConverter.GetBytes(1);
+                        stream.Write(Flag, 0, 4);
+
                         //发送文件内容长度
                         byte[] fileContentLengthBytes = BitConverter.GetBytes(fileContent.Length);
                         stream.Write(fileContentLengthBytes, 0, 4);
+
                         //发送内容
                         stream.Write(fileContent, 0, fileContent.Length);
 
                         //将发送的内容保存到server端的cache备份中
                         string serverCacheFilePath = Path.Combine(folderPath_Cache, Path.GetFileName(filePath));
                         File.WriteAllBytes(serverCacheFilePath, fileContent);
+
+                        //复用率
                         unmatchFragment++;
 
 
                     }
                     else
                     {
+                        //给他打个标签--发送hash--0
+                        byte[] Flag = BitConverter.GetBytes(0);
+                        stream.Write(Flag, 0, 4);
+
                         //发送hash
                         byte[] fragmentHashBytes = Encoding.UTF8.GetBytes(fragmentHash);
                         byte[] fragmentHashLengthBytes = BitConverter.GetBytes(fragmentHashBytes.Length);
                         stream.Write(fragmentHashLengthBytes, 0, 4);
                         stream.Write(fragmentHashBytes, 0, fragmentHashBytes.Length);
 
+                        //复用率
                         matchFragment++;
 
                     }
