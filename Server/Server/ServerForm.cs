@@ -222,7 +222,6 @@ namespace Server
 
                 stream.Flush();
                 stream.Close();
-                BeginInvoke(new Action(() => label6.Text = reuseRate.ToString("0.00") + "%"));
             }
 
             //同步清理缓存区
