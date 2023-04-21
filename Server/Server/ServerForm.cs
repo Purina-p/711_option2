@@ -138,7 +138,10 @@ namespace Server
                 
                 //获取文件夹中的所有文件
                 string[] filePaths = Directory.GetFiles(folderPath);
-                Invoke(new Action(() => label6.Text = folderPath));
+
+                //计算复用率的参数初始化
+                int unmatchFragment = 0;
+                int matchFragment = 0;
 
                 //文件切片后,单个文件变成文件夹因此进行循环遍历读取文件内容
                 foreach (string filePath in filePaths)
@@ -174,9 +177,13 @@ namespace Server
                         stream.Write(fileContentLengthBytes, 0, 4);
                         //发送内容
                         stream.Write(fileContent, 0, fileContent.Length);
+
                         //将发送的内容保存到server端的cache备份中
                         string serverCacheFilePath = Path.Combine(folderPath_Cache, Path.GetFileName(filePath));
                         File.WriteAllBytes(serverCacheFilePath, fileContent);
+                        unmatchFragment++;
+
+
                     }
                     else
                     {
@@ -185,13 +192,19 @@ namespace Server
                         byte[] fragmentHashLengthBytes = BitConverter.GetBytes(fragmentHashBytes.Length);
                         stream.Write(fragmentHashLengthBytes, 0, 4);
                         stream.Write(fragmentHashBytes, 0, fragmentHashBytes.Length);
+
+                        matchFragment++;
+
                     }
 
                 }
 
                 stream.Flush();
                 stream.Close();
-             
+
+                //计算复用率
+                double reuseRate = (double) matchFragment / (matchFragment + unmatchFragment) * 100;
+                BeginInvoke(new Action(() => label6.Text = reuseRate.ToString("0.00") + "%"));
             }
 
             //同步清理缓存区
@@ -325,7 +338,7 @@ namespace Server
                 if (hash == 0 || i == inputFileBytes.Length - 1)
                 {
                     // 保存文件切片
-                    string outputPath = Path.Combine(OutputDirectory, $"{fileCounter}.dat");
+                    string outputPath = Path.Combine(OutputDirectory, $"{Path.GetFileNameWithoutExtension(inputFilePath)}_{fileCounter}.dat");
                     using (FileStream fileSplites = new FileStream(outputPath, FileMode.Create))
                     {
                         fileSplites.Write(inputFileBytes, startIndex, i - startIndex + 1);
@@ -354,6 +367,7 @@ namespace Server
                 return stringBuilder.ToString();
             }
         }
+      
     }
 
 }
