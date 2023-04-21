@@ -1,6 +1,0 @@
-as follows:
-Example 3.2 ⊲
-Period: 1 2 3
- Cost of goods sold (income statement) 0 60 80
-+ Investment in inventories (balance sheet) 60 −60 + 80 = 20 −80
-= Cash pai

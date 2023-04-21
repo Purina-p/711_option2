@@ -1,7 +1,0 @@
-d: 1 2
- Cost of goods sold (income statement) 0 60
-+ Investment in inventories (balance sheet) 60 −60
-= Cash paid out 60 0
-Final PDF to printer
-Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
- http://ebookcentral.proquest.com/lib/auc

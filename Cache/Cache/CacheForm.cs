@@ -138,47 +138,45 @@ namespace Cache
                     FolderPath = Path.GetFullPath(FolderPath);
                     string filePath = Path.Combine(FolderPath, fileName);
                     Invoke(new Action(() => label1.Text = "Connect to server"));
+
                     //文件存在不存在都发送请求申请--以便对比文件               
                     _stream_cs.WriteByte(command);
                     _stream_cs.Write(fileNameLengthBytes, 0, 4);
                     _stream_cs.Write(fileNameBytes, 0, fileNameLength);
                     _stream_cs.Flush();
 
-                    //读取server传来的文件内容
-                    StreamReader stream_cs_Reader = new StreamReader(_stream_cs, Encoding.UTF8);
-                    string fileContent = stream_cs_Reader.ReadToEnd();
-                    stream_cs_Reader?.Close();
+                    //读取server传来的文件内容--filefragment--------
 
-                    //判断我的listbox中是不是已经有了
-                    //实时更新listbox
-                    bool fileInListBox = listBox1.Items.Contains(fileName);
+                    //把所有server发来的文件片按hash命名存在一个大文件夹下
+                    string cacheFilePath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\CacheData");
+                    cacheFilePath = Path.GetFullPath(cacheFilePath);
 
-                    if (!fileInListBox)
+                    if (!File.Exists(cacheFilePath))
                     {
-                        BeginInvoke(new Action(() => listBox1.Items.Add(fileName)));
-                    }
-                    
-                    //判断文件路径是否存在,并且把log写上
-                    string cacheFileContent;
-                    string logMessage_response;
-                    if (File.Exists(filePath))
-                    {
-                        //如果存在，直接把cache的文件价中的内容传给client
-                        cacheFileContent = File.ReadAllText(filePath);
-                        logMessage_response = $"user response: cached {fileName}";
-                        UpdateLog(logMessage_response);
-                    }
-                    else
-                    {
-                        //如果不存在，就创建新文件并写入server的内容
-                        using (File.Create(filePath)) { }                      
-                        File.WriteAllText(filePath, fileContent);
-                        cacheFileContent = File.ReadAllText(filePath);                       
-                        logMessage_response = $"user response: {fileName} downloaded from server";
-                        UpdateLog(logMessage_response);
-                    }
+                        using(File.Create(cacheFilePath)) { }
+                        using(FileStream fileStream = new FileStream(cacheFilePath, FileMode.Append))
+                        {
+                            while (true)
+                            {
+                                //读取文件内容长度
+                                byte[] fileContentLengthBytes = new byte[4];
+                                int bytesRead = _stream_cs.Read(fileContentLengthBytes, 0, 4);
+                                if(bytesRead == 0)
+                                {
+                                    break;
+                                }
+                                int fileContentLength = BitConverter.ToInt32(fileContentLengthBytes, 0);
 
-                    
+                                //读文件内容
+                                byte[] fileContentBytes = new byte[fileContentLength];
+                                _stream_cs.Read(fileContentBytes, 0, fileContentLength);
+
+                                //将文件写入缓存
+                                fileStream.Write(fileContentBytes,0, fileContentLength);
+                            }
+                        }
+                    }
+                                                                                                                
                     // 获取文件内容的字节长度
                     byte[] contentBytes = Encoding.UTF8.GetBytes(cacheFileContent);
                     int contentLength = contentBytes.Length;

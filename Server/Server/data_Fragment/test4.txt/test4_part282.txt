@@ -1,7 +1,0 @@
- each of these sections in turn.
-The first section, cash flow from operations, starts with net income but adjusts that 
-figure for those parts of the income statement that do not involve cash coming in or 
-going out. Therefore, it adds back the allowance for depreciation because depreciation 
-is not a cash outflow, even though it is treated as an expense in the income statement.
-Any additions to current assets (other than cash itself) need to be subtracted from 
-net income

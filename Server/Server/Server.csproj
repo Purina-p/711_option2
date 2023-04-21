@@ -11,6 +11,7 @@
   <ItemGroup>
     <Folder Include="data\" />
     <Folder Include="data_Fragment\" />
+    <Folder Include="data_Fragment_Cache\" />
   </ItemGroup>
 
 </Project>

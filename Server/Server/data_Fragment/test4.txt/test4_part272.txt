@@ -1,9 +1,0 @@
-r that it was extremely profitable in period 3 (when 
-cash flow was positive). Therefore, to construct the income statement, the 
-accountant looks at when the sale was made (period 2 in our example) and gathers 
-together all the revenues and expenses associated with that sale. For our company, 
-the income statement would show:
-Revenue $100
-Less cost of goods sold 60
-Profit $ 40
-This practice of matc

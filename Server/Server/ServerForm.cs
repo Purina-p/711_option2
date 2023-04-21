@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Server
@@ -8,12 +9,13 @@ namespace Server
     public partial class ServerForm : Form
     {
         private string _selectFileName;
+        private List<string> fragmentHash;
 
         public ServerForm()
         {
             InitializeComponent();
             label2.Text = "Waiting for connection...";
-            //获取server_data路径
+            //获取Admindata路径
             string FolderPath_A = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\AdminData");
             FolderPath_A = Path.GetFullPath(FolderPath_A);
 
@@ -31,7 +33,7 @@ namespace Server
                 listBox1.Items.Add(fileName);
             }
 
-            //获取server_data路径
+            //获取data->cache option1路径
             string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data");
             FolderPath = Path.GetFullPath(FolderPath);
 
@@ -121,24 +123,43 @@ namespace Server
                 stream.Read(fileNameBytes, 0, fileNameLength);
                 string fileName = Encoding.UTF8.GetString(fileNameBytes);
               
-                //查看是否在我的文件里面
-                string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data");
-                FolderPath = Path.GetFullPath(FolderPath);
-                string filePath = Path.Combine(FolderPath, fileName);
-              
-                //读取文件内容发给cache
-                string fileContent = File.ReadAllText(filePath,Encoding.UTF8);
-                StreamWriter writer = new StreamWriter(stream, Encoding.UTF8);
-                //Invoke(new Action(() => label4.Text = $"Send Content of {fileName} "));
-                writer.WriteLine(fileContent);
-                writer.Flush();
-                writer.Close();
-                stream.Close();
-               
+                //查看是否在我的文件里面-改文件切片--直接把文件来源变成我的datafragment
+                string folderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment", fileName);
+                folderPath = Path.GetFullPath(folderPath);
 
+                //在cache端申请的时候，我把申请的碎片文件夹存下来
+                string folderPath_Cache = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment_Cache", fileName);
+                folderPath_Cache = Path.GetFullPath(folderPath_Cache);
+
+                //获取文件夹中的所有文件
+                string[] filePaths = Directory.GetFiles(folderPath);
+
+                //文件切片后,单个文件变成文件夹因此进行循环遍历读取文件内容
+                foreach (string filePath in filePaths)
+                {
+                    //读取文件内容
+                    //string fileContent = File.ReadAllText(filePath,Encoding.UTF8);--文件切片后不能读text->bytes
+                    byte[] fileContent = File.ReadAllBytes(filePath);
+
+                    //发送文件内容长度
+                    byte[] fileContentLengthBytes = BitConverter.GetBytes(fileContent.Length);
+                    stream.Write(fileContentLengthBytes, 0, 4);
+
+                    //发送内容
+                    stream.Write(fileContent, 0, fileContentLengthBytes.Length);
+
+                    //将发送的内容保存到server端的cache备份中
+                    string serverCacheFilePath = Path.Combine(folderPath_Cache, Path.GetFileName(filePath));
+                    File.WriteAllBytes(serverCacheFilePath, fileContent);
+
+                }
+                          
+                stream.Flush();
+                stream.Close();
+             
             }
         }
-     
+       
         private void ServerForm_Load(object sender, EventArgs e)
         {
             //时间处理程序中启动服务器，以便加载主窗体运行在后台线程
@@ -181,9 +202,9 @@ namespace Server
                 if (!File.Exists(filePath))
                 {
                     File.Copy(filePath_A, filePath, true);
-                    RabinKarpFileSplitter(filePath_A, filePath_fragment);
+                    fragmentHash = RabinKarpFileSplitter(filePath_A, filePath_fragment);
                     listBox2.Items.Add(_selectFileName);
-
+                    
                 }
                 else
                 {
@@ -192,23 +213,23 @@ namespace Server
 
             }
 
+        }
 
-
-
-        }        
-
-        //文件切片--Rabin函数
-        private void RabinKarpFileSplitter(string inputFilePath,string OutputDirectory)
+        //文件切片--Rabin函数,同时记录返回我的hash列表
+        private List<string> RabinKarpFileSplitter(string inputFilePath, string OutputDirectory)
         {
             //创建文件夹来接收切片文件
-            if(!Directory.Exists(OutputDirectory))
+            if (!Directory.Exists(OutputDirectory))
             {
                 Directory.CreateDirectory(OutputDirectory);
             }
 
+            //创建一个列表来存储文件列表的hash--用MD5计算来保证唯一性
+            List<string> fragmentHashes = new List<string>();
+
             //Rabin-Krap的算法参数
-            const ulong Q = 1003;//大质数：用于取模运算避免哈希溢出
-            const ulong D = 128;//基数：用于计算哈希值
+            const ulong Q = 1003;//大质数：用于取模运算
+            const ulong D = 64;//基数：用于计算哈希值
             const int BlockSize = 2 * 1024;//2kb文件块大小
 
             // 预计算值，计算每个窗口的hash然后对他进行快速更新
@@ -224,34 +245,70 @@ namespace Server
 
             for (int i = 0; i < inputFileBytes.Length; i++)
             {
-                // 更新哈希值
+                // 判断我的blocksize是不是大于2kb，如果大于2kb我就要进行算hash分块
                 if (i >= BlockSize)
                 {
+                    //输入文件字节数组中获取哈希值计算所需的上一个字节
                     byte lastByte = inputFileBytes[i - BlockSize];
+
+                    //计算了当前块的哈希值
                     hash = ((hash - lastByte * Dm) * D + inputFileBytes[i]) % Q;
                 }
                 else
                 {
-                    // 计算第一个文件片的哈希值
+                    // 直接计算文件片的哈希值
                     hash = (hash * D + inputFileBytes[i]) % Q;
                 }
 
-                // 检查哈希值是否满足分割条件（即哈希值是BlockSize的整数倍）
+                // 检查哈希值是否满足分割条件,hash=0或者已经切到最后一个块了
                 if (hash == 0 || i == inputFileBytes.Length - 1)
                 {
                     // 保存文件切片
-                    string outputPath = Path.Combine(OutputDirectory, $"{Path.GetFileNameWithoutExtension(inputFilePath)}_part{fileCounter:000}.txt");
-                    using (FileStream fs = new FileStream(outputPath, FileMode.Create))
+                    string outputPath = Path.Combine(OutputDirectory, $"{fileCounter}.dat");
+                    using (FileStream fileSplites = new FileStream(outputPath, FileMode.Create))
                     {
-                        fs.Write(inputFileBytes, startIndex, i - startIndex + 1);
+                        fileSplites.Write(inputFileBytes, startIndex, i - startIndex + 1);
                     }
+
+                    //在这里计算片段MD5的hash值
+
+                    //计算片段的hash值
+                    byte[] fragmentBytes = new byte[i - startIndex + 1];
+
+                    //从这个列表中复制片段
+                    Array.Copy(inputFileBytes, startIndex, fragmentBytes, 0, i - startIndex + 1);
+
+                    //使用MD5 calculateHash
+                    string fragmentHash = CalculateMD5Hash(fragmentBytes);
+
+                    //将片段的hash添加到fragmentHashes列表中
+                    fragmentHashes.Add(fragmentHash);
 
                     fileCounter++;
                     startIndex = i + 1;
                 }
             }
+            return fragmentHashes;
+        }        
+
+        //rabin函数算的hash值不一定能保证唯一性，所以在循环里有调用了一次MD5的函数来计算hash，来返回列表
+        private string CalculateMD5Hash(byte[] fragmentBytes)
+        {
+            using(MD5 md5 = MD5.Create())
+            {
+                //创建实例
+                byte[] hashBytes = md5.ComputeHash(fragmentBytes);
+                //创建字符串
+                StringBuilder stringBuilder= new StringBuilder();
+                //遍历hash字节数组
+                for (int i=0;i<hashBytes.Length;i++)
+                {
+                    //将每个byte转为2为16进制的字符串
+                    stringBuilder.Append(hashBytes[i].ToString("X2"));
+                }
+                return stringBuilder.ToString();
+            }
         }
-               
     }
 
 }
