@@ -78,7 +78,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(253, 91);
+            this.textBox1.Location = new System.Drawing.Point(364, 91);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -88,7 +88,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(253, 66);
+            this.label5.Location = new System.Drawing.Point(380, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 15);
             this.label5.TabIndex = 7;
@@ -100,7 +100,7 @@
             this.listBox1.ItemHeight = 15;
             this.listBox1.Location = new System.Drawing.Point(32, 91);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(157, 289);
+            this.listBox1.Size = new System.Drawing.Size(314, 289);
             this.listBox1.TabIndex = 8;
             // 
             // CacheForm

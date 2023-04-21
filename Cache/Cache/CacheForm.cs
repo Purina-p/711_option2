@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
@@ -144,53 +145,66 @@ namespace Cache
                     _stream_cs.Write(fileNameLengthBytes, 0, 4);
                     _stream_cs.Write(fileNameBytes, 0, fileNameLength);
                     _stream_cs.Flush();
+                    Invoke(new Action(() => label1.Text = "1"));
 
                     //读取server传来的文件内容--filefragment--------
 
                     //把所有server发来的文件片按hash命名存在一个大文件夹下
-                    string cacheFilePath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\CacheData");
-                    cacheFilePath = Path.GetFullPath(cacheFilePath);
+                    string cacheFoldPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\CacheData");
+                    cacheFoldPath = Path.GetFullPath(cacheFoldPath);
+                    Invoke(new Action(() => label1.Text = "2"));
 
-                    if (!File.Exists(cacheFilePath))
+
+                    if (!Directory.Exists(cacheFoldPath))
                     {
-                        using(File.Create(cacheFilePath)) { }
-                        using(FileStream fileStream = new FileStream(cacheFilePath, FileMode.Append))
+                        Directory.CreateDirectory(cacheFoldPath);
+                    }
+                    Invoke(new Action(() => label1.Text = "3"));
+
+
+                    while (true)
+                    {
+                        // 读取文件内容长度
+                        byte[] fileContentLengthBytes = new byte[4];
+                        int bytesRead = _stream_cs.Read(fileContentLengthBytes, 0, 4);
+                        if (bytesRead == 0)
                         {
-                            while (true)
-                            {
-                                //读取文件内容长度
-                                byte[] fileContentLengthBytes = new byte[4];
-                                int bytesRead = _stream_cs.Read(fileContentLengthBytes, 0, 4);
-                                if(bytesRead == 0)
-                                {
-                                    break;
-                                }
-                                int fileContentLength = BitConverter.ToInt32(fileContentLengthBytes, 0);
+                            break;
+                        }
+                        int fileContentLength = BitConverter.ToInt32(fileContentLengthBytes, 0);
 
-                                //读文件内容
-                                byte[] fileContentBytes = new byte[fileContentLength];
-                                _stream_cs.Read(fileContentBytes, 0, fileContentLength);
+                        //读文件内容
+                        byte[] fileContentBytes = new byte[fileContentLength];
+                        _stream_cs.Read(fileContentBytes, 0, fileContentLength);
 
-                                //将文件写入缓存
-                                fileStream.Write(fileContentBytes,0, fileContentLength);
-                            }
+                        //计算hash
+                        string fileHashName = CalculateMD5Hash(fileContentBytes);
+
+                        //创建文件存储内容
+                        string filePath_fragment = Path.Combine(cacheFoldPath, fileHashName);
+
+                        //创建文件存储文件片段并用hash值命名
+                        using (FileStream fileStream = new FileStream(filePath_fragment, FileMode.Append))
+                        {
+                            Invoke(new Action(() => listBox1.Items.Add(fileHashName)));
+                            fileStream.Write(fileContentBytes, 0, fileContentBytes.Length);
                         }
                     }
-                                                                                                                
+
                     // 获取文件内容的字节长度
-                    byte[] contentBytes = Encoding.UTF8.GetBytes(cacheFileContent);
-                    int contentLength = contentBytes.Length;
+                    //byte[] contentBytes = Encoding.UTF8.GetBytes(cacheFileContent);
+                    //int contentLength = contentBytes.Length;
 
                     // 发送文件内容长度
-                    byte[] contentLengthBytes = BitConverter.GetBytes(contentLength);
-                    clientStream.Write(contentLengthBytes, 0, 4);
-                    clientStream.Flush();
+                    //byte[] contentLengthBytes = BitConverter.GetBytes(contentLength);
+                    //clientStream.Write(contentLengthBytes, 0, 4);
+                    //clientStream.Flush();
 
                     // 文件内容发送给客户端
-                    using (BinaryWriter clientWriter = new BinaryWriter(clientStream, Encoding.UTF8, leaveOpen: true))
+                    //using (BinaryWriter clientWriter = new BinaryWriter(clientStream, Encoding.UTF8, leaveOpen: true))
                     {
-                        clientWriter.Write(contentBytes, 0, contentLength);
-                        clientWriter.Flush();
+                        //clientWriter.Write(contentBytes, 0, contentLength);
+                        //clientWriter.Flush();
                     }
 
                 }
@@ -205,9 +219,44 @@ namespace Cache
             Task.Run(() => StartCache());
         }
 
+        //hash值计算
+        private string CalculateMD5Hash(byte[] fragmentBytes)
+        {
+            using (MD5 md5 = MD5.Create())
+            {
+                //创建实例
+                byte[] hashBytes = md5.ComputeHash(fragmentBytes);
+                //创建字符串
+                StringBuilder stringBuilder = new StringBuilder();
+                //遍历hash字节数组
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    //将每个byte转为2为16进制的字符串
+                    stringBuilder.Append(hashBytes[i].ToString("X2"));
+                }
+                return stringBuilder.ToString();
+            }
+        }
+
+        //读取文件时防止都不全
+        private void ReadFromStream(NetworkStream stream, byte[] buffer, int offset, int count)
+        {
+            int bytesRead = 0;
+            while (bytesRead < count)
+            {
+                int n = stream.Read(buffer, offset + bytesRead, count - bytesRead);
+                if (n == 0)
+                {
+                    throw new InvalidOperationException("无法读取数据");
+                }
+                bytesRead += n;
+            }
+        }
+
         //清除cache
         private void button1_Click(object sender, EventArgs e)
         {
+            Byte command = 2; 
             string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\CacheData");
             FolderPath = Path.GetFullPath(FolderPath);
 

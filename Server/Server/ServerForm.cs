@@ -131,8 +131,15 @@ namespace Server
                 string folderPath_Cache = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment_Cache", fileName);
                 folderPath_Cache = Path.GetFullPath(folderPath_Cache);
 
+                //判断我村没存过这个文件夹，如果没有，建一个存碎片
+                if (!Directory.Exists(folderPath_Cache))
+                {
+                    Directory.CreateDirectory(folderPath_Cache);
+                }
+
                 //获取文件夹中的所有文件
                 string[] filePaths = Directory.GetFiles(folderPath);
+                Invoke(new Action(() => label6.Text = folderPath));
 
                 //文件切片后,单个文件变成文件夹因此进行循环遍历读取文件内容
                 foreach (string filePath in filePaths)
@@ -146,7 +153,7 @@ namespace Server
                     stream.Write(fileContentLengthBytes, 0, 4);
 
                     //发送内容
-                    stream.Write(fileContent, 0, fileContentLengthBytes.Length);
+                    stream.Write(fileContent, 0, fileContent.Length);
 
                     //将发送的内容保存到server端的cache备份中
                     string serverCacheFilePath = Path.Combine(folderPath_Cache, Path.GetFileName(filePath));
@@ -157,6 +164,11 @@ namespace Server
                 stream.Flush();
                 stream.Close();
              
+            }
+
+            //同步清理缓存区
+            else if(command == 2){
+
             }
         }
        
