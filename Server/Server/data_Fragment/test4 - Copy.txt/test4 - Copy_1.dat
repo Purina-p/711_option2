@@ -1,0 +1,1080 @@
+al.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 2 Financial Markets and Institutions 47
+bre22619_ch02_032-055.indd 47 10/06/16 03:41 PM
+and firms to send and receive payments quickly and safely over long distances. Banks 
+are the obvious providers of payment services, but they are not alone. For example, if 
+you buy shares in a money market mutual fund, your money is pooled with that of 
+other investors and used to buy safe, short-term securities. You can then write checks 
+on this mutual fund investment, just as if you had a bank deposit.
+Information Provided by Financial Markets
+In well-functioning financial markets, you can see what securities and commodities are 
+worth, and you can see—or at least estimate—the rates of return that investors can expect 
+on their savings. The information provided by financial markets is often essential to a 
+financial manager’s job. Here are three examples of how this information can be used.
+Commodity Prices Catalytic converters are used in the exhaust systems of cars and 
+light trucks to reduce pollution. The catalysts include platinum, which is traded on the 
+New York Mercantile Exchange (NYMEX).
+In March a manufacturer of catalytic converters is planning production for October. 
+How much per ounce should the company budget for purchases of platinum in that 
+month? Easy: The company’s CFO looks up the futures price of platinum on the New 
+York Mercantile Exchange—$972 per ounce for delivery in October (this was the 
+closing price for platinum in March 2016, for delivery in October). The CFO can lock 
+in that price if she wishes. The details of such a trade are covered in Chapter 24.
+Interest Rates The CFO of Catalytic Concepts has to raise $400 million in new 
+financing. She considers an issue of long-term bonds. What will the interest rate on the 
+bonds be? To find out, the CFO looks up interest rates on existing bonds traded in 
+financial markets.
+The results are shown in Table 2.2. Notice how the interest rate climbs as credit 
+quality deteriorates: The largest, safest companies, which are rated AAA (“triple-A”), 
+can raise long-term debt at a 2.59% interest rate. The interest rates for AA, A, and 
+BBB rise to 2.62%, 3.03%, and 4.32%, respectively. BBB companies are still regarded 
+as investment grade, that is, good quality, but the next step down takes the investor into 
+junk bond territory. The interest rate for BB debt climbs to 5.62%. Single-B companies 
+are riskier still, so investors demand 8.32%.
+There will be more on bond ratings and interest rates in Chapter 6. But you can see 
+how a financial manager can use information from fixed-income markets to forecast 
+the interest rate on new debt financing. For example, if Catalytic Concepts can qualify 
+as a BBB-rated company, and interest rates are as shown in Table 2.2, it should be able 
+to raise new debt financing for approximately 4.32%.
+Company Values How much was Callaway Golf worth in March 2016? How about 
+Alaska Air Group, Entergy, Yum! Brands, or GE? Table 2.3 shows the market capitalization of each company. We simply multiply the number of shares outstanding by the 
+price per share in the stock market. Investors valued Callaway Golf at $821 million 
+and GE at $283 billion.
+TABLE 2.2 Interest rates on 
+long-term corporate bonds, 
+March 2016. The interest rate is 
+lowest for top-quality (AAA) 
+issuers. The rate rises as credit 
+quality declines.
+Credit Rating Interest Rate
+AAA 2.59%
+AA 2.62
+A 3.03
+BBB 4.32
+BB 5.62
+B 8.32
+Source: Thomson Reuters.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+48 Part One Introduction
+bre22619_ch02_032-055.indd 48 10/06/16 03:41 PM
+Stock prices and company values summarize investors’ collective assessment 
+of how well a company is doing, both its current performance and its future prospects. Thus an increase in stock price sends a positive signal from investors to 
+managers.16 That is why top management’s compensation is linked to stock prices. A 
+manager who owns shares in his or her company will be motivated to increase the 
+company’s market value. This reduces agency costs by aligning the interests of managers and stockholders.
+This is one important advantage of going public. A private company can’t use its 
+stock price as a measure of performance. It can still compensate managers with shares, 
+but the shares will not be valued in a financial market.
+Cost of Capital Financial managers look to financial markets to measure, or at 
+least estimate, the cost of capital for the firm’s investment projects. The cost of capital 
+is the minimum acceptable rate of return on the project. Investment projects offering 
+rates of return higher than their cost of capital are worthwhile because they add value; 
+they make both the firm and its shareholders better off financially. Projects offering 
+rates of return less than the cost of capital subtract value and should not be 
+undertaken.17
+Thus the hurdle rate for investments inside the corporation is actually set outside 
+the corporation. The expected rate of return on investments in financial markets determines the opportunity cost of capital.
+The opportunity cost of capital is generally not the interest rate that the firm pays on 
+a loan from a bank or insurance company. If the company is making a risky investment, the opportunity cost of capital is the expected rate of return that investors can 
+achieve in financial markets at the same level of risk. The expected rate of return on 
+risky securities is normally well above the interest rate on corporate borrowing.
+We introduced the cost of capital in Chapter 1, but this brief reminder may help to 
+fix the idea. We cover the cost of capital in detail in Chapters 11 and 12.
+cost of capital
+Minimum acceptable rate 
+of return on capital 
+investment.
+TABLE 2.3 Calculating the 
+market capitalization of Callaway 
+Golf and other companies in 
+March 2016. (Shares and market 
+values in millions. Ticker symbols 
+in parentheses.)
+Number of Shares × Stock Price =
+Market Capitalization  
+($ millions)
+Callaway Golf (ELY) 93.8 × $8.76 = $821
+Alaska Air Group (ALK) 124.7 × $80.77 = $10,074
+Entergy (ETR) 178.5 × $75.92 = $13,551
+Yum! Brands (YUM) 408.7 × $77.77 = $31,875
+General Electric (GE) 9,331.0 × $30.34 = $283,091
+Source: Yahoo! Finance, finance.yahoo.com.
+16 We can’t claim that investors’ assessments of value are always correct. Finance can be a risky and dangerous 
+business—dangerous for your wealth, that is. With hindsight we see horrible mistakes by investors, for example, 
+the gross overvaluation of Internet and telecom companies in 2000. On average, however, it appears that financial markets collect and assess information quickly and accurately. We’ll discuss this issue again in Chapter 7.
+17 Of course, the firm may invest for other reasons. For example, it may invest in pollution control equipment for 
+a factory. The equipment may not generate a cash return but may still be worth investing in to meet legal and 
+ethical obligations.
+Which of the functions described in this section require financial markets? 
+Explain briefly.
+2.4 Self-Test
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 2 Financial Markets and Institutions 49
+bre22619_ch02_032-055.indd 49 10/06/16 03:41 PM
+The Crisis of 2007–2009
+The financial crisis of 2007–2009 raised many questions, but it settled one question 
+conclusively: Yes, financial markets and institutions are important. When financial 
+markets and institutions ceased to operate properly, the world was pushed into a global 
+recession.
+The financial crisis had its roots in the easy-money policies that were pursued by 
+the U.S. Federal Reserve and other central banks following the collapse of the Internet 
+and telecom stock bubble in 2000. At the same time, large balance-of-payments surpluses in Asian economies were invested back into U.S. debt securities. This also 
+helped to push down interest rates and contribute to lax credit.
+Banks took advantage of this cheap money to expand the supply of subprime mortgages to low-income borrowers. Many banks tempted would-be homeowners with low 
+initial payments, offset by significantly higher payments later.18 (Some home buyers 
+were betting on escalating housing prices so that they could resell or refinance before 
+the higher payments kicked in.) One lender is even said to have advertised what it 
+dubbed its “NINJA” loan—NINJA standing for “No Income, No Job, and No Assets.” 
+Most subprime mortgages were then packaged together into mortgage-backed securities (MBSs) that could be resold. But, instead of selling these securities to investors 
+who could best bear the risk, many banks kept large quantities of the loans on their 
+own books or sold them to other banks.
+The widespread availability of mortgage finance fueled a dramatic increase in 
+house prices, which doubled in the 5 years ending June 2006. At that point, prices 
+started to slide and homeowners began to default on their mortgages. A year later, 
+Bear Stearns, a large investment bank, announced huge losses on the mortgage investments that were held in two of its hedge funds. By the spring of 2008, Bear Stearns 
+was on the verge of bankruptcy, and the U.S. Federal Reserve arranged for it to be 
+acquired by JPMorgan Chase.
+The crisis peaked in September 2008, when the U.S. government was obliged to take 
+over the giant federal mortgage agencies Fannie Mae and Freddie Mac, both of which 
+had invested several hundred billion dollars in subprime mortgage-backed securities. 
+Over the next few days, the financial system started to melt down. Both Merrill Lynch 
+and Lehman Brothers were in danger of failing. On September 14, the government 
+arranged for Bank of America to take over Merrill in return for financial guarantees. 
+However, it did nothing to rescue Lehman Brothers, which filed for bankruptcy protection the next day. Two days later, the government reluctantly lent $85 billion to the 
+giant insurance company AIG, which had insured huge volumes of mortgage-backed 
+securities and other bonds against default. The following day, the Treasury unveiled its 
+first proposal to spend $700 billion to purchase “toxic” mortgage-backed securities.
+After the failure of Lehman and the forced rescues of Bear Stearns, Fannie Mae, Freddie 
+Mac, Merrill Lynch, and AIG, investors and financial institutions had to ask, “Who will 
+be next? Do I dare trade with or lend money to Bank X?” In many situations, the cautious 
+answer was “No.” Customary day-to-day financial transactions were canceled or completed on onerous terms.19 At the same time, trading in MBSs and other hard-to-value 
+securities dried up; it therefore became even harder to know what these securities were 
+worth. As banks and other financial institutions became reluctant to trade securities or 
+lend to one another, the supply of credit to the economy contracted and business investment was cut back. The U.S. economy suffered one of its worst setbacks since the Great 
+Depression. Unemployment rose rapidly and business bankruptcies tripled.
+2.4
+18 With a so-called option ARM loan, the minimum mortgage payment was often not even sufficient to cover 
+that month’s interest on the loan. The unpaid interest was then added to the amount of the mortgage, so the 
+homeowner was burdened by an ever-increasing mortgage that one day would need to be paid off.
+19  The interest rate on interbank loans rose in 2008 to 4.6% above the rate on U.S. Treasury debt. The normal 
+spread over Treasuries is less than .5%.
+BEYOND THE PAGE
+mhhe.com/brealey9e
+Housing prices in 
+the financial crisis
+BEYOND THE PAGE
+mhhe.com/brealey9e
+Time line of the 
+financial crisis
+BEYOND THE PAGE
+mhhe.com/brealey9e
+The rise and fall of 
+Lehman Brothers
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+50
+bre22619_ch02_032-055.indd 50 10/24/16 03:38 PM
+Few developed economies escaped the crisis. As well as suffering from a collapse in 
+their own housing markets, a number of foreign banks had made large investments in 
+U.S. subprime mortgages and had to be rescued by their governments. Many European 
+governments were already heavily in debt and, as the cost of the bank bailouts mounted, 
+investors began to worry about the ability of the governments to repay their debts. 
+Thus in Europe, the banking crisis became entwined with a sovereign debt crisis.
+The invention of MBSs also made mortgages liquid. They 
+are actively traded among banks, insurance companies, 
+mutual funds, pension funds, and endowments.
+The MBS market has grown explosively. With the growth 
+came more and more complexity. Issuers were not content 
+with the simple pass-through MBS described earlier. They 
+issued complicated packages of securities called tranches.
+The most senior tranches were given first call on all cash 
+flows from the mortgage portfolio and were viewed as almost 
+risk-free. Bond-rating agencies gave their highest, triple-A ratings to the senior tranches, even for MBSs based on subprime mortgages for homeowners with weak credit. Many 
+investors in triple-A tranches lost a lot of money in the crisis of 
+2007–2009. We discuss bond ratings in Chapter 6.
+The MBS market survived. It is still by far the largest source 
+of mortgage financing. By 2015, the aggregate MBSs outstanding exceeded $2 trillion. MBSs are part of a broader 
+market for asset-backed securities, which include securities 
+that work like MBSs but are based on portfolios of other types 
+of assets, including car loans, bank loans to businesses, and 
+financing for commercial real estate.
+Mortgage-backed securities (MBSs) provide another example of how financial markets convey savings to finance 
+investment in real assets. In this case, the real assets 
+are homes, which homeowners finance in part with mortgage loans.
+In the old days—the 1960s, for example—most mortgage 
+loans were made by local banks, savings banks, and savings 
+and loan institutions (S&Ls), which accepted deposits and savings accounts and made mortgage and other local loans. We 
+will use an S&L as the example. The flow of savings would be 
+as described by the figure in Panel a, at the bottom of this box.
+The typical mortgage was long term, up to 30 years maturity, with a fixed interest rate. The S&Ls’ liabilities—chiefly savings accounts—had much shorter maturities, perhaps a year 
+or two on average. The S&Ls were therefore “borrowing 
+short, lending long,” a dangerous investment strategy. When 
+interest rates rose in the 1970s and 1980s, the S&Ls’ interest 
+costs on savings accounts rose, too, but their interest income 
+was locked up in long-term, fixed-rate mortgages. Losses 
+mounted. The S&L crisis of the 1980s followed.*
+The invention of the MBS allowed S&Ls to eliminate the risks 
+of borrowing short and lending long. You can still get a mortgage 
+from your local S&L, but now the S&L does not have to keep it. 
+The S&L originates the mortgage, but will probably resell it to an 
+MBS issuer—for example, Fannie Mae (Federal National Mortgage Association or FNMA†) or Bank of America. The issuer combines your mortgage with hundreds or thousands of others and 
+issues an MBS backed by the combined portfolio. The MBS is 
+sold to investors such as life insurance companies that want to 
+hold long-term, fixed-rate obligations. Cash flows from the mortgage portfolio are passed through to investors.‡
+Suppose a life insurance company purchases an MBS. The 
+flow of savings would now match the figure in Panel b.
+Finance in Practice Mortgage-Backed Securities
+*For a history of the crisis, see Edward J. Kane, The S&L Insurance Mess: How 
+Did It Happen? (Washington, D.C.: Urban Institute Press, 1989).
+†Fannie Mae and Freddie Mac (Federal Home Loan Mortgage Corp.) are 
+government-sponsored entities (GSEs) charged with increasing the availability 
+of mortgage credit. The GSEs purchase “conforming loans” and package and 
+resell them as MBSs. Nonconforming loans—for example, large, “jumbo” 
+mortgages—are packaged by banks such as Citigroup or Bank of America.
+‡ You still send monthly payments to your local S&L. The S&L extracts a small 
+servicing fee and sends your payments along to the MBS issuer, which also 
+extracts a small servicing fee. Net cash flows from the portfolio
+bre22619_fm_i-1.indd 1 11/03/16 06:49 PM
+Fundamentals of
+Corporate Finance
+Ninth EDITION
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+2
+bre22619_ch01_002-031.indd 2 10/06/16 03:32 PM
+1
+R E L AT E D W E B S I T E S F O R T H I S C H A P T E R C A N B E 
+FOUND IN CONNECT.
+CHAPTER
+Goals and 
+Governance of 
+the Corporation
+LEARNING OBJECTIVES
+After studying this chapter, you should be able to:
+1-1 Give examples of the investment and financing decisions that 
+financial managers make.
+1-2 Distinguish between real and financial assets.
+1-3 Cite some of the advantages and disadvantages of organizing 
+a business as a corporation.
+1-4 Describe the responsibilities of the CFO, treasurer, and 
+controller.
+1-5 Explain why maximizing market value is the natural financial 
+goal of the corporation.
+1-6 Understand what is meant by “agency problems,” and cite 
+some of the ways that corporate governance helps mitigate 
+agency problems.
+1-7 Explain why unethical behavior does not maximize market 
+value.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+3
+PART ONE Introduction
+bre22619_ch01_002-031.indd 3 10/06/16 03:32 PM
+To grow from small beginnings to a major corporation, FedEx needed to make good investment and financing decisions.
+Frank Kovalchek via Alaskan Dude/Flickr/CC BY 2.0
+To carry on business, a corporation needs an 
+almost endless variety of assets. Some are tangible assets such as plant and machinery, office 
+buildings, and vehicles; others are intangible assets 
+such as brand names and patents. Corporations finance 
+these assets by borrowing, by reinvesting profits back 
+into the firm, and by selling additional shares to the 
+firm’s shareholders.
+Financial managers, therefore, face two broad questions. First, what investments should the corporation 
+make? Second, how should it pay for these investments? 
+Investment decisions spend money. Financing decisions raise money for investment.
+We start this chapter with examples of recent investment and financing decisions by major U.S. and foreign 
+corporations. We review what a corporation is and 
+describe the roles of its top financial managers. We then 
+turn to the financial goal of the corporation, which is 
+usually expressed as maximizing value, or at least 
+adding value. Financial managers add value whenever 
+the corporation can invest to earn a higher return than 
+its shareholders can earn for themselves.
+But managers are human beings; they cannot be 
+perfect servants who always and everywhere maximize 
+value. We will consider the conflicts of interest that 
+arise in large corporations and how corporate governance helps to align the interests of managers and 
+shareholders.
+If we ask managers to maximize value, can the corporation also be a good citizen? Won’t the managers be 
+tempted to try unethical or illegal financial tricks? They 
+may sometimes be tempted, but wise managers realize 
+that such tricks are not just dishonest; they almost 
+always destroy value, not increase it. More challenging 
+are the gray areas where the line between ethical and 
+unethical financial actions is hard to draw.
+Finally, we look ahead to the rest of this book and look 
+back to some entertaining snippets of financial history.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+4 Part One Introduction
+bre22619_ch01_002-031.indd 4 10/06/16 03:32 PM
+1.1 Investment and Financing Decisions
+Fred Smith is best known today as the founder of FedEx. But in 1965 he was still a 
+sophomore at Yale, where he wrote an economics term paper arguing that delivery 
+systems were not keeping up with increasing needs for speed and dependability.1
+He later joined his stepfather at a struggling equipment and maintenance firm for air 
+carriers. He observed firsthand the difficulties of shipping spare parts on short notice. 
+He saw the need for an integrated air and ground delivery system with a central hub 
+that could connect a large number of points more efficiently than a point-to-point 
+delivery system. In 1971, at the age of 27, Smith founded Federal Express.
+Like many start-up firms, Federal Express flirted again and again with failure. 
+Smith and his family had an inheritance of a few million dollars, but this was far from 
+enough. The young company needed to purchase and retrofit a small fleet of aging 
+Dassault Falcon jets; build a central-hub facility; and hire and train pilots, delivery, 
+and office staff. The initial source of capital was short-term bank loans. Because of the 
+company’s shaky financial position, the bank demanded that the planes be used as 
+collateral and that Smith personally guarantee the loan with his own money.
+In April 1973, the company went live with a fleet of 14 jets, servicing 25 U.S. cities 
+out of its Memphis hub. By then, the company had spent $25 million and was effectively flat broke, without enough funds to pay for its weekly delivery of jet fuel. 
+In desperation, it managed to acquire a bank loan for $23.7 million. This loan had to be 
+backed by a guarantee from General Dynamics, which in return acquired an option to 
+buy the company. (Today, General Dynamics must regret that it never exercised 
+this option.)
+In November of that year, the company finally achieved some financial stability 
+when it raised $24.5 million from venture capitalists, investment firms that provide 
+funds and advice to young companies in return for a partial ownership share. Eventually, venture capitalists invested about $90 million in Federal Express.
+In 1977, private firms were allowed for the first time to compete with the Postal 
+Service in package delivery. Federal Express responded by expanding its operations. 
+It acquired seven Boeing 727s, each with about seven times the capacity of the Falcon 
+jets. To pay for these new investments, Federal Express raised about $19 million by 
+selling shares of stock to the general public in an initial public offering (IPO). The new 
+stockholders became part-owners of the company in proportion to the number of 
+shares they purchased.
+From this point on, success followed success, and the company invested heavily to 
+expand its air fleet as well as its supporting infrastructure. It introduced an automated 
+shipping system and a bar-coded tracking system. In 1994, it launched its fedex.com
+website for online package tracking. It opened several new hubs across the United 
+States as well as in Canada, France, the Philippines, and China. In 2007, FedEx (as the 
+company was now called) became the world’s largest airline measured by number of 
+planes. FedEx also invested in other companies, capped by the acquisition of Kinko’s 
+for $2.4 billion in 2004. By 2016, FedEx had 325,000 employees, annual revenue of 
+$49 billion, and a stock market value of almost $40 billion. Its name had become a 
+verb—to “FedEx a package” was to ship it overnight.
+Even in retrospect, FedEx’s success was hardly a sure thing. Fred Smith’s idea was 
+inspired, but its implementation was complex and difficult. FedEx had to make good 
+investment decisions. In the beginning, these decisions were constrained by lack of 
+financing. For example, used Falcon jets were the only option, given the young company’s precarious financial position. At first it could service only a short list of the 
+major cities. As the company grew, its investment decisions became more complex. 
+Which type of planes should it buy? When should it expand coverage to Europe and 
+1
+ Legend has it that Smith received a grade of C on this paper. In fact, he doesn’t remember the grade.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 1 Goals and Governance of the Corporation 5
+bre22619_ch01_002-031.indd 5 10/06/16 03:32 PM
+Asia? How many operations hubs should it build? What computer and tracking systems were necessary to keep up with the increasing package volume and geographic 
+coverage? Which companies should it acquire as it expanded its range of services?
+FedEx also needed to make good financing decisions. For example, how should it 
+raise the money it needed for investment? In the beginning, these choices were limited 
+to family money and bank loans. As the company grew, its range of choices expanded. 
+Eventually it was able to attract funding from venture capitalists, but this posed new 
+questions. How much cash did the firm need to raise from the venture capitalists? How 
+big a share in the firm would the venture capitalists demand in return? The initial public 
+offering of stock prompted similar questions. How many shares should the company try 
+to sell? At what price? As the company grew, it raised more funds by borrowing money 
+from its banks and by selling publicly traded bonds to investors. At each point, it needed 
+to decide on the proper form and terms of financing as well as the amounts to be raised.
+In short, FedEx needed to be good at finance. It had a head start over potential 
+competitors, but a series of bad financial decisions would have sunk the company. 
+No two companies’ histories are the same, but, like FedEx, all successful companies 
+must make good investment and financing decisions. And, as with FedEx, those 
+decisions range from prosaic and obvious to difficult and strategically crucial.
+Let’s widen our discussion. Table 1.1 gives an example of a recent investment and 
+financing decision for 11 corporations. Seven are U.S. corporations. Four are foreign: 
+Virgin Atlantic’s headquarters are in London, TransCanada’s in Calgary, LVMH’s in 
+Paris,2
+ and Vale’s in Rio de Janeiro. We have chosen very large public corporations 
+that you are likely to be familiar with. You may have flown with Virgin Atlantic, 
+shopped at Walmart, or posted a picture on Facebook.
+TABLE 1.1 Examples of recent investment and financing decisions by major public corporations
+Company Recent Investment Decisions Recent Financing Decisions
+Entergy Purchased the Union Power generating station 
+near El Dorado, Arkansas, for $948 million.
+Entergy’s Arkansas subsidiary issued $325 
+million of bonds maturing in 2026.
+ExxonMobil Cut total capital investment for 2016 to $34 
+billion, down 12% because of plummeting oil 
+prices.
+Eliminated share repurchases for 2016, thus 
+reducing payout to stockholders.
+Facebook Spent $60 million to acquire Pebbles, an Israeli 
+company developing virtual reality software.
+Financed capital investment and acquisitions 
+with operating cash flow.
+Ford Announced plan to invest $1 billion to build an 
+assembly plant in Mexico.
+Ford’s credit subsidiary issued $3.5 billion in 
+long-term debt.
+John Deere Total capital investment fell to $655 million, 
+after completing investments for producing 
+clean-burning diesel engines.
+Maintained credit lines with banks that allowed 
+it to borrow up to $7.2 billion.
+LVMH Acquired Luxola, a Singapore cosmetics 
+e-commerce start-up.
+Repaid €750 million in debt issued in 2009 
+and 2011.
+Procter & Gamble Spent $2.0 billion on research and 
+development in 2015.
+Spent $4.6 billion to repurchase its common 
+stock.
+TransCanada Announced purchase of Columbia Pipeline 
+Group for $10.2 billion.
+Will pay Columbia shareholders in cash and also 
+assume $2.8 billion of existing Columbia debt.
+Vale Started up the Caue Itabiritos iron-ore project 
+after capital investment of $927 million.
+Announced plan to issue at least $750 million 
+of 30-year debt.
+Virgin Atlantic Airlines Ordered 12 new Airbus A350-1000 planes. Used value of its landing slots at London’s 
+Heathrow Airport as collateral for a £220 
+million bond issue.
+Walmart Announced plans to open more than 200 new 
+stores in 2016.
+Raised its annual dividend to $2.00 a share.
+2
+ LVMH (Moët Hennessy Louis Vuitton) markets perfumes and cosmetics, wines and spirits, leather goods, 
+watches, and other luxury products. And, yes, we know what you are thinking, but “LVMH” really is short 
+for “Moët Hennessy Louis Vuitton.”
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+6 Part One Introduction
+bre22619_ch01_002-031.indd 6 10/06/16 03:32 PM
+Take a look at the decisions now. We think you will agree that they appear 
+sensible—at least there is nothing obviously wrong with them. But if you are new to 
+finance, it may be difficult to think about why these companies made these decisions 
+and not others.
+The Investment (Capital Budgeting) Decision
+Investment decisions, such as those shown in Table 1.1, are also called capital 
+budgeting or capital expenditure (CAPEX) decisions. Some of the investments in 
+the table, such as Walmart’s new stores or Virgin Atlantic’s new planes, involve 
+tangible assets—assets that you can touch and kick. Others involve intangible assets, 
+such as research and development (R&D), advertising, and the design of computer 
+software. For example, major pharmaceutical manufacturers invest billions every year 
+on R&D for new drugs.
+Most of the investments in Table 1.1 have long-term consequences. For example, 
+the planes acquired by Virgin Atlantic may still be flying 20 or 30 years from now. 
+Other investments may pay off in only a few months. For example, with the approach 
+of the Christmas holidays, Walmart spends nearly $50 billion to stock up its warehouses and retail stores. As the goods are sold over the following months, the company 
+recovers its investment in these inventories.
+The world of business can be intensely competitive, and corporations prosper only 
+if they can keep launching new products or services. In some cases, the costs and risks 
+of doing so are amazingly large. For example, the cost of developing the Gorgon 
+natural gas field in Australia has been estimated at $54 billion. It’s not surprising that 
+this cost is being shared among several major energy companies. But do not think of 
+companies as making billion-dollar investments on a daily basis. Most investment 
+decisions are smaller, such as the purchase of a truck, machine tool, or computer 
+system. Corporations make thousands of such investments each year. The cumulative 
+amount of these small expenditures can be just as large as the occasional jumbo investments, such as those shown in Table 1.1.
+Not all investments succeed. In October 2011 Hewlett-Packard (HP) paid $11.1 
+billion to acquire the British software company Autonomy. Just 13 months later, 
+HP wrote down the value of this investment by $8.8 billion. HP claimed that it was 
+misled by improper accounting at Autonomy. Nevertheless, the Autonomy acquisition 
+was a disastrous investment for HP. HP’s CEO was fired in short order.
+There are no free guarantees in finance. But you can tilt the odds in your favor if 
+you learn the tools of investment analysis and apply them intelligently. We cover these 
+tools in detail later in this book.
+The Financing Decision
+The financial manager’s second main responsibility is to raise the money that the firm 
+requires for its investments and operations. This is the financing decision. When a 
+company needs to raise money, it can invite investors to put up cash in exchange for a 
+share of future profits, or it can promise to pay back the investors’ cash plus a fixed 
+rate of interest. In the first case, the investors receive shares of stock and become 
+shareholders, part-owners of the corporation. The investors in this case are referred to 
+as equity investors, who contribute equity financing. In the second case, the investors 
+are lenders, that is, debt investors, who one day must be repaid. The choice between 
+debt and equity financing is often called the capital structure decision. Here “capital” 
+refers to the firm’s sources of long-term financing. A firm that is seeking to raise longterm financing is said to be “raising capital.”
+Notice the essential difference between the investment and financing decisions. 
+When the firm invests, it acquires real assets, which are then used to produce the 
+firm’s goods and services. The firm finances its investment in real assets by issuing 
+financial assets to investors. A share of stock is a financial asset, which has value as a 
+capital budgeting or capital 
+expenditure (CAPEX) decision
+Decision to invest in 
+tangible or intangible 
+assets.
+financing decision
+Decision on the sources 
+and amounts of financing.
+real assets
+Assets used to produce 
+goods and services.
+financial assets
+Financial claims to the 
+income generated by the 
+firm’s real assets.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 1 Goals and Governance of the Corporation 7
+bre22619_ch01_002-031.indd 7 10/06/16 03:32 PM
+claim on the firm’s real assets and on the income that those assets will produce. 
+A bank loan is a financial asset also. It gives the bank the right to get its money back plus 
+interest. If the firm’s operations can’t generate enough income to repay the bank, the 
+bank can force the firm into bankruptcy and stake a claim on its real assets. Financial 
+assets that can be purchased and traded by investors in public markets are called securities. The shares of stock issued by the public corporations in Table 1.1 are all securities. 
+Entergy’s 10-year bond in Table 1.1 is a security. But a bank loan from JPMorgan to 
+Entergy is not called a security unless the bank resells the loan to public investors.
+The firm can issue an almost endless variety of financial assets. Suppose it decides 
+to borrow. It can issue debt to investors, or it can borrow from a bank. It can borrow for 
+1 year or 20 years. If it borrows for 20 years, it can reserve the right to pay off the debt 
+early if interest rates fall. It can borrow in Paris, receiving and promising to repay 
+euros, or it can borrow dollars in New York. (As Table 1.1 shows, Ford chose to borrow U.S. dollars, but it could have borrowed euros or Japanese yen instead.)
+In some ways, financing decisions are less important than investment decisions. 
+Financial managers say that “value comes mainly from the investment side of the balance sheet.” Also, the most successful corporations sometimes have the simplest 
+financing strategies. Take Microsoft as an example. It is one of the world’s most valuable corporations. In early 2016, Microsoft shares traded for $53 each. There were 7.91 
+billion shares outstanding. Therefore Microsoft’s market value—its market capitalization or market cap—was 53 × 7.91 = $419 billion. Where did this market value come 
+from? It came from Microsoft’s products, from its brand name and worldwide customer base, from its R&D, and from its ability to make profitable future investments. 
+It did not come from sophisticated financing. Microsoft’s financing strategy is very 
+simple: It finances almost all investment by retaining and reinvesting operating cash flow.
+Financing decisions may not add much value compared to good investment decisions, but they can destroy value if they are stupid or ambushed by bad news. For 
+example, when a consortium of investment companies bought the energy giant TXU in 
+2007, the company took on an additional $40 billion in debt. This may not have been a 
+stupid decision, but it did prove fatal. The consortium did not foresee the expansion of 
+shale gas production and the resulting sharp fall in natural gas and electricity prices, 
+and in April 2014 the company (renamed Energy Future Holdings) was bankrupt.
+We have emphasized the financial manager’s responsibility for two decisions:
+The investment decision = purchase of real assets
+The financing decision = sale of financial assets
+But this is an oversimplification because the financial manager is also involved in many 
+other day-to-day activities that are essential to the smooth operation of a business. 
+Are the following capital budgeting or financing decisions? (Hint: In one case the 
+answer is “both.”)
+a. Intel decides to spend $7 billion to develop a new microprocessor factory.
+b. BMW borrows 350 million euros (€350 million) from Deutsche Bank.
+c. Royal Dutch Shell constructs a pipeline to bring natural gas onshore from a 
+production platform in Australia.
+d. Avon spends €200 million to launch a new range of cosmetics in European 
+markets.
+e. Pfizer issues new shares to buy a small biotech company.
+1.1 Self-Test
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+8 Part One Introduction
+bre22619_ch01_002-031.indd 8 10/06/16 03:32 PM
+For example, if the firm sells goods or services on credit, it needs to make sure that its 
+customers pay on time. Corporations that operate internationally must constantly transfer cash from one currency to another. And the manager must keep an eye on the risks 
+that the firm runs and ensure that they don’t land the firm in a pickle.
+3
+ In the United States, corporations are identified by the label “Corporation,” “Incorporated,” or “Inc.,” as in 
+Caterpillar Inc. The United Kingdom identifies public corporations by “plc” (short for “Public Limited 
+Corporation”). French corporations have the suffix “SA” (“Société Anonyme”). The corresponding labels in 
+Germany are “GmbH” (“Gesellschaft mit beschränkter Haftung”) and “AG” (“Aktiengesellschaft”).
+4
+ “Shareholder” and “stockholder” mean exactly the same thing and are used interchangeably.
+1.2 What Is a Corporation?
+We have been referring to “corporations.” But before going too far or too fast, we need 
+to offer some basic definitions.
+A corporation is a distinct, permanent legal entity. Suppose you decide to create a 
+new corporation.3
+ You would work with a lawyer to prepare articles of incorporation,
+which set out the purpose of the business and how it is to be financed, managed, and 
+governed. These articles must conform to the laws of the state in which the business is 
+incorporated. For many purposes, the corporation is considered a resident of its state. 
+For example, it can enter into contracts, borrow or lend money, and sue or be sued. 
+It pays its own taxes (but it cannot vote!).
+A corporation’s owners are called shareholders or stockholders.4
+ The shareholders 
+do not directly own the business’s real assets (factories, oil wells, stores, etc.). Instead 
+they have indirect ownership via financial assets (the shares of the corporation).
+A corporation is legally distinct from the shareholders. Therefore, the shareholders 
+have limited liability and cannot be held personally responsible for the corporation’s 
+debts. When the U.S. financial corporation Lehman Brothers failed in 2008, no one 
+demanded that its stockholders put up more money to cover Lehman’s massive debts. 
+Shareholders can lose their entire investment in a corporation, but no more.
+corporation
+A business organized as a 
+separate legal entity 
+owned by stockholders.
+limited liability
+The owners of a 
+corporation are not 
+personally liable for its 
+obligations.
+Business Organization
+Suppose you buy a building and open a restaurant. You have invested in the building itself, 
+kitchen equipment, dining-room furnishings, plus various other assets. If you do not incorporate, you own these assets personally, as the sole proprietor of the business. If you have 
+borrowed money from a bank to start the business, then you are personally responsible for 
+this debt. If the business loses money and cannot pay the bank, then the bank can demand 
+Example 1.1 ⊲
+Which of the following are financial assets, and which are real assets?
+a. A patent.
+b. A share of stock issued by Wells Fargo Bank.
+c. A blast furnace in a steelmaking factory.
+d. A mortgage loan taken out to help pay for a new home.
+e. After a successful advertising campaign, potential customers trust FedEx to 
+deliver packages promptly and reliably.
+f. An IOU (“I owe you”) from your brother-in-law.
+1.2 Self-Test
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 1 Goals and Governance of the Corporation 9
+bre22619_ch01_002-031.indd 9 10/06/16 03:32 PM
+When a corporation is first established, its shares may be privately owned by a 
+small group of investors, perhaps the company’s managers and a few backers. In this 
+case, the shares are not publicly traded and the company is closely held. Eventually, 
+when the firm grows and new shares are issued to raise additional capital, its shares 
+are traded in public markets such as the New York Stock Exchange. Such corporations 
+are known as public companies. Most well-known corporations in the United States 
+are public companies with widely dispersed shareholdings. In other countries, it is 
+more common for large corporations to remain in private hands, and many public 
+companies may be controlled by just a handful of investors.
+A large public corporation may have hundreds of thousands of shareholders, who 
+together own the business. An individual may have 100 shares, receive 100 votes, and 
+be entitled to a tiny fraction of the firm’s income and value. On the other hand, a 
+pension fund or insurance company may own millions of shares, receive millions of 
+votes, and have a correspondingly large stake in the firm’s performance.
+Public shareholders cannot possibly manage or control the corporation directly. 
+Instead, they elect a board of directors, who in turn appoint the top managers and 
+monitor their performance. This separation of ownership and control gives corporations 
+permanence. Even if managers quit or are dismissed, the corporation survives. Today’s 
+stockholders can sell all their shares to new investors without disrupting the operations 
+of the business. Corporations can, in principle, live forever, and in practice they may 
+survive many human lifetimes. One of the oldest corporations is the Hudson’s Bay 
+Company, which was formed in 1670 to profit from the fur trade between northern 
+Canada and England. The company still operates as one of Canada’s leading retail chains.
+The separation of corporate ownership and control can also have a downside, for it 
+can open the door for managers and directors to act in their own interests rather than in 
+the stockholders’ interest. We return to this problem later in the chapter.
+There are other disadvantages to being a corporation. One is the cost, in both time 
+and money, of managing the corporation’s legal machinery. These costs are particularly burdensome for small businesses.
+There is also an important tax drawback to corporations in the United States. 
+Because the corporation is a separate legal entity, it is taxed separately. So corporations pay tax on their profits, and shareholders are taxed again when they receive 
+dividends from the company or sell their shares at a profit. By contrast, income generated by businesses that are not incorporated is taxed just once as personal income.6
+Other Forms of Business Organization
+Corporations do not have to be prominent, multinational businesses such as those 
+listed in Table 1.1. You can organize a local plumbing contractor or barber shop as a 
+corporation if you want to take the trouble. But most corporations are larger 
+BEYOND THE PAGE
+mhhe.com/brealey9e
+S-corporations
+that you raise cash by selling other assets—your car or house, for example—in order to repay 
+the loan. But if you incorporate the restaurant business, and then the corporation borrows 
+from the bank, your other assets are shielded from the restaurant’s debts. Of course, 
+incorporation also means that the bank will be more cautious in lending, because the bank 
+will have no recourse to your other assets.5
+Notice that if you incorporate your business, you exchange direct ownership of its real 
+assets (the building, kitchen equipment, etc.) for indirect ownership via financial assets 
+(the shares of the new corporation). ■
+5
+ The bank may ask you to put up personal assets as collateral for the loan to your restaurant corporation. But it 
+has to ask and get your agreement. It doesn’t have to ask if your business is a sole proprietorship.
+6
+ The U.S. tax system is somewhat unusual in this respect. To avoid taxing the same income twice, many other 
+countries give shareholders at least some credit for the taxes that the corporation has already paid.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+10 Part One Introduction
+bre22619_ch01_002-031.indd 10 10/06/16 03:32 PM
+businesses or businesses that aspire to grow. Small “mom-and-pop” businesses are 
+usually organized as sole proprietorships.
+What about the middle ground? What about businesses that grow too large for sole 
+proprietorships but don’t want to reorganize as corporations? For example, suppose 
+you wish to pool money and expertise with some friends or business associates. 
+You can form a partnership and enter into a partnership agreement that sets out 
+how decisions are to be made and how profits are to be split up. Partners, like sole 
+proprietors, face unlimited liability. If the business runs into difficulties, each partner 
+can be held responsible for all the business’s debts.
+Partnerships have a tax advantage. Partnerships, unlike corporations, do not have 
+to pay income taxes. The partners pay personal income taxes on their shares of 
+the profits.
+Some businesses are hybrids that combine the tax advantage of a partnership with 
+the limited liability advantage of a corporation. In a limited partnership, partners 
+are classified as general or limited. General partners manage the business and have 
+unlimited personal liability for its debts. Limited partners are liable only for the money 
+they invest and do not participate in management.
+Many states allow limited liability partnerships (LLPs) or limited liability companies (LLCs). These are partnerships in which all partners have limited liability. 
+Another variation on the theme is the professional corporation (PC), which is 
+commonly used by doctors, lawyers, and accountants. In this case, the business 
+has limited liability, but the professionals can still be sued personally, for example, 
+for malpractice.
+Most large investment banks such as Morgan Stanley and Goldman Sachs started 
+life as partnerships. But eventually these companies and their financing requirements 
+grew too large for them to continue as partnerships, and they reorganized as corporations. The partnership form of organization does not work well when ownership is 
+widespread and separation of ownership and management is essential.
+1.3 Who Is the Financial Manager?
+What do financial managers do for a living? That simple question can be answered in 
+several ways. We can start with financial managers’ job titles. Most large corporations 
+have a chief financial officer (CFO), who oversees the work of all financial staff. 
+As you can see from Figure 1.1, the CFO is deeply involved in financial policy and 
+financial planning and is in constant contact with the chief executive officer (CEO) 
+and other top management. The CFO is the most important financial voice of the 
+corporation and explains earnings results and forecasts to investors and the media.
+chief financial officer (CFO)
+Supervises all financial 
+functions and sets overall 
+financial strategy.
+Treasurer
+Responsible for:
+Cash management
+Raising of capital
+Banking relationships
+Controller
+Responsible for:
+Preparation of financial statements
+Accounting
+Taxes
+Chief Financial Ocer (CFO)
+Responsible for:
+Financial policy
+Corporate planning
+FIGURE 1.1 Financial managers in large corporations
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 1 Goals and Governance of the Corporation 11
+bre22619_ch01_002-031.indd 11 10/06/16 03:32 PM
+Below the CFO are usually a treasurer and a controller. The treasurer looks after 
+the firm’s cash, raises new capital, and maintains relationships with banks and other 
+investors that hold the firm’s securities. The controller prepares the financial statements, manages the firm’s internal budgets and accounting, and looks after its tax 
+affairs. Thus the treasurer’s main function is to obtain and manage the firm’s capital, 
+whereas the controller ensures that the money is used efficiently.
+BEYOND THE PAGE
+mhhe.com/brealey9e
+The role of 
+the corporate 
+treasurer
+treasurer
+Responsible for financing, 
+cash management, and 
+relationships with banks 
+and other financial 
+institutions.
+controller
+Responsible for budgeting, 
+accounting, and taxes.
+In large corporations, financial managers are responsible for organizing and supervising the capital budgeting process. However, major capital investment projects are 
+so closely tied to plans for product development, production, and marketing that 
+managers from these other areas are inevitably drawn into planning and analyzing the 
+projects. If the firm has staff members specializing in corporate planning, they are 
+naturally involved in capital budgeting too. For this reason, we will use the term financial manager to refer to anyone responsible for an investment or financing decision. 
+Often we will use the term collectively for all the managers drawn into such decisions.
+Now let’s go beyond job titles. What is the essential role of the financial manager? 
+Figure 1.2 gives one answer. The figure traces how money flows from investors to the 
+corporation and back again to investors. The flow starts when cash is raised from 
+investors (arrow 1 in the figure). The cash could come from banks or from securities 
+sold to investors in financial markets. The cash is then used to pay for the real assets 
+(investment projects) needed for the corporation’s business (arrow 2). Later, as the 
+business operates, the assets generate cash inflows (arrow 3). That cash is either 
+reinvested (arrow 4a) or returned to the investors who furnished the money in the first 
+place (arrow 4b). Of course, the choice between arrows 4a and 4b is constrained by the 
+promises made when cash was raised at arrow 1. For example, if the firm borrows 
+money from a bank at arrow 1, it must repay this money plus interest at arrow 4b.
+You can see examples of arrows 4a and 4b in Table 1.1. Facebook financed its 
+investments by reinvesting earnings (arrow 4a). Procter & Gamble decided to return 
+cash to shareholders by buying back its stock (arrow 4b). It could have chosen instead 
+to pay the money out as additional cash dividends, also on arrow 4b.
+Notice how the financial manager stands between the firm and outside investors. 
+On the one hand, the financial manager is involved in the firm’s operations, 
+FIGURE 1.2 Flow of cash 
+between investors and the firm’s 
+operations. Key: (1) Cash raised 
+by selling financial assets to 
+investors; (2) cash invested in 
+the firm’s operations; (3) cash 
+generated by the firm’s 
+operations; (4a) cash reinvested; 
+(4b) cash returned to investors.
+(2)
+(3)
+(1)
+(4b)
+(4a) Financial
+Manager
+Firm’s
+Operations
+Real Assets
+Investors
+Financial Assets
+Fritz and Frieda went to business school together 10 years ago. They have 
+just been hired by a midsize corporation that wants to bring in new financial 
+managers. Fritz studied finance, with an emphasis on financial markets and 
+institutions. Frieda majored in accounting and became a CPA 5 years ago. 
+Who is more suited to be treasurer and who controller? Briefly explain.
+1.3 Self-Test
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+12 Part One Introduction
+bre22619_ch01_002-031.indd 12 10/06/16 03:32 PM
+particularly by helping to make good investment decisions. On the other hand, he or 
+she deals with financial institutions and other investors and with financial markets 
+such as the New York Stock Exchange. We say more about these financial institutions 
+and markets in the next chapter.
+1.4 Goals of the Corporation
+Shareholders Want Managers to Maximize Market Value
+For small corporations, shareholders and management may be one and the same. 
+But for large corporations, separation of ownership and management is a practical 
+necessity. For example, Walmart has nearly 300,000 shareholders. There is no way 
+that these shareholders can be actively involved in management; it would be like trying 
+to run New York City by town meetings. Authority has to be delegated.
+How can shareholders effectively delegate decision making when they all have 
+different tastes, wealth, time horizons, personal opportunities, and tolerance for 
+risk? Delegation can work only if the shareholders have a common goal. Fortunately 
+there is a natural financial objective on which almost all shareholders can agree: 
+Maximize the current market value of shareholders’ investment in the firm.
+This simple, unqualified goal makes sense when the shareholders have access to 
+well-functioning financial markets and institutions. Access gives them the flexibility 
+to manage their own savings and consumption plans, leaving the corporation’s financial managers with only one task, to increase market value. For example, a corporation’s roster of shareholders will usually include both risk-averse and risk-tolerant 
+investors. You might expect the risk-averse to say, “Sure, maximize value, but don’t 
+touch too many high-risk projects.” Instead, they say, “Risky projects are okay, provided that expected profits are more than enough to offset the risks. If this firm ends 
+up too risky for my taste, I’ll adjust my investment portfolio to make it safer.” 
+For example, the risk-averse shareholder can shift more of his or her portfolio to safe 
+assets, such as U.S. government bonds. Shareholders can also just say good-bye, 
+selling off shares of the risky firm and buying shares in a safer one. If the risky investments increase market value, the departing shareholders are better off than they would 
+be if the risky investments were turned down.
+BEYOND THE PAGE
+mhhe.com/brealey9e
+Foundations of the 
+NPV rule
+Value Maximization
+Fast-Track Wireless shares trade for $20. It has just announced a “bet the company” 
+investment in a high-risk, but potentially revolutionary, WhyFi technology. Investors note the 
+risk of failure but are even more impressed with the technology’s upside. They conclude 
+that the possibility of very high future profits justifies a higher share price. The price goes 
+up to $23.
+Caspar Milquetoast, a thoughtful but timid shareholder, notes the downside risks and 
+decides that it’s time for a change. He sells out to more risk-tolerant investors. But he sells at 
+$23 per share, not $20. Thus he captures the value added by the WhyFi project without 
+having to bear the project’s risks. Those risks are transferred to other investors, who are 
+more risk-tolerant or more optimistic.
+In a well-functioning stock market, there is always a pool of investors ready to bear 
+downside risks if the upside potential is sufficiently attractive. We know that the upside 
+potential was sufficient in this case, because Fast-Track stock attracted investors willing to 
+pay $23 per share. ■
+Example 1.2 ⊲
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 1 Goals and Governance of the Corporation 13
+bre22619_ch01_002-031.indd 13 10/06/16 03:32 PM
+The same principles apply to the timing of a corporation’s cash flows, as the 
+following Self-Test illustrates.
+Sometimes you hear managers speak as if the corporation has other goals. For 
+example, they may say that their job is to “maximize profits.” That sounds reasonable. 
+After all, don’t shareholders want their company to be profitable? But taken literally, 
+profit maximization is not a well-defined corporate objective. Here are two reasons:
+1. Maximize profits? Which year’s profits? A corporation may be able to increase 
+current profits by cutting back on outlays for maintenance or staff training, but that 
+will not add value unless the outlays were wasteful in the first place. Shareholders 
+will not welcome higher short-term profits if long-term profits are damaged.
+2. A company may be able to increase future profits by cutting this year’s dividend 
+and investing the freed-up cash in the firm. That is not in the shareholders’ best 
+interest if the company earns only a very low rate of return on the extra investment.
+Maximizing—or at least maintaining—value is necessary for the long-run survival 
+of the corporation. Suppose, for example, that its managers forget about value and decide 
+that the only goal is to increase the market share of its products. So the managers cut 
+prices aggressively to attract new customers, even when this leads to continuing losses. 
+As losses mount, the corporation finds it more and more difficult to borrow money and 
+sooner or later cannot pay existing debts. Nor can it raise new equity financing if shareholders see that new equity investment will follow previous investments down the drain.
+This firm’s managers would probably pay the price for this business malpractice. 
+For example, outside investors would see an opportunity for easy money. They could 
+buy the firm from its current shareholders, toss out the managers, and reemphasize 
+value rather than market share. The investors would profit from the increase in value 
+under new management.
+Managers who pursue goals that destroy value often end in early retirement—
+another reason that the natural financial goal of the corporation is to maximize 
+market value.
+The Investment Trade-Off Okay, let’s take the objective as maximizing market 
+value, or at least adding market value. But why do some investments increase market 
+value, while others reduce it? The answer is given by Figure 1.3, which sets out the 
+fundamental trade-off for corporate investment decisions. The corporation has a 
+proposed investment project (the purchase of a real asset). Suppose it has sufficient 
+cash on hand to finance the project. The financial manager is trying to decide whether 
+to go ahead. If he or she decides not to invest, the corporation can pay out the cash 
+to shareholders, say as an extra dividend. (The investment and dividend arrows in 
+Figure 1.3 are arrows 2 and 4b in Figure 1.2.)
+Assume that the financial manager is acting in the interests of the corporation’s 
+owners, its stockholders. What do these stockholders want the financial manager to do? 
+BEYOND THE PAGE
+mhhe.com/brealey9e
+B-corporations
+Rhonda and Reggie Hotspur are working hard to save for their children’s college 
+education. They don’t need more cash for current consumption but will face big 
+tuition bills in 2025. Should they therefore avoid investing in stocks that pay 
+generous current cash dividends? (Hint: Are they required to spend the 
+dividends on current consumption?) Explain briefly.
+1.4 Self-Test
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+14 Part One Introduction
+bre22619_ch01_002-031.indd 14 10/06/16 03:32 PM
+The answer depends on the rate of return on the investment project and on the rate of 
+return that stockholders can earn by investing in financial markets. If the return offered 
+by the investment project is higher than the rate of return that shareholders can get by 
+investing on their own, then the shareholders would vote for the investment project. 
+If the investment project offers a lower return than shareholders can achieve on their 
+own, the shareholders would vote to cancel the project and take the cash instead.
+Figure 1.3 could apply to Virgin Atlantic’s decisions to invest in new aircraft. 
+Suppose the company has cash set aside to buy five more Airbus A350-1000s. It could 
+go ahead with the purchase, or it could choose to cancel the investment and instead pay 
+out the cash to its stockholders. If it pays out the cash, the stockholders could then 
+invest for themselves.
+Suppose that Virgin’s investment in new planes is just about as risky as the stock 
+market and that investment in the stock market offers a 10% expected rate of return. 
+If the new planes offer a superior rate of return, say 20%, then Virgin’s stockholders 
+would be happy to let the company keep the cash and invest it in the new planes. 
+If the planes offer only a 5% return, then the stockholders are better off with the cash 
+and without the new project; in that case, the financial manager should turn down 
+the project.
+As long as a corporation’s proposed investments offer higher rates of return than its 
+shareholders can earn for themselves in the stock market (or in other financial 
+markets), its shareholders will applaud the investments and the market value of the 
+firm will increase. But if the company earns an inferior return, shareholders boo, 
+market value falls, and stockholders clamor to get their money back so that they can 
+invest on their own.
+In our example, the minimum acceptable rate of return on Virgin’s new aircraft 
+is 10%. This minimum rate of return is called the hurdle rate or opportunity cost of 
+capital. It is called an opportunity cost of capital because it depends on the alternative 
+investment opportunities available to shareholders in financial markets. Whenever a 
+corporation invests cash in a new project, its shareholders lose the opportunity to 
+invest the cash on their own. Corporations increase value by accepting investment 
+projects that earn more than the opportunity cost of capital.
+Figure 1.3, which compares rates of return on investment projects with the opportunity cost of capital, illustrates a general principle: A corporation should direct cash to 
+investments that add market value, compared with the investments that shareholders 
+could make on their own.7
+opportunity cost of capital
+Expected rate of return 
+given up by investing in a 
+project rather than in the 
+capital market.
+FIGURE 1.3 The firm can 
+either keep and reinvest cash or 
+return it to investors. (Arrows 
+represent possible cash flows or 
+transfers.) If cash is reinvested, 
+the opportunity cost is the 
+expected rate of return that 
+shareholders could have 
+obtained by investing in 
+financial assets.
+Investment
+opportunity
+(real asset)
+Invest Alternative:
+pay out cash
+to shareholders
+Shareholders
+invest for
+themselves
+Firm Shareholders
+Investment
+opportunities
+(financial assets)
+Cash
+7
+ We have mentioned 5% or 20% as possible future rates of return on Virgin Atlantic’s new planes. We will see 
+in Chapter 8 that future rates of return are sometimes difficult to calculate and interpret. The general 
+principle always holds, however. In Chapters 8 and 9 we show you how to apply the principle by calculating 
+the net present value (NPV) of investment projects.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 1 Goals and Governance of the Corporation 15
+bre22619_ch01_002-031.indd 15 10/06/16 03:32 PM
+Notice that the opportunity cost of capital depends on the risk of the proposed 
+investment project. Why? It’s not just because shareholders are risk-averse. It’s also 
+because shareholders have to trade off risk against return when they invest on their 
+own. The safest investments, such as U.S. government debt, offer low rates of return. 
+Investments with higher expected rates of return—the stock market, for example—are 
+riskier and sometimes deliver painful losses. (The U.S. stock market fell 38% in 2008, 
+for example.) Other investments are riskier still. For example, high-tech growth stocks 
+offer the prospect of higher rates of return than typical stocks but are also more volatile 
+than typical stocks.
+Managers look to the financial markets to measure the opportunity cost of capital 
+for the firm’s investment projects. They can observe the opportunity cost of capital for 
+safe investments by looking up current interest rates on safe debt securities. For risky 
+investments, the opportunity cost of capital has to be estimated. We start to tackle this 
+task in Chapter 11.
+1.5 Agency Problems, Executive Compensation, 
+and Corporate Governance
+Sole proprietors face no conflicts in financial management. They are both owners and 
+managers, reaping the rewards of good decisions and hard work and suffering when 
+they make bad decisions or slack off. Their personal wealth is tied to the value of their 
+businesses.
+In most large corporations, the owners are mostly outside investors, and so the 
+managers may be tempted to act in their own interests rather than maximize shareholder value. For example, they may shy away from valuable but risky investment 
+projects because they worry more about job security than maximizing value. They 
+may build empires by overaggressive investment or overconfident acquisitions of 
+other companies.
+The temptation for such value-destroying actions arises because the managers are 
+not the shareholders, but agents of the shareholders. Therefore, the actions are called 
+agency problems. Losses in value from agency problems—or from costs incurred to 
+mitigate the problems—are called agency costs.
+Agency problems sometimes lead to outrageous behavior. When Dennis 
+Kozlowski, the former CEO of Tyco, threw a $2 million birthday bash for his wife, 
+he charged half the cost to the company. Conrad Black, the former boss of Hollinger 
+International, used the company jet for a trip with his wife to Bora Bora. These, of 
+course, are extreme examples. The agency problems encountered in the ordinary 
+course of business are often subtle and mundane. But agency problems do arise 
+whenever managers think just a little less hard about spending money that is not 
+their own.
+agency problem
+Managers are agents for 
+stockholders and are 
+tempted to act in their own 
+interests rather than 
+maximizing value.
+agency cost
+Value lost from agency 
+problems or from the cost 
+of mitigating agency 
+problems.
+Investing $100,000 in additional raw materials, mostly palladium, should allow 
+Cryogenic Concepts to increase production and earn an additional $112,000 
+next year. This payoff could cover the investment, plus a 12% return. Palladium is 
+traded in commodity markets. The CFO has studied the history of returns from 
+investments in palladium and believes that investors in the precious metal 
+can reasonably expect a 15% return. What is the opportunity cost of capital? 
+Is Cryogenic’s proposed investment in palladium a good idea? Why or why not?
+1.5 Self-Test
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+16 Part One Introduction
+bre22619_ch01_002-031.indd 16 10/06/16 03:32 PM
+Think of the corporation’s value as a pie that is divided among several classes of 
+claimants. These include managers and workers as well as shareholders and lenders. 
+The government is a claimant, too, because it taxes sales and profits. The claimants are 
+called stakeholders because each has a stake in the firm. Agency problems arise 
+whenever the stakeholders’ interests do not coincide.
+stakeholder
+Anyone with a financial 
+interest in the corporation.
+8
+ Most restricted stock does not “vest” immediately. Suppose the vesting period is 3 years. If the manager quits 
+or is fired in year 2, the restricted stock stays behind. Vesting gives the managers an incentive to stay at the 

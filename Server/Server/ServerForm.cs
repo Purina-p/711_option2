@@ -208,14 +208,19 @@ namespace Server
                         matchFragment++;
 
                     }
-
                 }
-
-                stream.Flush();
-                stream.Close();
+                
+                //发完所有的文件块给出Flag=3，传输完成，并且把复用率传过去
+                byte[] endFlag = BitConverter.GetBytes(3);
+                stream.Write(endFlag, 0, 4);
 
                 //计算复用率
                 double reuseRate = (double) matchFragment / (matchFragment + unmatchFragment) * 100;
+                byte[] reuseRateBytes = BitConverter.GetBytes(reuseRate);
+                stream.Write(reuseRateBytes, 0, reuseRateBytes.Length);
+
+                stream.Flush();
+                stream.Close();
                 BeginInvoke(new Action(() => label6.Text = reuseRate.ToString("0.00") + "%"));
             }
 
@@ -301,64 +306,94 @@ namespace Server
 
         }
 
-        //文件切片--Rabin函数,同时记录返回我的hash列表
+        //文件切片--Rabin函数
         private void RabinKarpFileSplitter(string inputFilePath, string OutputDirectory)
         {
-            //创建文件夹来接收切片文件
+            
+            //Rabin-Krap的算法参数
+            const int WindowSize = 11; // 滑动窗口大小-->导致切片大小
+            const ulong Q = 10007; // 大质数，用于取模运算-->降低hash冲突，
+            const ulong D = 256; // 基数，用于计算哈希值-->无所dawei
+            const int BlockSize = 2 * 1024; // 2KB文件块大小
+
+            //存hash列表对比的文件夹--记得删
+            string HashPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\Rabin_Test");
+            HashPath = Path.GetFullPath(HashPath);
+
+            // 创建一个列表来存储文件片段的哈希值
+            List<string> fragmentHashes = new List<string>();
+
+            // 如果输出目录不存在，则创建
             if (!Directory.Exists(OutputDirectory))
             {
                 Directory.CreateDirectory(OutputDirectory);
             }
-
-            //创建一个列表来存储文件列表的hash--用MD5计算来保证唯一性
-            List<string> fragmentHashes = new List<string>();
-
-            //Rabin-Krap的算法参数
-            const ulong Q = 1003;//大质数：用于取模运算
-            const ulong D = 64;//基数：用于计算哈希值
-            const int BlockSize = 2 * 1024;//2kb文件块大小
-
-            // 预计算值，计算每个窗口的hash然后对他进行快速更新
-            ulong Dm = (ulong)Math.Pow(D, BlockSize - 1) % Q;
 
             // 将输入文件的字节读取到字节数组中
             byte[] inputFileBytes = File.ReadAllBytes(inputFilePath);
 
             // 初始化变量
             ulong hash = 0;
+            ulong Dm = 1;
+
+            // 预计算值，计算每个窗口的hash然后对他进行快速更新
+            //for (int i = 0; i < WindowSize - 1; i++)
+            {
+                //Dm = (Dm * D) % Q;
+            }
+
+            // 计算滑动窗口的初始哈希值
+            for (int i = 0; i < WindowSize; i++)
+            {
+                hash = (hash * D + inputFileBytes[i]) % Q;
+            }
+
             int fileCounter = 0;
             int startIndex = 0;
 
-            for (int i = 0; i < inputFileBytes.Length; i++)
+            // 从滑动窗口的结束位置开始遍历输入文件的字节
+            for (int i = WindowSize; i < inputFileBytes.Length; i++)
             {
-                // 判断我的blocksize是不是大于2kb，如果大于2kb我就要进行算hash分块
-                if (i >= BlockSize)
-                {
-                    //输入文件字节数组中获取哈希值计算所需的上一个字节
-                    byte lastByte = inputFileBytes[i - BlockSize];
+                // 从输入文件字节数组中获取哈希值计算所需的上一个字节
+                byte lastByte = inputFileBytes[i - WindowSize];
 
-                    //计算了当前块的哈希值
-                    hash = ((hash - lastByte * Dm) * D + inputFileBytes[i]) % Q;
-                }
-                else
-                {
-                    // 直接计算文件片的哈希值
-                    hash = (hash * D + inputFileBytes[i]) % Q;
-                }
+                // 计算当前滑动窗口的哈希值
+                hash = ((hash - lastByte) * D + inputFileBytes[i]) % Q;
 
-                // 检查哈希值是否满足分割条件,hash=0或者已经切到最后一个块了
+                // 判断当前哈希值是否满足分割条件,或者已经到达文件末尾
                 if (hash == 0 || i == inputFileBytes.Length - 1)
                 {
                     // 保存文件切片
                     string outputPath = Path.Combine(OutputDirectory, $"{Path.GetFileNameWithoutExtension(inputFilePath)}_{fileCounter}.dat");
-                    using (FileStream fileSplites = new FileStream(outputPath, FileMode.Create))
+                    using (FileStream fileSplit = new FileStream(outputPath, FileMode.Create))
                     {
-                        fileSplites.Write(inputFileBytes, startIndex, i - startIndex + 1);
-                    }                    
+                        fileSplit.Write(inputFileBytes, startIndex, i - startIndex + 1);
+                    }
+
+                    // 计算文件片段的 MD5 哈希值
+                    byte[] fragmentBytes = new byte[i - startIndex + 1];
+                    Array.Copy(inputFileBytes, startIndex, fragmentBytes, 0, i - startIndex + 1);
+                    string fragmentHash = CalculateMD5Hash(fragmentBytes);
+                    fragmentHashes.Add(fragmentHash);
+
+                    // 更新文件计数器和下一个文件切片的起始位置
                     fileCounter++;
                     startIndex = i + 1;
                 }
             }
+
+            // 为哈希值列表文件创建路径
+            string hashListFilePath = Path.Combine(HashPath, $"{Path.GetFileNameWithoutExtension(inputFilePath)}hashes.txt");
+
+            // 保存哈希值列表到文件中
+            using (StreamWriter sw = new StreamWriter(hashListFilePath, false))
+            {
+                foreach (string hashValue in fragmentHashes)
+                {
+                    sw.WriteLine(hashValue);
+                }
+            }
+
         }        
 
         //rabin函数算的hash值不一定能保证唯一性，所以在循环里有调用了一次MD5的函数来计算hash，来返回列表

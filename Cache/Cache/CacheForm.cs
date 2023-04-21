@@ -162,17 +162,18 @@ namespace Cache
                     {
                         Directory.CreateDirectory(cacheFoldPath);
                     }
-
-
+                   
                     while (true)
                     {
 
                         //先读取Flag
-                        byte[] FlagBytes= new byte[4];
+                        byte[] FlagBytes = new byte[4];
                         _stream_cs.Read(FlagBytes, 0, 4);
                         int Flag = BitConverter.ToInt32(FlagBytes, 0);
                         Invoke(new Action(() => label1.Text = "Connect to 0"));
-                        if (Flag == 0 )//发hash
+
+                        //发hash
+                        if (Flag == 0 )
                         {
                             //读取hash的长度
                             byte[] hashLengBytes = new byte[4];
@@ -187,6 +188,7 @@ namespace Cache
                             //获取文件夹中的所有文件
                             string[] filePaths = Directory.GetFiles(cacheFoldPath);
                             Invoke(new Action(() => label1.Text = "Connect to 3"));
+
                             foreach (string HashNameFile in filePaths)
                             {
                                 Invoke(new Action(() => label1.Text = "Connect to 4"));
@@ -196,15 +198,13 @@ namespace Cache
                                 {
                                     byte[] fileContentBytes = File.ReadAllBytes(HashNameFile);
                                     File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
-                                    Invoke(new Action(() => label1.Text = "Connect to 5"));
-                                    break;
-
                                 }                               
                             }
                             Invoke(new Action(() => label1.Text = "Connect to 6"));
 
                         }
-                        else
+                                             
+                        else if(Flag == 1)
                         {
                             Invoke(new Action(() => label1.Text = "Connect to 7"));
 
@@ -215,18 +215,21 @@ namespace Cache
                             {
                                 break;
                             }
+
                             int fileContentLength = BitConverter.ToInt32(fileContentLengthBytes, 0);
                             Invoke(new Action(() => label1.Text = "Connect to 8"));
                             //读文件内容
                             byte[] fileContentBytes = new byte[fileContentLength];
                             _stream_cs.Read(fileContentBytes, 0, fileContentLength);
                             Invoke(new Action(() => label1.Text = "Connect to 9"));
+
                             //计算hash
                             string fileHashName = CalculateMD5Hash(fileContentBytes);
 
                             //创建文件存储内容--存储在本地
                             string filePath_fragment = Path.Combine(cacheFoldPath, fileHashName + ".dat");
                             Invoke(new Action(() => label1.Text = "Connect to 10"));
+
                             //创建文件存储文件片段并用hash值命名
                             using (FileStream fileStream = new FileStream(filePath_fragment, FileMode.Append))
                             {
@@ -234,9 +237,24 @@ namespace Cache
                                 fileStream.Write(fileContentBytes, 0, fileContentBytes.Length);
                             }
                             Invoke(new Action(() => label1.Text = "Connect to 11"));
+
                             //拼接整块
                             File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
                             Invoke(new Action(() => label1.Text = "Connect to 12"));
+                        }
+
+                        //文件结束跳出循环，输出复用率
+                        else if(Flag == 3)
+                        {
+                            byte[] reuseRateBytes = new byte[8];//double类型占8个
+                            _stream_cs.Read(reuseRateBytes, 0, reuseRateBytes.Length);
+                            double reuseRate = BitConverter.ToDouble(reuseRateBytes, 0);
+
+                            // 记录客户端请求下载文件的日志
+                            string logMessage_reuse = $"response:{reuseRate.ToString("0.000")}% of {fileName} was constructed by the cached data";
+                            UpdateLog(logMessage_reuse);
+                            break;
+
                         }
 
                     }

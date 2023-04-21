@@ -12,6 +12,7 @@
     <Folder Include="data\" />
     <Folder Include="data_Fragment\" />
     <Folder Include="data_Fragment_Cache\" />
+    <Folder Include="Rabin_Test\" />
   </ItemGroup>
 
 </Project>

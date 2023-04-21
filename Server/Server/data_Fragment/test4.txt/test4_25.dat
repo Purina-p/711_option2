@@ -1,15 +1,85 @@
-07–2009 raised many questions, but it settled one question 
-conclusively: Yes, financial markets and institutions are important. When financial 
-markets and institutions ceased to operate properly, the world was pushed into a global 
-recession.
-The financial crisis had its roots in the easy-money policies that were pursued by 
-the U.S. Federal Reserve and other central banks following the collapse of the Internet 
-and telecom stock bubble in 2000. At the same time, large balance-of-payments surpluses in Asian economies were invested back into U.S. debt securities. This also 
-helped to push down interest rates and contribute to lax credit.
-Banks took advantage of this cheap money to expand the supply of subprime mortgages to low-income borrowers. Many banks tempted would-be homeowners with low 
-initial payments, offset by significantly higher payments later.18 (Some home buyers 
-were betting on escalating housing prices so that they could resell or refinance before 
-the higher payments kicked in.) One lender is even said to have advertised what it 
-dubbed its “NINJA” loan—NINJA standing for “No Income, No Job, and No Assets.” 
-Most subprime mortgages were then packaged together into mortgage-backed securities (MBSs) that could be resold. But, instead of selling these securities to investors 
-who could best bear the risk, many banks kept large quantities of the 
+075
++ Interest payments 830
+ Free cash flow $7,699
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 3 Accounting and Finance 71
+bre22619_ch03_056-085.indd 71 10/07/16 03:18 PM
+investors. Investors worry about the fact that some companies seem particularly prone 
+to inflate their earnings by playing fast and loose with accounting practice. They refer 
+to such companies as having “low-quality” earnings, and they place a correspondingly 
+lower value on the firms’ stock.
+Here are some examples of ambiguities in accounting rules that have been used by 
+companies to conceal unflattering information:
+∙ Revenue recognition. As we saw earlier, firms record a sale when it is made, not 
+when the customer actually pays. But the date of sale is not always obvious. 
+Suppose it is November and you are concerned that if your firm does not meet its 
+sales target, you can forget about your annual bonus. You contact your main 
+customers, and they agree to increase their December orders as long as they have 
+the right to return any unsold goods. Your firm then books these shipments as 
+“sales,” even though there is a high likelihood that many of the goods will be 
+returned. That is almost certainly illegal and will get you into serious trouble. 
+But suppose instead that you tell your customers that the price of your product 
+may rise in the new year and suggest that they place an extra order in December. 
+This practice, known as “channel stuffing,” increases this year’s sales at the 
+expense of next year’s sales.
+ Many companies have been thought to use channel stuffing to overstate their 
+earnings, but very blatant instances are liable to attract the SEC’s attention. 
+For example, in 2002 the pharmaceutical giant, Bristol Myers Squibb, disclosed 
+that wholesalers were holding hundreds of millions of dollars in excessive 
+inventories of its products and the company’s earnings for 2002 might be just half 
+of its 2001 earnings as wholesalers worked down these inventories. Following an 
+investigation by the SEC, the company agreed to pay $150 million to settle 
+accusations that this channel stuffing had improperly inflated its sales and earnings. 
+In Chapter 1, we mentioned Hewlett-Packard’s disastrous acquisition of the British 
+company Autonomy. Hewlett-Packard paid $11.1 billion for Autonomy. Just over a 
+year later, it wrote down the value of the company by $8.8 billion, alleging that 
+Autonomy had used channel stuffing to greatly inflate its revenues.
+∙ Cookie-jar reserves. The giant mortgage-pass-through firm Freddie Mac earned the 
+Wall Street nickname “Steady Freddie” for its unusually smooth and predictable 
+pattern of earnings growth, at least until 2008 when it suddenly collapsed in the 
+wake of the meltdown in subprime mortgages. Unfortunately, it emerged in 2003 
+that Freddie achieved this predictability in part by misusing its reserve accounts. 
+Normally, such accounts are intended to allow for the likely impact of events 
+that might reduce earnings, such as the failure of customers to pay their bills. 
+But Freddie seemed to “overreserve” against such contingencies so that it could 
+“release” those reserves and bolster income in a bad year. Its steady growth was 
+largely a matter of earnings management.
+∙ Off–balance sheet assets and liabilities. Before its bankruptcy in 2001 (at that time, 
+the second largest in U.S. history), Enron had accumulated large debts and had also 
+guaranteed the debts of other companies in which it had an ownership stake. 
+To present a fair view of the firm, Enron should have recognized these potential 
+liabilities on its balance sheet. But the firm created and placed paper firms—
+so-called special-purpose entities (SPEs)—in the middle of its transactions and 
+excluded these liabilities from its financial statements.
+The collapse of Enron illustrates how dishonest managers with creamy compensation packages may be tempted to conceal the truth from investors. If the company had 
+been more transparent to outsiders—that is, if they could have assessed its true profitability and prospects—its problems would have shown up right away in a falling stock 
+price. This in turn would have generated extra scrutiny from security analysts, bond 
+rating agencies, lenders, and investors.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+72
+bre22619_ch03_056-085.indd 72 10/07/16 03:18 PM
+With transparency, corporate troubles generally lead to corrective action. But the 
+top management of a troubled and opaque company may be able to maintain its stock 
+price and postpone the discipline of the market. Market discipline caught up with 
+Enron only a month or two before bankruptcy.
+Enron was not the only company to be mired in accounting scandals in the early 
+years of the century. Firms such as Global Crossing, Qwest Communications, and 
+WorldCom misstated profits by billions of dollars. Overseas, the Italian dairy company Parmalat falsified the existence of a bank account to the tune of $5.5 billion, and 
+the French media and entertainment company Vivendi came close to bankruptcy after 
+it was accused of accounting fraud. In response to these scandals, Congress passed the 
+Sarbanes-Oxley Act, widely known as SOX. A major goal of SOX is to increase transparency and ensure that companies and their accountants provide directors, lenders, 
+and shareholders with the information they need to monitor progress.
+SOX created the Public Accounting Oversight Board to oversee the auditing of 
+public companies; it banned accounting firms from offering other services to companies whose accounts they audit; it prohibited any individual from heading a firm’s 
+audit for more than 5 years; and it required that the board’s audit committee consist of 
+directors who are independent of the company’s management. Sarbanes-Oxley also 
+required that management certify that the financial statements present a fair view of 
+the firm’s financial position and demonstrate that the firm has adequate controls and 
+procedures for financial reporting. All this has come at a price. Managers and investors worry that the costs of SOX and the burden of meeting detailed, inflexible regulations are pushing some corporations to return from public to private ownership. 
+So

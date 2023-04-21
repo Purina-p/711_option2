@@ -1,0 +1,155 @@
+
+the income statement would show:
+Revenue $100
+Less cost of goods sold 60
+Profit $ 40
+This practice of matching revenues and expenses is known as accrual accounting.
+Of course, the accountant does not ignore the actual timing of the cash expenditures 
+and payments. So the cash outlay in the first period will be treated not as an expense 
+but as an investment in inventories. Subsequently, in period 2, when the goods are 
+taken out of inventory and sold, the accountant shows a reduction in inventories.
+To go from the cost of goods sold in the income statement to the cash outflows, 
+we need to subtract the investment in inventories that is shown in the balance sheet:
+Period: 1 2
+ Cost of goods sold (income statement) 0 60
++ Investment in inventories (balance sheet) 60 −60
+= Cash paid out 60 0
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+66 Part One Introduction
+bre22619_ch03_056-085.indd 66 10/07/16 03:18 PM
+The accountant also does not ignore the fact that the firm has to wait until period 3 
+to collect its bills. When the sale is made in period 2, the figure for accounts receivable 
+in the balance sheet is increased to show that the company’s customers owe an extra 
+$100 in unpaid bills. Later, when the customers pay those bills in period 3, accounts 
+receivable are reduced by $100. Therefore, to go from the sales shown in the income 
+statement to the cash inflows, we need to subtract the investment in receivables:
+Period: 2 3
+ Sales (income statement) 100 0
+− Investment in receivables (balance sheet) 100 −100
+= Cash received 0 +100
+We will return to these issues in more detail in Chapter 9, but for now we summarize the key points as follows: Cash outflow is equal to the cost of goods sold, which is 
+shown in the income statement, plus the change in inventories. Cash inflow is equal to 
+the sales shown in the income statement less the change in uncollected bills.
+Profits versus Cash Flows
+Suppose our manufacturer spends a further $80 to produce goods in period 2. It sells these 
+goods in period 3 for $120, but customers do not pay their bills until period 4.
+The cash flows from these transactions are now as follows:
+Example 3.2 ⊲
+Period: 1 2 3
+ Cost of goods sold (income statement) 0 60 80
++ Investment in inventories (balance sheet) 60 −60 + 80 = 20 −80
+= Cash paid out 60 80 0
+$100
+(collect payment)
+$120
+(collect further payment)
+-$60
+(pay for goods) -$80
+(pay for more goods)
+1 2 3 4 Period
+How do the new transactions affect the income statement and the balance sheet? 
+The income statement will match costs with revenues and record the cost of goods sold 
+when the sales are made in periods 1 and 2. The difference between the costs shown in the 
+income statement and the cash flows is recorded as an investment (and later, disinvestment) 
+in inventories. Thus, in period 1 the accountant shows an investment in inventories of 
+$60 just as before. In period 2, these goods are taken out of inventory and sold, but the firm 
+also produces a further $80 of goods. Thus, there is a net increase in inventories of $20. 
+As these goods in turn are sold in period 3, inventories are reduced by $80. The following 
+table confirms that the cash outflow in each period is equal to the cost of goods sold that is 
+shown in the income statement plus the change in inventories.
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+Chapter 3 Accounting and Finance 67
+bre22619_ch03_056-085.indd 67 10/07/16 03:18 PM
+The Statement of Cash Flows
+The firm requires cash when it buys new plant and machinery or when it pays interest 
+to the bank and dividends to the shareholders. Therefore, the financial manager needs 
+to keep track of the cash that is coming in and going out.
+We have seen that the firm’s cash flow can be quite different from its net income. 
+These differences can arise for at least two reasons:
+1. The income statement does not recognize capital expenditures as expenses in the 
+year that the capital goods are paid for. Instead, it spreads those expenses over time 
+in the form of an annual deduction for depreciation.
+2. The income statement uses the accrual method of accounting, which means that 
+revenues and expenses are recognized when sales are made, rather than when the 
+cash is received or paid out.
+The statement of cash flows shows the firm’s cash inflows and outflows from operations as well as from its investments and financing activities. Table 3.4 is the cash-flow 
+statement for Home Depot. It contains three sections. The first shows the cash flow from 
+operations. This is the cash generated from Home Depot’s normal business activities. 
+Next comes the cash that Home Depot has invested in plant and equipment or in the 
+acquisition of new businesses. The final section reports cash flows from financing activities such as the sale of new debt or stock. We will look at each of these sections in turn.
+The first section, cash flow from operations, starts with net income but adjusts that 
+figure for those parts of the income statement that do not involve cash coming in or 
+going out. Therefore, it adds back the allowance for depreciation because depreciation 
+is not a cash outflow, even though it is treated as an expense in the income statement.
+Any additions to current assets (other than cash itself) need to be subtracted from 
+net income because these absorb cash but do not show up in the income statement. 
+Conversely, any additions to current liabilities need to be added to net income because 
+these release cash. For example, you can see that the increase of $86 million in accounts 
+3.3
+statement of cash flows
+Financial statement that 
+shows the firm’s cash 
+receipts and cash payments 
+over a period of time.
+Period: 2 3 4
+ Sales (income statement) 100 120 0
+− Investment in receivables (balance sheet) 100 −100 + 120 = 20 −120
+= Cash received 0 +100 +120
+The following table provides a similar reconciliation of the difference between the revenues shown in the income statement and the cash inflow:
+In the income statement the accountant records sales of $100 in period 1 and $120 in 
+period 2. The fact that the firm has to wait for payment is recognized in the balance sheet as 
+an investment in receivables. The cash that the company receives is equal to the sales 
+shown in the income statement less the investment in receivables. ■
+Consider a firm that spends $200 to produce goods in period 1. In period 2, 
+it sells half of those goods for $150, but it doesn’t collect payment until one 
+period later. In period 3, it sells the other half of the goods for $150, and it 
+collects payment on these sales in period 4. Calculate the profits and the cash 
+flows for this firm in periods 1 to 4.
+3.3 Self-Test
+Final PDF to printer
+Brealey, Richard, et al. ISE EBook Online Access for Fundamentals of Corporate Finance, McGraw-Hill US Higher Ed ISE, 2017. ProQuest Ebook Central,
+ http://ebookcentral.proquest.com/lib/auckland/detail.action?docID=5662584.
+Created from auckland on 2023-02-26 06:24:32. Copyright © 2017. McGraw-Hill US Higher Ed ISE. All rights reserved.
+68 Part One Introduction
+bre22619_ch03_056-085.indd 68 10/24/16 04:23 PM
+receivable is deducted from income. In addition, Home Depot increased inventories by 
+$22 million. This increase in inventory levels also absorbed cash and must be deducted 
+from net income when calculating cash flows. On the other hand, Home Depot does 
+not pay all its bills immediately. These delayed payments show up as payables. 
+In 2014, Home Depot had larger bills outstanding than a year earlier: Accounts 
+payable increased by $94 million. Delaying these payments freed up extra cash.
+We have pointed out that depreciation is not a cash payment; it is simply the accountant’s allocation to the current year of the original cost of the capital equipment. 
+However, cash does flow out the door when the firm actually buys and pays for 
+new capital equipment. Therefore, these capital expenditures are set out in the second 
+section of the cash-flow statement. You can see that Home Depot spent $1,289 million 
+on new capital equipment. Notice that (gross) property, plant, and equipment on 
+Home Depot’s balance sheet increased by precisely this amount. On the other hand, 
+Home Depot freed up $31 million by selling off other investments. Total cash used by 
+investments was $1,258 million.
+Finally, the third section of the cash-flow statement shows the cash from financing 
+activities. For example, Home Depot raised $2,178 million by issuing long-term debt. 
+But it paid out $2,530 million to stockholders in the form of dividends and used 
+another $7,000 million to repurchase stock.7
+To summarize, the cash-flow statement tells us that Home Depot generated $8,127 
+million from operations, spent $1,258 million on new investments, and used $7,075 
+million in financing activities. Home Depot earned and raised less cash than it spent. 
+7
+ You might think that interest payments also ought to be listed in this section. However, it is usual to include 
+interest in the first section with cash flow from operations. This is because, unlike dividends, interest payments 
+are not discretionary. The firm must pay interest when a payment comes due, so these payments are treated as a 
+business expense rather than as a financing decision.
+TABLE 3.4 Home Depot’s 
+statement of cash flows (figures 
+in $ millions)
+Cash Provided by Operations
+Net income $6,345
+Depreciation 1,786
+Changes in working capital items
+Decrease (increase) in accounts receivable −86
+Decrease (increase) in inventories −
