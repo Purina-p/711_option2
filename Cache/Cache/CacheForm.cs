@@ -22,8 +22,15 @@ namespace Cache
             string FolderPath_A = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\CacheData");
             FolderPath_A = Path.GetFullPath(FolderPath_A);
 
+            if (!Directory.Exists(FolderPath_A))
+            {
+                Directory.CreateDirectory(FolderPath_A);
+            }
+
             //获取文件夹中的文件名
             string[] fileNames_A = Directory.GetFiles(FolderPath_A);
+
+            
 
             for (int i = 0; i < fileNames_A.Length; i++)
             {

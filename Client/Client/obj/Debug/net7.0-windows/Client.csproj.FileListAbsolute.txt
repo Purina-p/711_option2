@@ -100,3 +100,20 @@ C:\Users\rpen966\OneDrive - The University of Auckland\Desktop\711-option2\711_o
 C:\Users\rpen966\OneDrive - The University of Auckland\Desktop\711-option2\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.pdb
 C:\Users\rpen966\OneDrive - The University of Auckland\Desktop\711-option2\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.genruntimeconfig.cache
 C:\Users\rpen966\OneDrive - The University of Auckland\Desktop\711-option2\711_option2\Client\Client\obj\Debug\net7.0-windows\ref\Client.dll
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\bin\Debug\net7.0-windows\Client.exe
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\bin\Debug\net7.0-windows\Client.deps.json
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\bin\Debug\net7.0-windows\Client.runtimeconfig.json
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\bin\Debug\net7.0-windows\Client.dll
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\bin\Debug\net7.0-windows\Client.pdb
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.csproj.AssemblyReference.cache
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.ClientForm.resources
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.csproj.GenerateResource.cache
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.AssemblyInfoInputs.cache
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.AssemblyInfo.cs
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.csproj.CoreCompileInputs.cache
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.dll
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\refint\Client.dll
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.pdb
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.genruntimeconfig.cache
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\ref\Client.dll

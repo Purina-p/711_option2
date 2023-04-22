@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Diagnostics;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Security.Cryptography;
@@ -9,11 +10,6 @@ namespace Server
     public partial class ServerForm : Form
     {
         private string _selectFileName;
-
-        //Rabin-Krap的算法参数
-        private const int WindowSize = 3; // 滑动窗口大小-->导致切片大小
-        private const int Q = 2048; // 用于取模运算-->降低hash冲突，
-        private const  int D = 8567; // 基数，用于计算哈希值-->无所dawei
 
         public ServerForm()
         {
@@ -320,6 +316,7 @@ namespace Server
             }
         }
 
+        /// //////////////////////////////////////////点击按钮授权切片///////////////////////////////////////
 
         //点击把文件copy一份进data
         private void button1_Click(object sender, EventArgs e)
@@ -341,11 +338,31 @@ namespace Server
                 target_fragment = Path.GetFullPath(target_fragment);
                 string filePath_fragment = Path.Combine(target_fragment, _selectFileName);
 
-                //切片
-                RabinKarpFileSplitter(filePath_A, filePath_fragment);
-                File.Copy(filePath_A, filePath, true);
+                string FileType = GetFileType(filePath_A);
+
+                if(FileType == "text")
+                {
+                    //切片---不同文件进行不同的切片处理--图片和文档
+                    RabinKarpFileSplitter_txt(filePath_A, filePath_fragment,3,2048,8567);
+                    File.Copy(filePath_A, filePath, true);
+                    BeginInvoke(new Action(() => label7.Text = "text"));
+
+                }
+                else if(FileType == "image")
+                {
+                    //切片---不同文件进行不同的切片处理--图片和文档
+                    RabinKarpFileSplitter_txt(filePath_A, filePath_fragment,96,1500,256);
+                    File.Copy(filePath_A, filePath, true);
+                    BeginInvoke(new Action(() => label7.Text = "image"));
+                }
+                else
+                {
+                    Invoke(new Action(() => label7.Text = "Can't handle"));
+
+                }
 
 
+                //实时更新文件名
                 if (!listBox2.Items.Contains(_selectFileName))
                 {
 
@@ -362,7 +379,7 @@ namespace Server
         }
 
         //文件切片--Rabin函数
-        private void RabinKarpFileSplitter(string inputFilePath, string OutputDirectory)
+        private void RabinKarpFileSplitter_txt(string inputFilePath, string OutputDirectory, int WindowSize, int Q,int D)
         {
                    
             //存hash列表对比的文件夹--记得删
@@ -382,7 +399,7 @@ namespace Server
             byte[] inputFileBytes = File.ReadAllBytes(inputFilePath);
 
             //fingerprintes--对应他在输入文件时的位置
-            List<int> fingerprints = GetFingerprints(inputFileBytes);
+            List<int> fingerprints = GetFingerprints(inputFileBytes, WindowSize, Q, D);
 
             //块计数
             int fileCounter = 0;
@@ -449,7 +466,7 @@ namespace Server
         }
 
         //计算切片位置
-        private static List<int> GetFingerprints(byte[] data)
+        private static List<int> GetFingerprints(byte[] data, int WindowSize, int Q,int D)
         {
 
             List<int> fingerprints = new List<int>();
@@ -459,7 +476,7 @@ namespace Server
             {
                 byte[] window = new byte[WindowSize];
                 Array.Copy(data, i, window, 0, WindowSize);
-                hash = CalculateRabinHash(window);
+                hash = CalculateRabinHash(window , Q, D);
 
                 if (hash % Q == 0)
                 {
@@ -471,7 +488,7 @@ namespace Server
         }
 
         //计算窗口hash
-        private static int CalculateRabinHash(byte[] window)
+        private static int CalculateRabinHash(byte[] window, int Q,int D)
         {
             int hash = 0;
 
@@ -502,6 +519,33 @@ namespace Server
                 return stringBuilder.ToString();
             }
         }
+
+        //分辨一下文件类型
+        private string GetFileType(string filePath)
+        {
+            string extension = Path.GetExtension(filePath).ToLower();
+
+            //图片文件扩展名
+            List<string> imageExtension = new List<string> { ".jpg",".png",".bmp"};
+
+            //文本文件扩展名
+            List<string> textExtension = new List<string> {".txt"};
+
+            if(imageExtension.Contains(extension))
+            {
+                return "image";
+            }
+            else if(textExtension.Contains(extension))
+            {
+                return "text";
+            }
+            else
+            {
+                return "unknow";
+            }
+
+        }
+
       
     }
 

@@ -28,7 +28,7 @@ namespace Client
                 _selectFileName = listBox1.SelectedItem.ToString();
                 label2.Text = _selectFileName;
 
-            }           
+            }
         }
 
 
@@ -69,7 +69,7 @@ namespace Client
         }
 
 
-        //下载文件
+        //下载文件,显示text文件内容
         private void button2_Click(object sender, EventArgs e)
         {
             using (TcpClient tcpClient = new TcpClient())
@@ -116,7 +116,7 @@ namespace Client
                             }
 
                             //using (MemoryStream imageStream = new MemoryStream(contentBytes)) 
-                            { 
+                            {
                                 //Image image = Image.FromStream(imageStream);
                                 //Invoke(new Action(() => pictureBox1.Image = image));
 
@@ -144,6 +144,69 @@ namespace Client
         private void ClientForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (TcpClient tcpClient = new TcpClient())
+            {
+                tcpClient.Connect(_cacheaddress, _cacheport);
+                using (NetworkStream stream_cc = tcpClient.GetStream())
+                {
+                    Byte command = 1;
+
+                    if (_selectFileName != null)
+                    {
+                        //给cache的文件名字节数据和长度数据
+                        byte[] fileNameBytes = Encoding.UTF8.GetBytes(_selectFileName);
+                        byte[] fileNameLengBytes = BitConverter.GetBytes(fileNameBytes.Length);
+
+                        try
+                        {
+                            //向缓存发指令
+                            stream_cc.WriteByte(command);
+                            stream_cc.Flush();
+
+                            //发送文件名长度和文件名
+                            stream_cc.Write(fileNameLengBytes, 0, 4);
+                            stream_cc.Write(fileNameBytes, 0, fileNameBytes.Length);
+                            stream_cc.Flush();
+
+
+                            // 在此处处理来自缓存的响应，例如将文件内容显示在客户端窗口中
+                            // 读取文件内容长度
+                            byte[] contentLengthBytes = new byte[4];
+                            stream_cc.Read(contentLengthBytes, 0, 4);
+                            int contentLength = BitConverter.ToInt32(contentLengthBytes, 0);
+                            Invoke(new Action(() => label2.Text = "Content"));
+
+                            // 读取文件内容
+                            byte[] contentBytes = new byte[contentLength];
+
+                            
+                            //using (MemoryStream imageStream = new MemoryStream(contentBytes)) 
+                            {
+                                //Image image = Image.FromStream(imageStream);
+                                //Invoke(new Action(() => pictureBox1.Image = image));
+
+                            }
+
+
+
+                        }
+                        catch (Exception ex)
+                        {
+                            Invoke(new Action(() => label2.Text = $"DownLoadError: {ex.Message}"));
+                        }
+                    }
+                    else
+                    {
+                        Invoke(new Action(() => label2.Text = "DownLoadError: haven't chooose file"));
+                    }
+
+
+                }
+            }
         }
     }
 }
