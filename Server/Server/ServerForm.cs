@@ -10,6 +10,11 @@ namespace Server
     {
         private string _selectFileName;
 
+        //Rabin-Krap的算法参数
+        private const int WindowSize = 3; // 滑动窗口大小-->导致切片大小
+        private const int Q = 100067; // 用于取模运算-->降低hash冲突，
+        private const  int D = 128; // 基数，用于计算哈希值-->无所dawei
+
         public ServerForm()
         {
             InitializeComponent();
@@ -214,19 +219,19 @@ namespace Server
                         //给他打个标签--发内容的--1
                         byte[] Flag = BitConverter.GetBytes(1);
                         stream.Write(Flag, 0, 4);
-                        Invoke(new Action(() => label7.Text = "1"));
+
                         //发送文件内容长度
                         byte[] fileContentLengthBytes = BitConverter.GetBytes(fileContent.Length);
                         stream.Write(fileContentLengthBytes, 0, 4);
-                        Invoke(new Action(() => label7.Text = "2"));
+
                         //发送内容
                         stream.Write(fileContent, 0, fileContent.Length);
-                        Invoke(new Action(() => label7.Text = "3"));
+
                         //将发送的内容保存到server端的cache备份中
                         string uniqueFileName = Path.GetFileNameWithoutExtension(filePath) + "_" + fragmentHash + Path.GetExtension(filePath);
                         string serverCacheFilePath = Path.Combine(folderPath_Cache, uniqueFileName);
                         File.WriteAllBytes(serverCacheFilePath, fileContent);
-                        Invoke(new Action(() => label7.Text = "4"));
+
 
 
                     }
@@ -359,17 +364,7 @@ namespace Server
         //文件切片--Rabin函数
         private void RabinKarpFileSplitter(string inputFilePath, string OutputDirectory)
         {
-            
-            //Rabin-Krap的算法参数
-            const int WindowSize = 11; // 滑动窗口大小-->导致切片大小
-            const ulong Q = 100067; // 大质数，用于取模运算-->降低hash冲突，
-            const ulong D = 128; // 基数，用于计算哈希值-->无所dawei
-
-            //添加两个控制大小的变量
-            const int MinSplitSize = 1024; // 1KB
-            const int MaxSplitSize = 4*1024; // 4kb
-
-
+                   
             //存hash列表对比的文件夹--记得删
             string HashPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\Rabin_Test");
             HashPath = Path.GetFullPath(HashPath);
@@ -386,50 +381,57 @@ namespace Server
             // 将输入文件的字节读取到字节数组中
             byte[] inputFileBytes = File.ReadAllBytes(inputFilePath);
 
-            // 初始化变量
-            ulong hash = 0;
-            
-            // 计算滑动窗口的初始哈希值
-            for (int i = 0; i < WindowSize; i++)
+            //fingerprintes--对应他在输入文件时的位置
+            List<int> fingerprints = GetFingerprints(inputFileBytes);
+
+            //块计数
+            int fileCounter = 0;
+
+            //初始化切片位置
+            int previousFingerprint = 0;
+
+            //遍历fingerprint的列表
+            foreach(int fingerprint in fingerprints)
             {
-                hash = (hash * D + inputFileBytes[i]) % Q;
+                //计算当前快的大小
+                int chunkSize = fingerprint - previousFingerprint + 1;
+
+                //创建一个新字节数存储当前块
+                byte[] chunk = new byte[chunkSize];
+
+                // 从输入文件内容中复制当前块的内容
+                Array.Copy(inputFileBytes, previousFingerprint, chunk, 0, chunkSize);
+
+                // 计算文件片段的 MD5 哈希值
+                string fragmentHash = CalculateMD5Hash(chunk);
+                fragmentHashes.Add(fragmentHash);
+
+                // 为当前块生成文件名并保存到输出目录中
+                string chunkFileName = $"chunk_{fileCounter}.dat";
+                string chunkFilePath = Path.Combine(OutputDirectory, chunkFileName);
+                File.WriteAllBytes(chunkFilePath, chunk);
+                           
+                // 更新块计数器
+                fileCounter++;
+                previousFingerprint = fingerprint +1;
             }
 
-            int fileCounter = 0;
-            int startIndex = 0;
-
-            // 从滑动窗口的结束位置开始遍历输入文件的字节
-            for (int i = WindowSize; i < inputFileBytes.Length; i++)
+            // 如果文件结尾没有分割点，则添加最后一个块
+            if (previousFingerprint < inputFileBytes.Length)
             {
-                //重新计算当前滑动窗口的hash
-                hash = 0;
-                for (int j = i - WindowSize + 1; j <= i; j++)
-                {
-                    hash = (hash * D + inputFileBytes[j]) % Q;
-                }
+                // 计算最后一个块的大小
+                int chunkSize = inputFileBytes.Length - previousFingerprint;
 
+                // 创建一个新的字节数组来存储最后一个块的内容
+                byte[] chunk = new byte[chunkSize];
 
-                // 判断当前哈希值是否满足分割条件,或者已经到达文件末尾
-                if (hash == 0 || i == inputFileBytes.Length - 1)
-                {
-                    // 保存文件切片
-                    string outputPath = Path.Combine(OutputDirectory, $"{Path.GetFileNameWithoutExtension(inputFilePath)}_{fileCounter}.dat");
-                    using (FileStream fileSplit = new FileStream(outputPath, FileMode.Create))
-                    {
-                        fileSplit.Write(inputFileBytes, startIndex, i - startIndex + 1);
-                    }
+                // 从输入文件内容中复制最后一个块的内容
+                Array.Copy(inputFileBytes, previousFingerprint, chunk, 0, chunkSize);
 
-
-                    // 计算文件片段的 MD5 哈希值
-                    byte[] fragmentBytes = new byte[i - startIndex + 1];
-                    Array.Copy(inputFileBytes, startIndex, fragmentBytes, 0, i - startIndex + 1);
-                    string fragmentHash = CalculateMD5Hash(fragmentBytes);
-                    fragmentHashes.Add(fragmentHash);
-
-                    // 更新文件计数器和下一个文件切片的起始位置
-                    fileCounter++;
-                    startIndex = i + 1;
-                }
+                // 为最后一个块生成文件名并保存到输出目录中
+                string chunkFileName = $"chunk_{fileCounter}.dat";
+                string chunkFilePath = Path.Combine(OutputDirectory, chunkFileName);
+                File.WriteAllBytes(chunkFilePath, chunk);
             }
 
             // 为哈希值列表文件创建路径
@@ -444,7 +446,41 @@ namespace Server
                 }
             }
 
-        }        
+        }
+
+
+        private static List<int> GetFingerprints(byte[] data)
+        {
+            List<int> fingerprints = new List<int>();
+            int hash = 0;
+
+            for (int i = 0; i < data.Length - WindowSize + 1; i++)
+            {
+                byte[] window = new byte[WindowSize];
+                Array.Copy(data, i, window, 0, WindowSize);
+                hash = CalculateRabinHash(window);
+
+                if (hash % Q == 0)
+                {
+                    fingerprints.Add(i + WindowSize - 1);
+                }
+            }
+
+            return fingerprints;
+        }
+
+        private static int CalculateRabinHash(byte[] window)
+        {
+            int hash = 0;
+
+            for (int i = 0; i < window.Length; i++)
+            {
+                hash = (hash * D + window[i]) % Q;
+            }
+
+            return hash;
+        }
+
 
         //rabin函数算的hash值不一定能保证唯一性，所以在循环里有调用了一次MD5的函数来计算hash，来返回列表
         private string CalculateMD5Hash(byte[] fragmentBytes)

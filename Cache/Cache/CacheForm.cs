@@ -190,10 +190,8 @@ namespace Cache
 
                             foreach (string HashNameFile in filePaths)
                             {
-
-
                                 string Hash_file = Path.GetFileNameWithoutExtension(HashNameFile);
-                                if(Hash_file== Hash)
+                                if(Hash_file == Hash)
                                 {
                                     byte[] fileContentBytes = File.ReadAllBytes(HashNameFile);
                                     File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
@@ -234,7 +232,6 @@ namespace Cache
                                 Invoke(new Action(() => listBox1.Items.Add(fileHashName + ".dat")));
                                 fileStream.Write(fileContentBytes, 0, fileContentBytes.Length);
                             }
-
 
                             //拼接整块
                             File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
