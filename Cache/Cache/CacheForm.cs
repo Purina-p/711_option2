@@ -161,6 +161,8 @@ namespace Cache
                     string cacheFoldPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\CacheData");
                     cacheFoldPath = Path.GetFullPath(cacheFoldPath);
 
+                    string FileType = GetFileType(fileName);
+
                     //存储拼接好的文件
                     MemoryStream File_Full = new MemoryStream();
 
@@ -366,6 +368,32 @@ namespace Cache
         private void UpdateLog(string message)
         {
             BeginInvoke(new Action(() => textBox1.AppendText(message + Environment.NewLine)));
+        }
+
+        //分辨一下文件类型
+        private string GetFileType(string filePath)
+        {
+            string extension = Path.GetExtension(filePath).ToLower();
+
+            //图片文件扩展名
+            List<string> imageExtension = new List<string> { ".jpg", ".png", ".bmp" };
+
+            //文本文件扩展名
+            List<string> textExtension = new List<string> { ".txt" };
+
+            if (imageExtension.Contains(extension))
+            {
+                return "image";
+            }
+            else if (textExtension.Contains(extension))
+            {
+                return "text";
+            }
+            else
+            {
+                return "unknow";
+            }
+
         }
 
 

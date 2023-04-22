@@ -141,11 +141,7 @@ namespace Client
 
         }
 
-        private void ClientForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        //接收图片拼接
         private void button3_Click(object sender, EventArgs e)
         {
             using (TcpClient tcpClient = new TcpClient())
@@ -153,16 +149,18 @@ namespace Client
                 tcpClient.Connect(_cacheaddress, _cacheport);
                 using (NetworkStream stream_cc = tcpClient.GetStream())
                 {
-                    Byte command = 1;
 
                     if (_selectFileName != null)
                     {
+
+                        Byte command = 1;
+
                         //给cache的文件名字节数据和长度数据
                         byte[] fileNameBytes = Encoding.UTF8.GetBytes(_selectFileName);
                         byte[] fileNameLengBytes = BitConverter.GetBytes(fileNameBytes.Length);
-
                         try
                         {
+
                             //向缓存发指令
                             stream_cc.WriteByte(command);
                             stream_cc.Flush();
@@ -178,20 +176,19 @@ namespace Client
                             byte[] contentLengthBytes = new byte[4];
                             stream_cc.Read(contentLengthBytes, 0, 4);
                             int contentLength = BitConverter.ToInt32(contentLengthBytes, 0);
-                            Invoke(new Action(() => label2.Text = "Content"));
 
                             // 读取文件内容
                             byte[] contentBytes = new byte[contentLength];
+                            stream_cc.Read(contentBytes, 0, contentLength);
+                            stream_cc.Flush();
 
-                            
-                            //using (MemoryStream imageStream = new MemoryStream(contentBytes)) 
+
+                            using (MemoryStream imageStream = new MemoryStream(contentBytes))
                             {
-                                //Image image = Image.FromStream(imageStream);
-                                //Invoke(new Action(() => pictureBox1.Image = image));
+                                Image image = Image.FromStream(imageStream);
+                                Invoke(new Action(() => pictureBox1.Image = image));
 
                             }
-
-
 
                         }
                         catch (Exception ex)
@@ -208,5 +205,13 @@ namespace Client
                 }
             }
         }
+
+        private void ClientForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        
     }
 }

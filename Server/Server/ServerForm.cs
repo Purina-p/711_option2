@@ -1,9 +1,11 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Immutable;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Server
 {
@@ -128,6 +130,12 @@ namespace Server
                 string folderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment", fileName);
                 folderPath = Path.GetFullPath(folderPath);
 
+                //以防万一，clone空文件没有
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
                 //建一个存servercache的碎片
                 string folderPath_Cache = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment_Cache");
                 folderPath_Cache = Path.GetFullPath(folderPath_Cache);
@@ -179,12 +187,27 @@ namespace Server
                 double reuseRate =(double)matchFragment/ (unmatchFragment+ matchFragment) *100;
 
 
+                //初始化一下我的切片列表，让他按切块顺序循环，方便后面拼接
+                List<string> filePathList = Directory.GetFiles(folderPath_Cache).ToList();
+
+                // 提取文件名中的数字并用它对文件路径排序
+                Array.Sort(filePaths, (path1, path2) =>
+                {
+                    int number1 = NumberFileName(Path.GetFileNameWithoutExtension(path1));
+                    int number2 = NumberFileName(Path.GetFileNameWithoutExtension(path2));
+                    return number1.CompareTo(number2);
+                });
+
+                
                 //循环遍历内容读取，存入servercache
                 foreach (string filePath in filePaths)
                 {
                     //读取文件内容
-                    //string fileContent = File.ReadAllText(filePath,Encoding.UTF8);--文件切片后不能读text->bytes
                     byte[] fileContent = File.ReadAllBytes(filePath);
+
+                    //根据文件的扩展名判断一下类型，在cache那边分别处理文本和图片的拼接
+                    string fileExtension = Path.GetExtension(folderPath);
+                    byte fileType = (fileExtension == ".txt")?(byte)0:(byte)1;
 
                     //计算hash
                     string fragmentHash = CalculateMD5Hash(fileContent);
@@ -259,6 +282,7 @@ namespace Server
                     //Invoke(new Action(() => label7.Text = $"{reuseRate.ToString("0.000")}%"));
 
                 }
+
                 else
                 {
                     //传输复用率
@@ -386,6 +410,9 @@ namespace Server
             string HashPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\Rabin_Test");
             HashPath = Path.GetFullPath(HashPath);
 
+            //命名用
+            string inputFileName = Path.GetFileNameWithoutExtension(inputFilePath);
+
             // 创建一个列表来存储文件片段的哈希值
             List<string> fragmentHashes = new List<string>();
 
@@ -424,7 +451,7 @@ namespace Server
                 fragmentHashes.Add(fragmentHash);
 
                 // 为当前块生成文件名并保存到输出目录中
-                string chunkFileName = $"chunk_{fileCounter}.dat";
+                string chunkFileName = $"{inputFileName}_chunk_{fileCounter}.dat";
                 string chunkFilePath = Path.Combine(OutputDirectory, chunkFileName);
                 File.WriteAllBytes(chunkFilePath, chunk);
                            
@@ -446,7 +473,7 @@ namespace Server
                 Array.Copy(inputFileBytes, previousFingerprint, chunk, 0, chunkSize);
 
                 // 为最后一个块生成文件名并保存到输出目录中
-                string chunkFileName = $"chunk_{fileCounter}.dat";
+                string chunkFileName = $"{inputFileName}_chunk_{fileCounter}.dat";
                 string chunkFilePath = Path.Combine(OutputDirectory, chunkFileName);
                 File.WriteAllBytes(chunkFilePath, chunk);
             }
@@ -544,6 +571,20 @@ namespace Server
                 return "unknow";
             }
 
+        }
+
+        //提取文件名数字用于后续拼接
+        private int NumberFileName(string fileName)
+        {
+            string numberStr = "";
+            foreach(char c in fileName)
+            {
+                if (char.IsDigit(c))
+                {
+                    numberStr += c;
+                }
+            }
+            return int.Parse(numberStr);
         }
 
       
