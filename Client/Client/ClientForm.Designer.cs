@@ -50,7 +50,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(21, 54);
+            button1.Location = new Point(21, 50);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(115, 21);
@@ -62,7 +62,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(55, 73);
+            label2.Location = new Point(21, 73);
             label2.Name = "label2";
             label2.Size = new Size(38, 15);
             label2.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(185, 54);
+            button2.Location = new Point(185, 48);
             button2.Name = "button2";
             button2.Size = new Size(115, 23);
             button2.TabIndex = 5;
@@ -109,7 +109,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(632, 55);
+            button3.Location = new Point(632, 50);
             button3.Name = "button3";
             button3.Size = new Size(139, 23);
             button3.TabIndex = 8;

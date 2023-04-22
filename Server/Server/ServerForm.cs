@@ -39,6 +39,7 @@ namespace Server
             string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data");
             FolderPath = Path.GetFullPath(FolderPath);
 
+
             //获取文件夹中的文件名
             string[] fileNames = Directory.GetFiles(FolderPath);
 
@@ -87,12 +88,12 @@ namespace Server
         {
             //返回文件列表
             if (command == 0)
-            { 
-                
+            {
+
                 //到当前文件夹中的
                 string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data");
-                FolderPath = Path.GetFullPath(FolderPath);                
-                
+                FolderPath = Path.GetFullPath(FolderPath);
+
                 //获取文件夹中的文件名
                 string[] fileNames = Directory.GetFiles(FolderPath);
 
@@ -107,16 +108,16 @@ namespace Server
 
                 StreamWriter writer = new StreamWriter(stream, Encoding.UTF8);
                 writer.WriteLine(fileList);
-                writer.Flush();                                               
+                writer.Flush();
                 writer.Close();
                 stream.Close();
 
             }
 
             //返回文件数据
-            else if(command == 1) 
+            else if (command == 1)
             {
-                
+
                 // 从cache端读取文件名长度和文件名
                 byte[] fileNameLengthBytes = new byte[4];
                 stream.Read(fileNameLengthBytes, 0, 4);
@@ -125,7 +126,7 @@ namespace Server
                 byte[] fileNameBytes = new byte[fileNameLength];
                 stream.Read(fileNameBytes, 0, fileNameLength);
                 string fileName = Encoding.UTF8.GetString(fileNameBytes);
-              
+
                 //查看是否在我的文件里面-改文件切片--直接把文件来源变成我的datafragment
                 string folderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment", fileName);
                 folderPath = Path.GetFullPath(folderPath);
@@ -145,7 +146,7 @@ namespace Server
                 {
                     Directory.CreateDirectory(folderPath_Cache);
                 }
-                
+
                 //获取文件夹中的所有文件,我对应切片文件夹的所有文件
                 string[] filePaths = Directory.GetFiles(folderPath);
 
@@ -169,11 +170,11 @@ namespace Server
                 }
 
                 //对比hash计算复用率
-                foreach(string filePath in filePaths)
+                foreach (string filePath in filePaths)
                 {
                     byte[] fileContent = File.ReadAllBytes(filePath);
                     string fragmentHash = CalculateMD5Hash(fileContent);
-                    
+
                     if (currentFileFragment.Contains(fragmentHash))
                     {
                         matchFragment++;
@@ -184,7 +185,7 @@ namespace Server
                     }
                 }
 
-                double reuseRate =(double)matchFragment/ (unmatchFragment+ matchFragment) *100;
+                double reuseRate = (double)matchFragment / (unmatchFragment + matchFragment) * 100;
 
 
                 //初始化一下我的切片列表，让他按切块顺序循环，方便后面拼接
@@ -204,17 +205,17 @@ namespace Server
                     return number1.CompareTo(number2);
                 });
 
-                
+
                 //循环遍历内容读取，存入servercache
                 foreach (string filePath in filePaths)
                 {
                     //读取文件内容
-                    byte[] fileContent = File.ReadAllBytes(filePath);                   
+                    byte[] fileContent = File.ReadAllBytes(filePath);
 
                     //计算hash
                     string fragmentHash = CalculateMD5Hash(fileContent);
-                    Invoke(new Action(() => listBox3.Items.Add($"File: {Path.GetFileName(filePath)}, Hash: {fragmentHash}")));
-                    Invoke(new Action(() => listBox3.Items.Add($"File: {Path.GetFileName(filePath)}, Size: {fileContent.Length}, Content: {BitConverter.ToString(fileContent)}, Hash: {fragmentHash}")));
+                    //Invoke(new Action(() => listBox3.Items.Add($"File: {Path.GetFileName(filePath)}, Hash: {fragmentHash}")));
+                    //Invoke(new Action(() => listBox3.Items.Add($"File: {Path.GetFileName(filePath)}, Size: {fileContent.Length}, Content: {BitConverter.ToString(fileContent)}, Hash: {fragmentHash}")));
 
                     //检查cache端是否有相同的
                     string[] serverCacheFilePaths = Directory.GetFiles(folderPath_Cache);
@@ -222,13 +223,13 @@ namespace Server
 
                     foreach (string serverCachePath in serverCacheFilePaths)
                     {
-                        byte[] existContent= File.ReadAllBytes(serverCachePath);
+                        byte[] existContent = File.ReadAllBytes(serverCachePath);
                         string existContentHash = CalculateMD5Hash(existContent);
 
                         if (existContentHash == fragmentHash)
                         {
                             matchingServerCacheFilePath = serverCachePath;
-                            Invoke(new Action(() => listBox3.Items.Add($"Matching Hash: {fragmentHash}")));
+                            //Invoke(new Action(() => listBox3.Items.Add($"Matching Hash: {fragmentHash}")));
                         }
 
 
@@ -270,13 +271,13 @@ namespace Server
 
                     }
                 }
-                
+
                 //发完所有的文件块给出Flag=3，传输完成，并且把复用率传过去
                 byte[] endFlag = BitConverter.GetBytes(3);
                 stream.Write(endFlag, 0, 4);
 
                 //防止出现0作为分母的情况
-                if(matchFragment == 0)
+                if (matchFragment == 0)
                 {
                     double reuseRate_0 = 0.000;
                     byte[] reuseRateBytes = BitConverter.GetBytes(reuseRate_0);
@@ -295,11 +296,12 @@ namespace Server
                     stream.Flush();
                     stream.Close();
                 }
-                
+
             }
 
             //同步清理缓存区
-            else if(command == 2){
+            else if (command == 2)
+            {
                 string folderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\data_Fragment_Cache");
                 folderPath = Path.GetFullPath(folderPath);
                 try
@@ -316,7 +318,7 @@ namespace Server
                             string fileName = Path.GetFileName(file);
                         }
                     }
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -324,7 +326,7 @@ namespace Server
                 }
             }
         }
-       
+
         private void ServerForm_Load(object sender, EventArgs e)
         {
             //时间处理程序中启动服务器，以便加载主窗体运行在后台线程
@@ -347,7 +349,7 @@ namespace Server
         //点击把文件copy一份进data
         private void button1_Click(object sender, EventArgs e)
         {
-            if(_selectFileName!= null)
+            if (_selectFileName != null)
             {
                 //从admin读取文件路径
                 string sourcePath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\AdminData");
@@ -366,26 +368,22 @@ namespace Server
 
                 string FileType = GetFileType(filePath_A);
 
-                if(FileType == "text")
+                if (FileType == "text")
                 {
                     //切片---不同文件进行不同的切片处理--图片和文档
-                    RabinKarpFileSplitter_txt(filePath_A, filePath_fragment,3,2048,8567);
+                    RabinKarpFileSplitter_txt(filePath_A, filePath_fragment, 3, 2048, 8567);
                     File.Copy(filePath_A, filePath, true);
-                    BeginInvoke(new Action(() => label7.Text = "text"));
+                    //BeginInvoke(new Action(() => label7.Text = "text"));
 
                 }
-                else if(FileType == "image")
+                else if (FileType == "image")
                 {
                     //切片---不同文件进行不同的切片处理--图片和文档
-                    RabinKarpFileSplitter_txt(filePath_A, filePath_fragment,96,1500,256);
+                    RabinKarpFileSplitter_txt(filePath_A, filePath_fragment, 96, 1500, 256);
                     File.Copy(filePath_A, filePath, true);
-                    BeginInvoke(new Action(() => label7.Text = "image"));
+                    //BeginInvoke(new Action(() => label7.Text = "image"));
                 }
-                else
-                {
-                    Invoke(new Action(() => label7.Text = "Can't handle"));
-
-                }
+                
 
 
                 //实时更新文件名
@@ -393,24 +391,24 @@ namespace Server
                 {
 
                     listBox2.Items.Add(_selectFileName);
-                    
+
                 }
                 else
                 {
-                    Invoke(new Action(() => label5.Text="File Replaced"));
-                }                
+                    Invoke(new Action(() => label5.Text = "File Replaced"));
+                }
 
             }
 
         }
 
         //文件切片--Rabin函数
-        private void RabinKarpFileSplitter_txt(string inputFilePath, string OutputDirectory, int WindowSize, int Q,int D)
+        private void RabinKarpFileSplitter_txt(string inputFilePath, string OutputDirectory, int WindowSize, int Q, int D)
         {
-                   
+
             //存hash列表对比的文件夹--记得删
-            string HashPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\Rabin_Test");
-            HashPath = Path.GetFullPath(HashPath);
+            //string HashPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\Rabin_Test");
+            //HashPath = Path.GetFullPath(HashPath);
 
             //命名用
             string inputFileName = Path.GetFileNameWithoutExtension(inputFilePath);
@@ -437,7 +435,7 @@ namespace Server
             int previousFingerprint = 0;
 
             //遍历fingerprint的列表
-            foreach(int fingerprint in fingerprints)
+            foreach (int fingerprint in fingerprints)
             {
                 //计算当前快的大小
                 int chunkSize = fingerprint - previousFingerprint + 1;
@@ -456,10 +454,10 @@ namespace Server
                 string chunkFileName = $"{inputFileName}_chunk_{fileCounter}.dat";
                 string chunkFilePath = Path.Combine(OutputDirectory, chunkFileName);
                 File.WriteAllBytes(chunkFilePath, chunk);
-                           
+
                 // 更新块计数器
                 fileCounter++;
-                previousFingerprint = fingerprint +1;
+                previousFingerprint = fingerprint + 1;
             }
 
             // 如果文件结尾没有分割点，则添加最后一个块
@@ -481,21 +479,17 @@ namespace Server
             }
 
             // 为哈希值列表文件创建路径
-            string hashListFilePath = Path.Combine(HashPath, $"{Path.GetFileNameWithoutExtension(inputFilePath)}hashes.txt");
+            //string hashListFilePath = Path.Combine(HashPath, $"{Path.GetFileNameWithoutExtension(inputFilePath)}hashes.txt");
 
             // 保存哈希值列表到文件中
-            using (StreamWriter sw = new StreamWriter(hashListFilePath, false))
-            {
-                foreach (string hashValue in fragmentHashes)
-                {
-                    sw.WriteLine(hashValue);
-                }
-            }
+            //using (StreamWriter sw = new StreamWriter(hashListFilePath, false))
+            //foreach (string hashValue in fragmentHashes)
+            //sw.WriteLine(hashValue);
 
         }
 
         //计算切片位置
-        private static List<int> GetFingerprints(byte[] data, int WindowSize, int Q,int D)
+        private static List<int> GetFingerprints(byte[] data, int WindowSize, int Q, int D)
         {
 
             List<int> fingerprints = new List<int>();
@@ -505,7 +499,7 @@ namespace Server
             {
                 byte[] window = new byte[WindowSize];
                 Array.Copy(data, i, window, 0, WindowSize);
-                hash = CalculateRabinHash(window , Q, D);
+                hash = CalculateRabinHash(window, Q, D);
 
                 if (hash % Q == 0)
                 {
@@ -517,7 +511,7 @@ namespace Server
         }
 
         //计算窗口hash
-        private static int CalculateRabinHash(byte[] window, int Q,int D)
+        private static int CalculateRabinHash(byte[] window, int Q, int D)
         {
             int hash = 0;
 
@@ -533,14 +527,14 @@ namespace Server
         //rabin函数算的hash值不一定能保证唯一性，所以在循环里有调用了一次MD5的函数来计算hash，来返回列表
         private string CalculateMD5Hash(byte[] fragmentBytes)
         {
-            using(MD5 md5 = MD5.Create())
+            using (MD5 md5 = MD5.Create())
             {
                 //创建实例
                 byte[] hashBytes = md5.ComputeHash(fragmentBytes);
                 //创建字符串
-                StringBuilder stringBuilder= new StringBuilder();
+                StringBuilder stringBuilder = new StringBuilder();
                 //遍历hash字节数组
-                for (int i=0;i<hashBytes.Length;i++)
+                for (int i = 0; i < hashBytes.Length; i++)
                 {
                     //将每个byte转为2为16进制的字符串
                     stringBuilder.Append(hashBytes[i].ToString("X2"));
@@ -555,16 +549,16 @@ namespace Server
             string extension = Path.GetExtension(filePath).ToLower();
 
             //图片文件扩展名
-            List<string> imageExtension = new List<string> { ".jpg",".png",".bmp"};
+            List<string> imageExtension = new List<string> { ".jpg", ".png", ".bmp" };
 
             //文本文件扩展名
-            List<string> textExtension = new List<string> {".txt"};
+            List<string> textExtension = new List<string> { ".txt" };
 
-            if(imageExtension.Contains(extension))
+            if (imageExtension.Contains(extension))
             {
                 return "image";
             }
-            else if(textExtension.Contains(extension))
+            else if (textExtension.Contains(extension))
             {
                 return "text";
             }
@@ -579,7 +573,7 @@ namespace Server
         private int NumberFileName(string fileName)
         {
             string numberStr = "";
-            foreach(char c in fileName)
+            foreach (char c in fileName)
             {
                 if (char.IsDigit(c))
                 {
@@ -589,7 +583,7 @@ namespace Server
             return int.Parse(numberStr);
         }
 
-      
+
     }
 
 }

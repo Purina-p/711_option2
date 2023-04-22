@@ -79,7 +79,7 @@ namespace Client
                 {
                     Byte command = 1;
 
-                    if (_selectFileName != null)
+                    if (_selectFileName != null && Path.GetExtension(_selectFileName) == ".txt")
                     {
                         //给cache的文件名字节数据和长度数据
                         byte[] fileNameBytes = Encoding.UTF8.GetBytes(_selectFileName);
@@ -132,7 +132,7 @@ namespace Client
                     }
                     else
                     {
-                        Invoke(new Action(() => label2.Text = "DownLoadError: haven't chooose file"));
+                        Invoke(new Action(() => label2.Text = "DownLoadError: Cannot process the file. "));
                     }
 
 
@@ -150,7 +150,7 @@ namespace Client
                 using (NetworkStream stream_cc = tcpClient.GetStream())
                 {
 
-                    if (_selectFileName != null)
+                    if (_selectFileName != null && Path.GetExtension(_selectFileName) != ".txt")
                     {
                         Byte command = 1;
 
@@ -184,7 +184,7 @@ namespace Client
                             //stream_cc.Read(contentBytes, 0, contentLength);
                             //stream_cc.Flush();
 
-                            while(totalBytesRead < contentLength)
+                            while (totalBytesRead < contentLength)
                             {
                                 byteRead = stream_cc.Read(contentBytes, totalBytesRead, contentLength - totalBytesRead);
                                 if (byteRead == 0)
@@ -210,7 +210,7 @@ namespace Client
                     }
                     else
                     {
-                        Invoke(new Action(() => label2.Text = "DownLoadError: haven't chooose file"));
+                        Invoke(new Action(() => label2.Text = "DownLoadError: Cannot process the file. "));
                     }
 
 

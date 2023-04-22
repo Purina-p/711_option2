@@ -30,7 +30,7 @@ namespace Cache
             //获取文件夹中的文件名
             string[] fileNames_A = Directory.GetFiles(FolderPath_A);
 
-            
+
 
             for (int i = 0; i < fileNames_A.Length; i++)
             {
@@ -87,11 +87,11 @@ namespace Cache
         private async Task HandleClientCommand(byte command, TcpClient client)
         {
             NetworkStream clientStream = client.GetStream();
-          
+
             //申请文件列表
             if (command == 0)
             {
-                using(TcpClient serverConnection = GetServerConnection())
+                using (TcpClient serverConnection = GetServerConnection())
                 {
                     NetworkStream _stream_cs = serverConnection.GetStream();
                     //转发命令到Server
@@ -115,9 +115,9 @@ namespace Cache
                     //关闭clientWriter
                     clientWriter.Close();
                 }
-                
+
             }
-            
+
             //申请文件下载显示，并且cache存储
             else if (command == 1)
             {
@@ -162,7 +162,7 @@ namespace Cache
                     cacheFoldPath = Path.GetFullPath(cacheFoldPath);
 
                     //接收file发来的指令看是处理什么文件
-                    byte fileType =(byte)_stream_cs.ReadByte();
+                    byte fileType = (byte)_stream_cs.ReadByte();
 
                     //存储拼接好的文件
                     MemoryStream File_Full = new MemoryStream();
@@ -172,7 +172,7 @@ namespace Cache
                     {
                         Directory.CreateDirectory(cacheFoldPath);
                     }
-                                                      
+
                     while (true)
                     {
 
@@ -182,7 +182,7 @@ namespace Cache
                         int Flag = BitConverter.ToInt32(FlagBytes, 0);
 
                         //发hash--已存文件
-                        if (Flag == 0 )
+                        if (Flag == 0)
                         {
                             //已存文件---文本文件处理
                             if (fileType == 0)
@@ -213,7 +213,7 @@ namespace Cache
                             }
 
                             //处理未存文件--图片处理
-                            else if (fileType == 1) 
+                            else if (fileType == 1)
                             {
                                 //读取hash的长度
                                 byte[] hashLengBytes = new byte[4];
@@ -242,7 +242,7 @@ namespace Cache
                                         }
                                     }
                                 }
-                            }                            
+                            }
 
                         }
 
@@ -286,7 +286,7 @@ namespace Cache
                             }
 
                             //处理未存文件--图片处理
-                            else  if(Flag == 1)
+                            else if (Flag == 1)
                             {
                                 // 读取文件内容长度
                                 byte[] fileContentLengthBytes = new byte[4];
@@ -319,12 +319,12 @@ namespace Cache
 
                                 //拼接整块
                                 File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
-                            }                                                           
+                            }
 
                         }
 
                         //文件结束跳出循环，输出复用率
-                        else if(Flag == 3)
+                        else if (Flag == 3)
                         {
                             byte[] reuseRateBytes = new byte[8];//double类型占8个
                             _stream_cs.Read(reuseRateBytes, 0, reuseRateBytes.Length);
@@ -384,11 +384,11 @@ namespace Cache
                 return stringBuilder.ToString();
             }
         }
-       
+
         //清除cache
         private void button1_Click(object sender, EventArgs e)
         {
-            Byte command = 2; 
+            Byte command = 2;
             string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\CacheData");
             FolderPath = Path.GetFullPath(FolderPath);
 
@@ -398,7 +398,7 @@ namespace Cache
                 //获取当前文件夹下的所有文件
                 string[] files = Directory.GetFiles(FolderPath);
 
-                if(files.Length != 0) 
+                if (files.Length != 0)
                 {
                     //遍历删除所有文件
                     foreach (string file in files)
@@ -407,17 +407,19 @@ namespace Cache
                         string fileName = Path.GetFileName(file);
                         BeginInvoke(new Action(() => listBox1.Items.Remove(fileName)));
                     }
+
                     BeginInvoke(new Action(() => label4.Text = "cache cleard successfully"));
+
                 }
                 else
                 {
-                    BeginInvoke(new Action(() => label4.Text = $"Cache has already clear, nothing in CacheData"));
+                    BeginInvoke(new Action(() => label4.Text = "cache already clear"));
                 }
 
 
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 BeginInvoke(new Action(() => label4.Text = "cache cleard unsuccessfully"));
             }
@@ -425,7 +427,7 @@ namespace Cache
             //告诉server，让server清除
             try
             {
-                using(TcpClient serverConnection = GetServerConnection())
+                using (TcpClient serverConnection = GetServerConnection())
                 {
                     NetworkStream stream_clean = serverConnection.GetStream();
                     stream_clean.WriteByte(command);
@@ -433,7 +435,7 @@ namespace Cache
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 BeginInvoke(new Action(() => label4.Text = "Failed to send clear cache command to server."));
             }
@@ -446,33 +448,6 @@ namespace Cache
         {
             BeginInvoke(new Action(() => textBox1.AppendText(message + Environment.NewLine)));
         }
-
-        //分辨一下文件类型
-        private string GetFileType(string filePath)
-        {
-            string extension = Path.GetExtension(filePath).ToLower();
-
-            //图片文件扩展名
-            List<string> imageExtension = new List<string> { ".jpg", ".png", ".bmp" };
-
-            //文本文件扩展名
-            List<string> textExtension = new List<string> { ".txt" };
-
-            if (imageExtension.Contains(extension))
-            {
-                return "image";
-            }
-            else if (textExtension.Contains(extension))
-            {
-                return "text";
-            }
-            else
-            {
-                return "unknow";
-            }
-
-        }
-
 
     }
 }
