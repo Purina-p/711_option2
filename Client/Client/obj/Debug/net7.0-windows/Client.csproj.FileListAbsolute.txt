@@ -117,3 +117,4 @@ C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\
 C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.pdb
 C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.genruntimeconfig.cache
 C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\ref\Client.dll
+C:\Users\E-Force\Desktop\711\711_option2\Client\Client\obj\Debug\net7.0-windows\Client.Properties.Resources.resources

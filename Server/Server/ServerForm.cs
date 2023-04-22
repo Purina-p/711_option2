@@ -190,6 +190,12 @@ namespace Server
                 //初始化一下我的切片列表，让他按切块顺序循环，方便后面拼接
                 List<string> filePathList = Directory.GetFiles(folderPath_Cache).ToList();
 
+                //根据文件的扩展名判断一下类型，在cache那边分别处理文本和图片的拼接
+                string fileExtension = Path.GetExtension(folderPath);
+                byte fileTypeFlag = (fileExtension == ".txt") ? (byte)0 : (byte)1;
+                stream.WriteByte(fileTypeFlag);
+
+
                 // 提取文件名中的数字并用它对文件路径排序
                 Array.Sort(filePaths, (path1, path2) =>
                 {
@@ -203,11 +209,7 @@ namespace Server
                 foreach (string filePath in filePaths)
                 {
                     //读取文件内容
-                    byte[] fileContent = File.ReadAllBytes(filePath);
-
-                    //根据文件的扩展名判断一下类型，在cache那边分别处理文本和图片的拼接
-                    string fileExtension = Path.GetExtension(folderPath);
-                    byte fileType = (fileExtension == ".txt")?(byte)0:(byte)1;
+                    byte[] fileContent = File.ReadAllBytes(filePath);                   
 
                     //计算hash
                     string fragmentHash = CalculateMD5Hash(fileContent);

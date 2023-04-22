@@ -161,7 +161,8 @@ namespace Cache
                     string cacheFoldPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\CacheData");
                     cacheFoldPath = Path.GetFullPath(cacheFoldPath);
 
-                    string FileType = GetFileType(fileName);
+                    //接收file发来的指令看是处理什么文件
+                    byte fileType =(byte)_stream_cs.ReadByte();
 
                     //存储拼接好的文件
                     MemoryStream File_Full = new MemoryStream();
@@ -171,7 +172,7 @@ namespace Cache
                     {
                         Directory.CreateDirectory(cacheFoldPath);
                     }
-                   
+                                                      
                     while (true)
                     {
 
@@ -180,70 +181,141 @@ namespace Cache
                         _stream_cs.Read(FlagBytes, 0, 4);
                         int Flag = BitConverter.ToInt32(FlagBytes, 0);
 
-                        //发hash
+                        //发hash--已存文件
                         if (Flag == 0 )
                         {
-                            //读取hash的长度
-                            byte[] hashLengBytes = new byte[4];
-                            _stream_cs.Read(hashLengBytes, 0, 4);
-                            int hashLength = BitConverter.ToInt32(hashLengBytes,0);
-
-                            //读hash
-                            byte[] hashBytes = new byte[hashLength];
-                            _stream_cs.Read(hashBytes, 0, hashLength);
-                            string Hash = Encoding.UTF8.GetString(hashBytes);
-
-                            //获取文件夹中的所有文件
-                            string[] filePaths = Directory.GetFiles(cacheFoldPath);
-
-
-                            foreach (string HashNameFile in filePaths)
+                            //已存文件---文本文件处理
+                            if (fileType == 0)
                             {
-                                string Hash_file = Path.GetFileNameWithoutExtension(HashNameFile);
-                                if(Hash_file == Hash)
+                                //读取hash的长度
+                                byte[] hashLengBytes = new byte[4];
+                                _stream_cs.Read(hashLengBytes, 0, 4);
+                                int hashLength = BitConverter.ToInt32(hashLengBytes, 0);
+
+                                //读hash
+                                byte[] hashBytes = new byte[hashLength];
+                                _stream_cs.Read(hashBytes, 0, hashLength);
+                                string Hash = Encoding.UTF8.GetString(hashBytes);
+
+                                //获取文件夹中的所有文件
+                                string[] filePaths = Directory.GetFiles(cacheFoldPath);
+
+
+                                foreach (string HashNameFile in filePaths)
                                 {
-                                    byte[] fileContentBytes = File.ReadAllBytes(HashNameFile);
-                                    File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
-                                }                               
+                                    string Hash_file = Path.GetFileNameWithoutExtension(HashNameFile);
+                                    if (Hash_file == Hash)
+                                    {
+                                        byte[] fileContentBytes = File.ReadAllBytes(HashNameFile);
+                                        File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
+                                    }
+                                }
                             }
 
+                            //处理未存文件--图片处理
+                            else if (fileType == 1) 
+                            {
+                                //读取hash的长度
+                                byte[] hashLengBytes = new byte[4];
+                                _stream_cs.Read(hashLengBytes, 0, 4);
+                                int hashLength = BitConverter.ToInt32(hashLengBytes, 0);
+
+                                //读hash
+                                byte[] hashBytes = new byte[hashLength];
+                                _stream_cs.Read(hashBytes, 0, hashLength);
+                                string Hash = Encoding.UTF8.GetString(hashBytes);
+
+                                //获取文件夹中的所有文件
+                                string[] filePaths = Directory.GetFiles(cacheFoldPath);
+
+
+                                foreach (string HashNameFile in filePaths)
+                                {
+                                    string Hash_file = Path.GetFileNameWithoutExtension(HashNameFile);
+                                    if (Hash_file == Hash)
+                                    {
+                                        byte[] fileContentBytes = File.ReadAllBytes(HashNameFile);
+                                        File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
+                                    }
+                                }
+                            }                            
 
                         }
-                                             
-                        else if(Flag == 1)
+
+                        //处理未存文件                                         
+                        else if (Flag == 1)
                         {
-
-                            // 读取文件内容长度
-                            byte[] fileContentLengthBytes = new byte[4];
-                            int bytesRead = _stream_cs.Read(fileContentLengthBytes, 0, 4);
-                            if (bytesRead == 0)
+                            //处理未存文件--文本文件处理
+                            if (fileType == 0)
                             {
-                                break;
+                                // 读取文件内容长度
+                                byte[] fileContentLengthBytes = new byte[4];
+                                int bytesRead = _stream_cs.Read(fileContentLengthBytes, 0, 4);
+                                if (bytesRead == 0)
+                                {
+                                    break;
+                                }
+
+                                int fileContentLength = BitConverter.ToInt32(fileContentLengthBytes, 0);
+
+                                //读文件内容
+                                byte[] fileContentBytes = new byte[fileContentLength];
+                                _stream_cs.Read(fileContentBytes, 0, fileContentLength);
+
+
+                                //计算hash
+                                string fileHashName = CalculateMD5Hash(fileContentBytes);
+
+                                //创建文件存储内容--存储在本地
+                                string filePath_fragment = Path.Combine(cacheFoldPath, fileHashName + ".dat");
+
+
+                                //创建文件存储文件片段并用hash值命名
+                                using (FileStream fileStream = new FileStream(filePath_fragment, FileMode.Append))
+                                {
+                                    Invoke(new Action(() => listBox1.Items.Add(fileHashName + ".dat")));
+                                    fileStream.Write(fileContentBytes, 0, fileContentBytes.Length);
+                                }
+
+                                //拼接整块
+                                File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
                             }
 
-                            int fileContentLength = BitConverter.ToInt32(fileContentLengthBytes, 0);
-
-                            //读文件内容
-                            byte[] fileContentBytes = new byte[fileContentLength];
-                            _stream_cs.Read(fileContentBytes, 0, fileContentLength);
-
-
-                            //计算hash
-                            string fileHashName = CalculateMD5Hash(fileContentBytes);
-
-                            //创建文件存储内容--存储在本地
-                            string filePath_fragment = Path.Combine(cacheFoldPath, fileHashName + ".dat");
-
-
-                            //创建文件存储文件片段并用hash值命名
-                            using (FileStream fileStream = new FileStream(filePath_fragment, FileMode.Append))
+                            //处理未存文件--图片处理
+                            else  if(Flag == 1)
                             {
-                                Invoke(new Action(() => listBox1.Items.Add(fileHashName + ".dat")));
-                                fileStream.Write(fileContentBytes, 0, fileContentBytes.Length);
-                            }
+                                // 读取文件内容长度
+                                byte[] fileContentLengthBytes = new byte[4];
+                                int bytesRead = _stream_cs.Read(fileContentLengthBytes, 0, 4);
+                                if (bytesRead == 0)
+                                {
+                                    break;
+                                }
 
-                            //拼接整块
-                            File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
+                                int fileContentLength = BitConverter.ToInt32(fileContentLengthBytes, 0);
+
+                                //读文件内容
+                                byte[] fileContentBytes = new byte[fileContentLength];
+                                _stream_cs.Read(fileContentBytes, 0, fileContentLength);
+
+
+                                //计算hash
+                                string fileHashName = CalculateMD5Hash(fileContentBytes);
+
+                                //创建文件存储内容--存储在本地
+                                string filePath_fragment = Path.Combine(cacheFoldPath, fileHashName + ".dat");
+
+
+                                //创建文件存储文件片段并用hash值命名
+                                using (FileStream fileStream = new FileStream(filePath_fragment, FileMode.Append))
+                                {
+                                    Invoke(new Action(() => listBox1.Items.Add(fileHashName + ".dat")));
+                                    fileStream.Write(fileContentBytes, 0, fileContentBytes.Length);
+                                }
+
+                                //拼接整块
+                                File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
+                            }                                                           
 
                         }
 

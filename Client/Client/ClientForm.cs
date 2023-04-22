@@ -152,7 +152,6 @@ namespace Client
 
                     if (_selectFileName != null)
                     {
-
                         Byte command = 1;
 
                         //给cache的文件名字节数据和长度数据
@@ -186,6 +185,7 @@ namespace Client
                             using (MemoryStream imageStream = new MemoryStream(contentBytes))
                             {
                                 Image image = Image.FromStream(imageStream);
+                                image.Save("test_image.jpg"); // 保存图片到本地--test
                                 Invoke(new Action(() => pictureBox1.Image = image));
 
                             }
@@ -212,6 +212,6 @@ namespace Client
         }
 
 
-        
+
     }
 }
