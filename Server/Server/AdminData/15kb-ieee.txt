@@ -1,0 +1,222 @@
+﻿All sources of information, such as quotes or borrowed ideas, must be acknowledged in your writing.
+
+In the IEEE referencing style, a number [X] is inserted at the point in your writing where you cite another author's work. At the end of your work, the full reference [X] of the work is provided. Citations and their corresponding references are provided in the order they appear throughout your writing.
+
+Citing sources in the text
+IEEE in-text citations consist of numbers provided in square brackets, which correspond to the appropriate sources in the reference list at the end of the paper.
+
+The in-text citations numbers start at [1] and continue in ascending order throughout the paper – unless you are referring to a source you have already cited in your text, in which case you can use the previously assigned number.  
+
+Each in-text citation number should be enclosed by square brackets and appear on the text line, inside sentence punctuation, with a space before the bracket, e.g.
+
+ Thevenin’s and Norton’s theorems are widely used for circuit analysis simplification [13].
+
+Citations of references may be given simply as “in [1]...”, rather than as “in reference [1] ...”.
+
+Furthermore, citations may be grammatically treated either as if they were:
+
+footnote numbers, e.g.
+As shown by Jones [4] [5] …
+
+For more details, see [1], [3], [7].
+
+as mentioned earlier [3], [4]­–[6], [8] …
+
+Taylor et al. [5] have noted …
+
+or nouns:
+As seen in [2] …
+
+According to [4] and [6]–[8] …
+
+In contrast to [5, p. 7], it is evident that…
+
+As demonstrated in [4] …
+
+When authors are mentioned, they may be treated in the following way:
+
+Rickard [5] has shown …
+
+Jones [6], and Zheng and Rogers [7] have stated …
+
+Azzarello et al. [3] stated that they were unable to determine why …
+
+If there are more than three authors, provide et al. (meaning ‘and others') after the first author in the text of the paper. In the reference list, however, list all the authors for up to six authors– use et al. only if the names are not given. Also use et al. in the reference list for more than 6 authors, e.g.:
+
+[8]    J. D. Bellamy et al., Computer Telephony Integration, New York: Wiley, 2010.
+
+Do not mention authors of a source or provide date of publication within the text (e.g. “in Jones [1]” should be changed to “in [1]”) except in such cases where the author’s name is integral to the understanding of the sentence (e.g. “Jones [1] proposed a new approach for sensor and actuator selection problems).
+
+Editing the in-text citation numbers may require renumbering the whole reference list. Please check that the in-text citation numbers match the reference list numbers.
+
+The Reference List
+
+A numbered list of references must be provided at the end of the paper. The reference list contains full details of all sources cited in-text. Reference list entries should appear in the order the sources are cited in the text of the paper, beginning with [1], and continuing in the ascending numerical order, from the lowest number to the highest. Reference list entries do not follow an alphabetical order by author or title of sources.
+
+Refer to the information on the Sample Reference List box of this guide.
+
+How to use quotes in IEEE
+Direct quotes are used to support an argument showing the exact words and phrases of an author according to the original source. Enclose quotes in double quotation marks and provide the citation in square brackets after the quotation or after the author’s name along with the page number(s).
+
+Examples of a short direct quote:
+
+Baez et al. have noted that "full 3D stacking can potentially offer additional advantages for memory and processor applications" [7, p. 14].
+
+In fact, Wilde at al. [3, p. 21] suggest that energy storage is achieved "by means of static charge rather than of an electro-chemical process inherent to the battery".
+
+If you need to leave some unnecessary words out of the quotation, use a set of dots (…), called an ellipsis, indicating a break in quotes.
+
+As seen in [5, p. 14], “the proposed circuit has improved signal attenuation … and has been experiencing less performance degradation due to resistor variation”.
+
+An example of a longer direct quote:
+
+If you use longer quotations (of three lines and more), use a block quotation by setting the block of quoted text as a paragraph. Use smaller font size for block quotations, and also indent them from both margins, for example:
+
+As Abad notes:
+
+It is also desirable to minimize the parasitic capacitance of electronic packages because it is another source of signal delay. Consequently, a very low relative dielectric constant insulating material should be used whenever possible, since the relative dielectric constant is a measure of a material's total polarizability and determines its charge storage capacity with respect to a vacuum [7, p. 63]. 
+
+Provide the in-text citation in square brackets after the quotation, along with the page number(s) of the source where the quoted words or phrases are taken from.
+
+Reference list
+
+In the Reference list, provide page numbers if you are referencing a section or chapter of the source:
+
+[7]     W. Brown, "Electrical Design Considerations," in Advanced Electronic Packaging: With Emphasis on Multichip Modules: Wiley-IEEE Press, 2013, pp. 51-74.
+
+Paraphrasing in IEEE
+When you are paraphrasing, that is, expressing an idea or a fact found in a source using different words, a reference citing the source should always be given. Provide your citation number directly after the reference - this is not necessarily at the end of the sentence, unless it is where the reference occurs:
+
+In contrast to ‘data partitioning’ structures [13], the ‘space partitioning’ structures show better performance for dynamic memory resident data [14]–[15].
+
+Page numbers are generally not given for paraphrases, but can still be given along with the citation number within the main text of the paper if you are referring to a specific theory or idea in a source, or alternatively in the reference list. This enables the reader to locate the specific information you are referring to. Longer sections of an article, book or another source, do not require a page number. For example:
+
+These media have been used in many communication system applications, such as linearising high power amplifiers [8, p. 18], phased array antennas [9, pp. 15–17], and phase shifters [10].
+
+Page numbers
+Always provide page number(s) in the in-text citation when quoting directly (refer to How to use quotes in IEEE section). It is not necessary to provide page number(s): (1) if you are referring to an entire work, (2) if you are paraphrasing or summarising a longer section, or (3) if the work is only one page long. However, if you are paraphrasing, summarising or referring to a specific theory or idea in a text, you may still provide a page number, a page range or the paragraph number along with the in-text citation, as this helps the reader locate the relevant passage, especially if it is in a long or complex text, or if you need to refer to the same source on a number of occasions.  If not already provided along with the in-text citation, the page number, or a range of page numbers may alternatively be provided in the reference list to help identify the relevant place in a source where the information is found. Also keep in mind that pagination may not be present for many electronic sources.
+
+Pagination is cited as p. for a single page or pp. for multiple pages.
+
+Single page         … as demonstrated in [5, p. 17]
+
+Page range          … as seen in [5, pp. 6-12]
+
+Paragraph           … as noted in [4, para. 4.2]
+
+Chapter               … as argued in [6, Ch. 2, pp. 7-13]
+
+Figure                   … as seen in [8, Fig. 33]
+
+Table                   … as shown in [7, Tab. 14]
+
+Equation               … as evident in [6, eq. (8)]
+
+Appendix               … shown in a greater detail in [8, Appendix IV]
+
+Algorithm               … seen in [7, Algorithm 9]
+
+Example              … as shown [13, Example 3]
+
+Section                … as suggested in [5, Sec. 2.3]
+
+For referring to tables, figures, and equations, refer to more examples in Figures, tables and equations from another source.
+
+Place of publication
+The IEEE referencing style is U.S. based and as such has particular rules regarding the structure for the place of publication element in the reference list. Observe the following guidelines when referring to place of publication. 
+
+Rule	Structure for the name of the place of publication element within reference	Reference List example
+For books published in the U.S., the place of publication not well known
+
+Use abbreviations for U.S. states: NJ for New Jersey, CA for California, MA for Massachusetts, etc. 
+
+lesser-known city, U.S. state: publisher
+
+example:
+
+Reston, NJ: Reston Pub. Co.
+
+[2]     W. Sinnema, Digital, Analog, and Data Communication. Reston, NJ: Reston Pub. Co., 2014.
+
+For books published in the U.S., the place of publication well known 
+
+Well-known cities do not require U.S. state or U.S. country statement
+
+well known city: publisher
+
+example:
+
+New York: Nova Science Publishers
+
+[3]     B. M. Sze, Principles of Semiconductor Devices, 2nd ed. New York: Nova Science Publishers, 2014, p. 84.
+
+For books published in the rest of the world, publication city not well known 
+
+lesser-known city, country: publisher
+
+example:
+
+Dordrecht, Netherlands: Kluwer Academic Publishers
+
+[4]     M. J. Smith, Modern Information. Dordrecht, Netherlands: Kluwer Academic Publishers, 2011.
+
+For books published in the rest of the world, publication city well-known
+
+well known city: publisher
+
+example:
+
+Amsterdam: IOS Press
+
+[10]   K. Capova et al., Electromagnetic Nondestructive Evaluation (XVII), Amsterdam: IOS Press, 2014.
+
+ 	 	 
+ 
+
+DOI in IEEE
+When citing electronic sources such as e-books or e-journal articles, you must include a digital object identifier (DOI) if it has been provided. A DOI is an unique alphanumeric string indicating a persistent link to its location on the Internet.  It is preferable to add a DOI to a reference using the following formats:
+ 
+1. doi:xx.xxxxxxxxxxxx
+ 
+2. http://dx.doi.org/xxxxxxxxxxxxx
+ 
+3. https://doi.org/xxxxxxxxxxxxxxx
+ 
+If the DOI has not been provided, either provide the Victoria University database homepage URL through which the source has been accessed, or the full URL along with the access date if taken from a source on the open web. Note that there is no full stop after the DOI/URL, and the hyperlink is removed.
+ 
+It is acceptable to shorten the full URL to its abbreviated version to simply indicate the main database provider of the source. For example:
+ 
+* the full URL: http://0- site.ebrary.com.library.vu.edu.au/lib/victoriauni/detail.action?docID=XXXXXXX) can be abridged to just ebrary.com so that the URL statement will be: Available: http://ebrary.com
+
+* the full URL: http://www.sciencedirect.com/science/article/pii/S_XXXXXXXXXXX can be abridged to just sciencedirect.com so that the URL statement will be: Available: http://sciencedirect.com
+
+* the full URL: https://vu.kanopy.com/video/engineered-transparency-glass-architecture-and-structural-engineering can be abridged so that the URL statement will be: Available: Kanopy Streaming database
+
+The transcript for the 'IEEE Referencing: the basics' video
+In this presentation, you will learn the basics of how to create an in-text reference and a reference list in IEEE style.
+
+So, what is an IEEE style of referencing? “IEEE” stands for The Institute of Electrical and Electronics Engineers. IEEE style is a numbered referencing style that uses citation numbers in the text of the paper, provided in square brackets. A full corresponding reference is listed at the end of the paper, next to the respective citation number. The IEEE Style draws on the IEEE Editorial Style Manual, version 9 published in 2016.
+
+All sources of information, such as quotes or borrowed ideas, must be acknowledged in your writing. In the IEEE referencing style, a citation number is inserted in square brackets on the same line as the text at the point in your writing where you cite another author's work. This is known as an in-text citation. At the end of your work, the full reference details of the work are provided. 
+
+The in-text citations numbers start at the number [1], and continue in the ascending order they appear throughout your writing, as in the example here. If you wish to refer to the same source several times, simply repeat the earlier citation number and then use the same number in all subsequent citations throughout the body of the paper.
+
+So, how do I format an In-text citation? When formatting your in-text reference you need to consider the following:
+•  Are you paraphrasing or summarising the words or ideas of others in your own words?
+•  Or, are you quoting directly or copying “word-for-word” from a source?
+
+If paraphrasing or summarising the ideas or opinions of others in your own words, include the citation number in square brackets within the text of your writing. Alternatively, a numerical citation may grammatically be treated as part of a sentence as if it were a noun.
+
+If you wish to emphasise an author, your numerical citation may become author prominent. In this example, you can see that the numerical citation has been placed directly after the author’s surname.
+
+Directly quoting from a source is similar to paraphrasing or summarising except you also need to include the page number or numbers directly after the quote and place single quotation marks around the direct quote. 
+
+ When citing more than one source at a time, the preferable way is to list each citation number separately with a comma or a dash between each citation. Although, as seen in some literature, multiple sources can also be provided this way.
+
+It is important to note that IEEE style does not allow for the use of secondary sources. If you want to use the ideas of an author referred to in another source, then you must locate the original source of this information and cite the original source.
+
+The next component of IEEE Referencing is to compile a Reference List. A Reference list includes full details of all your in-text citations and is listed on a separate page at the end of your assignment. At the top of this page you must use the heading “References”. 
+
+The reference list is arranged in the order the in-text citations appear in your assignment, beginning with the number [1], and continuing in consecutive numerical order, from the lowest number to the highest. The text of the reference entry is indented two or three spaces, as in this example here.
+
+For further assistance, follow the link to the IEEE referencing guide or contact us through ‘Ask a Librarian’.

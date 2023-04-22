@@ -1,0 +1,55 @@
+
+respectively. However, it is important to mention when
+applying HMM of continuous density, these do not
+contemplate as necessary the calculation of F0, which
+represents a great advantage since it saves the
+implementation and execution of the algorithm for its
+detection.
+On the other hand, when analyzing Table 6 and
+comparing it with Table 5 it is possible to note that the
+ANNs increase their precision for this experiment performed
+on the corpus recorded in real-time. On the contrary, the VQ
+and the GMM decrease in precision.
+In this work an algorithm was proposed for an out-ofreal-time AMT. This algorithm works to determine essential
+information required by the MIDI format to perform the
+transcription; Such as pitch and note length.
+The algorithm was applied using Vector Quantification
+as classifier and vectors with 12 MFCC coefficients plus F0
+as characteristics. The reason for choosing these techniques
+is that they provided higher results in comparison to others in
+the first stage of the experiment and were also more feasible
+to implement in time and form.
+The implementation of the algorithm was carried out for
+four melodies. It was possible to obtain 100% recognition in
+some of them, however a decrease in the performance of the
+algorithm could also be observed when they were varied
+some of its parameters or criteria.
+From the algorithm for an out-of-real-time AMT, an
+algorithm for a real-time AMT was proposed modifying
+some parts of the previous procedure. This algorithm was
+also applied using Vector Quantification as classifier and
+vectors with 12 MFCC coefficients plus F0 as
+characteristics. On this occasion the implementation of the
+algorithm was carried out only on two of the four melodies
+transcribed above, but this time these melodies were
+recorded in real time. The maximum percentage of
+recognition that was obtained for this transcriber was of
+76.08%.
+ACKNOWLEDGMENT
+We thank National Polytechnic Institute (IPN - Nacional,
+Mexico) and the COFAA-IPN, BEIFI-IPN SIP-IPN
+20181550; for their academic and financial support.
+REFERENCES
+[1] Ansi Klapiuri and Manuel Davy. Signal Processing Methods for
+Music Transcription. Springer Science+Business Media LLC, ISBN10: 0-387-30667-6, e-ISBN: 0-387-32845-9, (2006)
+[2] E. Benetos. “Automatic Transcription of Polyphonic Music
+Exploiting Temporal Evolution”. PhD thesis, School of Electronic
+Engineering and Computer Science Queen Mary University of
+London, 2012.
+[3] Ken Schutte. Toolbox MATLAB and MIDI, kenschutte.com/midi,
+2012.
+[4] Madhav. Midi Sheet Music, midisheetmusic.sourceforge.net, 2012.
+[5] Farshad Arvin y Shyamala Doraisamy, ‘‘A Real-Time Note
+TranscriptionTechnique Using Static and Dynamic Window Sizes”,
+ICCSE, Malaysia, 2009.Artificial Intelligence Methods for Automatic Music Transcription using Isolated
+Notes in R

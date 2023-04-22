@@ -1,0 +1,13 @@
+eal-Time
+José Luis Oropeza Rodríguez, Sergio Suárez Guerra, Omar Velázquez López 1 Department of Digital Signal Processing, Center for Computing Research, National Polytechnic Institute, Mexico, DF.
+Instituto Politécnico Nacional, Centro de Investigación en Computación CIC. Av. Juan de Dios Batiz esq. Miguel Othón de
+Mendizábal s/n. Col. Nueva Industrial Vallejo, México, D. F.
+joropeza@cic.ipn.mx, ssuarez@cic.ipn.mx, omar.vlo@hotmail.com
+Abstract—We introduce a comparative study of several
+features obtained from audio signal and methods of Artificial
+Intelligence employed for Automatic Music Transcription in
+real-time, specially using monophonic notes. Mel-frequency
+Cepstrum Coefficients (MFCC), Linear Prediction Coefficients
+(LPC) and Cochlear Mechanics Cepstrum Coefficient (CMCC)
+were the features used which are a set of coefficients obtained
+from our laboratory experiments, which in this paper

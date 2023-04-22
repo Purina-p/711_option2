@@ -1,0 +1,15 @@
+
+indicate the number of coefficients used in each training vector.
+As mentioned before, the continuous HMM with HTK could
+not be trained with the real-time corpus recorded since the program
+did not find enough sequences of observations in the samples. For
+that reason the general table of results is expressed as follows in
+Table 6.
+Once the results showed in table 5 and 6 have been obtained, a
+comparison has been made with other works in the state of the art.
+Considering the highest percentage obtained in the present work
+for an out-of-real-time transcriber and real-time AMT.
+Table 5. Results by octave using different classifiers out of real-time
+Octave 2
+Classifier %Corr H D S I N
+HMM (MFCC) [39] 77.7

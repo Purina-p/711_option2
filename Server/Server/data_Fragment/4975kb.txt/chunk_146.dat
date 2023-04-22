@@ -1,0 +1,5 @@
+
+of vehicles detected by the road sensor, the traffic light agent
+can compute the real density of the lane to detect the level of
+congestion. Then the traffic light duration time will be adjust
+taking into account the level of congestion of the current l

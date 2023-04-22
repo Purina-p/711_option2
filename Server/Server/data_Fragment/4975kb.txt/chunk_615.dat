@@ -1,0 +1,245 @@
+
+may find it convenient to read chord symbols which
+characterize the note combinations to be played in a more
+general manner. In a computational transcription system, a
+MIDI file is often an appropriate format for musical
+notations. Common to all these representations is that they
+capture musically meaningful parameters that can be used in
+performing or synthesizing the piece of music in question.
+From this point of view, music transcription can be seen as
+discovering the 'recipe', or reverse-engineering the 'source
+code' of a music signal.
+A complete transcription would require that the pitch,
+timing, and instrument of all the sound events be resolved.
+As this can be very hard or even theoretically impossible in
+some cases, the goal is usually redefined as being either to
+notate as many of the constituent sounds as possible
+(complete transcription) or to transcribe only some welldefined part of the music signal. Music transcription is
+closely related to structured audio coding. A musical
+notation or a MIDI file is an extremely compact
+representation that retains the characteristics of a piece of
+music to an important degree. To give a reasonable estimate
+of the achievable goals in automatic music transcription, it is
+instructive to study what human listeners are able to do in
+this task.
+As noted in [2], one of the key measurements used in
+speech processing is the short-term spectrum. In all of its
+many forms, this measure consists of some kind of local
+spectral estimate, typically measured over a relatively short
+region as example the speech (e. g., 20 or 30 ms). This
+measure has been shown to be useful for a range of speech
+applications, including speech coding and recognition. In
+each case, the basic notion is that of capturing the timevarying spectral envelope for the speech or the music signal
+as in this work, and in each case it is desirable to reduce the
+effects of pitch on this estimate; either pitch is used
+separately. Therefore, in speech applications, the short-term
+spectral algorithm is usually designed to estimate a spectral
+envelope that has a reduced influence from the pitch
+harmonics in the signal. From this aspect we will use spectral
+analysis (specifically MFCC and CMCC) as features of
+music signal.
+II. APPLICATION BLOCK DIAGRAM
+The corpus created for the real-time mode consisted of
+840 music notes, we analyzed 5 scales (scale 2 to scale 6)
+and 14 samples by musical note. This corpus was selected
+because covers the principal set of notes used by a piano
+player. In this work the experiments were performed out-ofreal-time and in real-time. In the case of AMT real-time, the
+processing time is critical for the system.
+14
+Authorized licensed use limited to: University of Auckland. Downloaded on April 21,2023 at 15:11:48 UTC from IEEE Xplore. Restrictions apply.
+Figure 3 Block diagram of the application proposed for AMT in realtime
+For this reason, it was decided to make a modification
+with respect AMT out-of-real-time mentioned above. In this
+case the segment of the input signal is processed to find its
+fundamental tone and thus to know to which octave it will
+belong, carrying out the comparison of patterns only against
+the classifiers included in the correct octave and saving time
+of processing. Figure 3 shows the block diagram illustrates
+how the AMT real-time performs its function.
+For real-time experiments the following block diagram
+was used where we can see the communication between the
+Host and the Target. In the host three processes were
+executed and the OLE communication between them was
+realized. Through JTAG interface a SDK TMS320C6713
+target that contains a Digital Signal Processor of float point
+was connected to the Host while the output of the CASIO
+CTK-451 music keyboard was connected to the audio input
+of the target mentioned above. This figure shows the
+architecture implemented and each one of the elements are
+part of the real-time signal processing when DSP board was
+used. A program developed into Code Composer Studio
+obtains the music signal in real-time from the SDK
+TMS320C6713. Then, we used a C++ program to
+communicate this information to a software application
+written in C# language, named “MidiSheetMusic” which
+draw the sheet music obtained from the CASIO keyboard.
+All this is described in figure 4.
+Figure 4 Block diagram communication for real-time TAM (Transcription Automatic Music)
+III. ALGORITHM DESCRIPTION
+During the experiment presented in the section 4 we used
+MFCC as characteristics and Vector Quantification model as
+a recognizer with 32 centroids per model for each note, since
+they were the most convenient to apply for simplicity and
+good results in the experiments were reached. Each set of
+notes was classified by Octaves to comply with the principle
+of operation illustrated in Figure 3.
+A file was recorded for each one of the melodies in realtime using a CASIO CTK-45 musical keyboard, sending the
+signal to the TMS320DSK6713 through the RTDX module.
+To perform the melody recognition in this mode, it was
+necessary to take into account the considerations described in
+the following algorithm:
+1. As a first step an analysis window was defined. For
+this it was necessary to perform some tests applying the
+fundamental tone extraction function, we observed in which
+segments had a stable behavior for this characteristic. It was
+concluded that 0.035 seconds was the size for which a good
+fundamental tone calculation was obtained. Each segment
+was taken without overlap.
+2. After selecting the size of the analysis segment, the
+energy in that segment was calculated and included. In this
+way you could get a delta of energy between each of two
+15
+Authorized licensed use limited to: University of Auckland. Downloaded on April 21,2023 at 15:11:48 UTC from IEEE Xplore. Restrictions apply.
+segments, this would work as an indicator that it is the
+beginning of a note. This same algorithm was implemented
+for two types of energy delta ∆ࢍ࢘ࢋ࢔ࢋy૚ and ∆ࢍ࢘ࢋ࢔ࢋy2
+extracted from two segments contiguous.
+3. It was also necessary to use a flag that indicated when
+it was the beginning of a note, the course of the same and its
+end.
+4. At the beginning of a note, the fundamental tone
+calculation is performed in the first five segments of the
+note. This to determine which models per octave would
+apply the recognition task. As figure 3 illustrates.
+5. Once the octave is determined, the MFCC or CMCC
+and the pitch of the following segments are extracted until
+the flag indicates that the beginning of another note is
+repeated and the previous step is repeated. Each recognized
+note segment is stored in an array.
+6. In the event that the signal falls below the energy delta
+value equal to 0.008 during two segments, i. e. 0.07 seconds,
+it is considered to be silence.
+7. Now we must to verify if the number of segments
+currently analyzed is greater than the number of total
+segments.
+If yes: Go to Step 8.
+If no: Go to Step 2.
+8. The start and end values are stored in arrays, the start
+value is obtained directly from step 3 and the end value is
+calculated indirectly from the start value. Since there was no
+start value after the last end value in the signal, it was
+necessary to establish a condition that determined that after a
+certain number of silences the melody was considered to
+have ended.
+9. Once the arrangements of notes and durations were
+constructed, the MIDI file was created. For this we used a
+toolbox created by [3].
+10. Finally, after creating the MIDI file, use Midi Sheet
+Music to display the score [4].
+This algorithm was applied on each melody mentioned
+above and the experiments and results are following
+illustrated.
+IV. EXPERIMENTS
+The results obtained using the algorithm described above will be
+presented below. The set of songs were selected to probe of the
+algorithm described above and methods of the Artificial
+Intelligence proposed. With this results we hope extends this work
+using another corpus such as MAPS (Midi Align Piano Sounds) or
+NSYNTH (from Magenta Project, used for Machine Learning
+tasks).
+Table 1 Results of transcription Melody Canon of the children's song Martinillo in real-time by using ∆ࢍ࢘ࢋ࢔ࢋy૚
+Played
+notes
+Recognized
+notes
+Recognized
+symbols
+%
+notes
+%
+symbols
+(%notes + %symbols)
+૛
+32 25 9 78.12 28.12 53.12
+Figure 5 shows the results of the transcription of Melody “Canon of the children's song Martinillo” by using ∆ࢍ࢘ࢋ࢔ࢋy૛.
+Figure 5 Melody 1 “Canon of the children's song Martinillo” transcription in real-time by using ∆ࢍ࢘ࢋ࢔ࢋy૚
+For this other case the accuracy was further reduced and as we
+have seen, the second type of delta is more sensitive to changes,
+see Table 2 to analyze results.
+16
+Authorized licensed use limited to: University of Auckland. Downloaded on April 21,2023 at 15:11:48 UTC from IEEE Xplore. Restrictions apply.
+Table 2 Results of transcription Melody 1 in real time by using Δࢍ࢘ࢋ࢔ࢋy૛
+Played
+notes
+Recogniz
+ed notes
+Recogniz
+ed symbols
+%
+notes
+%
+symbols
+(%notes + %symbols)
+૛
+32 25 16 78.12 50 64.06
+For the second melody “My Heart Will Go On” the last
+considerations of the algorithm implemented in the previous
+melody were considered. Resulting in the transcription of figure 6
+for a Δenergy૚. For this case it is important to mention that the
+real-time recording could not be completed, since in the end the
+communication of the card was terminated unexpectedly. It is for
+this reason that the number of notes is smaller compared to this
+same melody recorded out of real-time.
+Figure 6 Melody 2 AMT in real-time by using ∆ࢍ࢘ࢋ࢔ࢋy૚
+The results obtained from the transcription of Melody 2 using a
+Δenergy1 are analyzed in table 3, as can be seen the average
+percentage increased in this melody in comparison with the
+previous one.
+Table 3 Results of transcription Melody 2 in real-time by using Δࢍ࢘ࢋ࢔ࢋíࢇ૚
+Played
+notes
+Recogniz
+ed notes
+Recogniz
+ed symbols
+%
+notes
+%
+symbols
+(%notes + %symbols
+)
+૛
+46 40 30 82.60 54.34 68.47
+Figure 7 shows the results of the transcription of Melody 2 by using ∆ࢍ࢘ࢋ࢔ࢋy૛.
+Figure 7 Melody 2 transcription in real-time by using ∆ࢍ࢘ࢋ࢔ࢋy૛
+17
+Authorized licensed use limited to: University of Auckland. Downloaded on April 21,2023 at 15:11:48 UTC from IEEE Xplore. Restrictions apply.
+The results obtained from the transcription of Melody 2 using
+Δenergy૛ are analyzed in Table 4, this time the percentage
+increased with respect to the previous transcription, being this the
+highest in a melody recorded in real time.
+Table 4 Results of transcription Melody 2 in real-time by using ∆ࢍ࢘ࢋ࢔ࢋy૛
+Played
+notes
+Recogniz
+ed notes
+Recogniz
+ed symbols
+%
+Notes
+%
+symbols
+(%notes + %symbols
+)
+૛
+46 40 30 86.95 65.21 76.08
+V. RESULTS
+In Table 5 the results are shown in general for each classifier.
+With a total of 144 sample files per octave, half of them were used
+for training and the other for recognition. The ‘% Corr’ indicator is
+the percentage of correctly recognized notes. ‘H’ is the number of
+correct notes in the octave of analysis. ‘D’ is the number of
+deletions. ‘S’ is the number of substitutions, when a note is
+recognized as a different one there is a substitution. And finally ‘I’
+is the number of inserts.
+The values in brackets next to the name of each classifier

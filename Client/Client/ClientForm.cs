@@ -110,13 +110,15 @@ namespace Client
                             using (BinaryReader reader = new BinaryReader(stream_cc, Encoding.UTF8, leaveOpen: true))
                             {
                                 reader.Read(contentBytes, 0, contentLength);
+                                string fileContent_txt = Encoding.UTF8.GetString(contentBytes);
+                                Invoke(new Action(() => textBox1.Text = $"{fileContent_txt}"));
 
                             }
 
-                            using (MemoryStream imageStream = new MemoryStream(contentBytes)) 
+                            //using (MemoryStream imageStream = new MemoryStream(contentBytes)) 
                             { 
-                                Image image = Image.FromStream(imageStream);
-                                Invoke(new Action(() => pictureBox1.Image = image));
+                                //Image image = Image.FromStream(imageStream);
+                                //Invoke(new Action(() => pictureBox1.Image = image));
 
                             }
 

@@ -1,0 +1,21 @@
+2RML-based Mapping
+System from Metal Materials Database to Ontology", Semantics,
+Knowledge and Grids (SKG), 2013 Ninth International Conference
+on, (2013).
+[7] W3C. Available online: http://www.w3.org/2005/Incubator/SSN/
+[8] Xiaoming Zhang, Yunping Zhao and Wanming Liu. A Method for
+Mapping Sensor Data to SSN Ontology. International Journal of uand e- Service, Science and Technology Vol.8, No. 6 (2015).measurement points
+Fig.11 Response at measurement point 10 cm
+Fig.12 Response at measurement point 30 cm
+4000
+Authorized licensed use limited to: University of Auckland. Downloaded on April 21,2023 at 15:14:16 UTC from IEEE Xplore. Restrictions apply.
+Fig.13 Response at measurement point 70 cm
+Fig.14 Measurement position and pressure change
+• Difference in response due to waveform type and ratio
+Fig.15 shows the results of examining the response to a
+sine wave. When the peak current value was 0.2A, the
+pressure change corresponding to the input current was
+19.0kPa. Fig.16 shows the results of examining the response
+to a rectangular wave with a duty ratio of 25%. When the
+input current was 0.2A, the pressure change corresponding
+to the input current was 17.7

@@ -12,8 +12,8 @@ namespace Server
 
         //Rabin-Krap的算法参数
         private const int WindowSize = 3; // 滑动窗口大小-->导致切片大小
-        private const int Q = 100067; // 用于取模运算-->降低hash冲突，
-        private const  int D = 128; // 基数，用于计算哈希值-->无所dawei
+        private const int Q = 2048; // 用于取模运算-->降低hash冲突，
+        private const  int D = 8567; // 基数，用于计算哈希值-->无所dawei
 
         public ServerForm()
         {
@@ -448,9 +448,10 @@ namespace Server
 
         }
 
-
+        //计算切片位置
         private static List<int> GetFingerprints(byte[] data)
         {
+
             List<int> fingerprints = new List<int>();
             int hash = 0;
 
@@ -469,6 +470,7 @@ namespace Server
             return fingerprints;
         }
 
+        //计算窗口hash
         private static int CalculateRabinHash(byte[] window)
         {
             int hash = 0;

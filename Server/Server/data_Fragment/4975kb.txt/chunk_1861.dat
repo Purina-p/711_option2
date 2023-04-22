@@ -1,0 +1,49 @@
+
+may find it convenient to read chord symbols which
+characterize the note combinations to be played in a more
+general manner. In a computational transcription system, a
+MIDI file is often an appropriate format for musical
+notations. Common to all these representations is that they
+capture musically meaningful parameters that can be used in
+performing or synthesizing the piece of music in question.
+From this point of view, music transcription can be seen as
+discovering the 'recipe', or reverse-engineering the 'source
+code' of a music signal.
+A complete transcription would require that the pitch,
+timing, and instrument of all the sound events be resolved.
+As this can be very hard or even theoretically impossible in
+some cases, the goal is usually redefined as being either to
+notate as many of the constituent sounds as possible
+(complete transcription) or to transcribe only some welldefined part of the music signal. Music transcription is
+closely related to structured audio coding. A musical
+notation or a MIDI file is an extremely compact
+representation that retains the characteristics of a piece of
+music to an important degree. To give a reasonable estimate
+of the achievable goals in automatic music transcription, it is
+instructive to study what human listeners are able to do in
+this task.
+As noted in [2], one of the key measurements used in
+speech processing is the short-term spectrum. In all of its
+many forms, this measure consists of some kind of local
+spectral estimate, typically measured over a relatively short
+region as example the speech (e. g., 20 or 30 ms). This
+measure has been shown to be useful for a range of speech
+applications, including speech coding and recognition. In
+each case, the basic notion is that of capturing the timevarying spectral envelope for the speech or the music signal
+as in this work, and in each case it is desirable to reduce the
+effects of pitch on this estimate; either pitch is used
+separately. Therefore, in speech applications, the short-term
+spectral algorithm is usually designed to estimate a spectral
+13
+2018 17th Mexican International Conference on Artificial Intelligence
+978-1-5386-9574-6/18/$31.00 ©2018 IEEE
+DOI 10.1109/MICAI46078.2018.00010
+Authorized licensed use limited to: University of Auckland. Downloaded on April 21,2023 at 15:11:48 UTC from IEEE Xplore. Restrictions apply.
+envelope that has a reduced influence from the pitch
+harmonics in the signal. From this aspect we will use spectral
+analysis (specifically MFCC and CMCC) as features of
+music signal.
+Figure 1 An Acoustic musical signal (top), pitch contour and energy (middle), spectrogram (down)
+Figure 2 Musical notations as input and output of AMT. The lines show the notation for pitched musical instruments.
+Besides the common musical notation, the transcription
+can take many other forms, too. For example, a guitar player
