@@ -140,11 +140,45 @@ namespace Server
                 //获取文件夹中的所有文件,我对应切片文件夹的所有文件
                 string[] filePaths = Directory.GetFiles(folderPath);
 
+                //获取初始servercache的文件--用于算计算率，防止后面循环加入文件片导致复用率增加
+                string[] file_fragments = Directory.GetFiles(folderPath_Cache);
+
                 //计算复用率的参数初始化
                 int unmatchFragment = 0;
                 int matchFragment = 0;
 
-                //循环遍历读取原切片文件内容
+                List<string> currentFileFragment = new List<string>();//存储初始文件夹下hash列表
+
+
+                //计算当前文件夹下的hash列表
+                foreach (string file_fragment in file_fragments)
+                {
+                    byte[] fileContent = File.ReadAllBytes(file_fragment);
+                    string fragmentHash = CalculateMD5Hash(fileContent);
+                    currentFileFragment.Add(fragmentHash);
+
+                }
+
+                //对比hash计算复用率
+                foreach(string filePath in filePaths)
+                {
+                    byte[] fileContent = File.ReadAllBytes(filePath);
+                    string fragmentHash = CalculateMD5Hash(fileContent);
+                    
+                    if (currentFileFragment.Contains(fragmentHash))
+                    {
+                        matchFragment++;
+                    }
+                    else
+                    {
+                        unmatchFragment++;
+                    }
+                }
+
+                double reuseRate =(double)matchFragment/ (unmatchFragment+ matchFragment) *100;
+
+
+                //循环遍历内容读取，存入servercache
                 foreach (string filePath in filePaths)
                 {
                     //读取文件内容
@@ -193,8 +227,6 @@ namespace Server
                         string serverCacheFilePath = Path.Combine(folderPath_Cache, uniqueFileName);
                         File.WriteAllBytes(serverCacheFilePath, fileContent);
                         Invoke(new Action(() => label7.Text = "4"));
-                        //复用率
-                        unmatchFragment++;
 
 
                     }
@@ -210,9 +242,6 @@ namespace Server
                         stream.Write(fragmentHashLengthBytes, 0, 4);
                         stream.Write(fragmentHashBytes, 0, fragmentHashBytes.Length);
 
-                        //复用率
-                        matchFragment++;
-
                     }
                 }
                 
@@ -223,16 +252,15 @@ namespace Server
                 //防止出现0作为分母的情况
                 if(matchFragment == 0)
                 {
-                    double reuseRate = 0.000;
-                    byte[] reuseRateBytes = BitConverter.GetBytes(reuseRate);
+                    double reuseRate_0 = 0.000;
+                    byte[] reuseRateBytes = BitConverter.GetBytes(reuseRate_0);
                     stream.Write(reuseRateBytes, 0, reuseRateBytes.Length);
                     //Invoke(new Action(() => label7.Text = $"{reuseRate.ToString("0.000")}%"));
 
                 }
                 else
                 {
-                    //计算复用率
-                    double reuseRate = (double)matchFragment / (matchFragment + unmatchFragment) * 100;
+                    //传输复用率
                     byte[] reuseRateBytes = BitConverter.GetBytes(reuseRate);
                     stream.Write(reuseRateBytes, 0, reuseRateBytes.Length);
 
@@ -333,13 +361,13 @@ namespace Server
         {
             
             //Rabin-Krap的算法参数
-            const int WindowSize = 3; // 滑动窗口大小-->导致切片大小
-            const ulong Q = 10067; // 大质数，用于取模运算-->降低hash冲突，
+            const int WindowSize = 11; // 滑动窗口大小-->导致切片大小
+            const ulong Q = 100067; // 大质数，用于取模运算-->降低hash冲突，
             const ulong D = 128; // 基数，用于计算哈希值-->无所dawei
 
             //添加两个控制大小的变量
             const int MinSplitSize = 1024; // 1KB
-            const int MaxSplitSize = 2048; // 2KB
+            const int MaxSplitSize = 4*1024; // 4kb
 
 
             //存hash列表对比的文件夹--记得删
