@@ -177,15 +177,27 @@ namespace Client
                             int contentLength = BitConverter.ToInt32(contentLengthBytes, 0);
 
                             // 读取文件内容
+                            int byteRead;
+                            int totalBytesRead = 0;
                             byte[] contentBytes = new byte[contentLength];
-                            stream_cc.Read(contentBytes, 0, contentLength);
-                            stream_cc.Flush();
+                            //byte[] contentBytes = new byte[contentLength];
+                            //stream_cc.Read(contentBytes, 0, contentLength);
+                            //stream_cc.Flush();
 
+                            while(totalBytesRead < contentLength)
+                            {
+                                byteRead = stream_cc.Read(contentBytes, totalBytesRead, contentLength - totalBytesRead);
+                                if (byteRead == 0)
+                                {
+                                    break;
+                                }
+                                totalBytesRead += byteRead;
+                            }
 
                             using (MemoryStream imageStream = new MemoryStream(contentBytes))
                             {
                                 Image image = Image.FromStream(imageStream);
-                                image.Save("test_image.jpg"); // 保存图片到本地--test
+                                //image.Save("test_image.bmp"); // 保存图片到本地--test
                                 Invoke(new Action(() => pictureBox1.Image = image));
 
                             }

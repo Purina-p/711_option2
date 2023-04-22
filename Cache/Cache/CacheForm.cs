@@ -234,8 +234,12 @@ namespace Cache
                                     string Hash_file = Path.GetFileNameWithoutExtension(HashNameFile);
                                     if (Hash_file == Hash)
                                     {
-                                        byte[] fileContentBytes = File.ReadAllBytes(HashNameFile);
-                                        File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
+                                        using (FileStream fileStream = File.OpenRead(HashNameFile))
+                                        {
+                                            byte[] fileContentBytes = new byte[fileStream.Length];
+                                            fileStream.Read(fileContentBytes, 0, fileContentBytes.Length);
+                                            File_Full.Write(fileContentBytes, 0, fileContentBytes.Length);
+                                        }
                                     }
                                 }
                             }                            
@@ -334,6 +338,7 @@ namespace Cache
                         }
 
                     }
+
                     //将memoryStream的位置设置为0，以确保从文件开始发送数据
                     File_Full.Position = 0;
 
