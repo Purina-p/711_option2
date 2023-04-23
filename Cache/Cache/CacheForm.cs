@@ -11,6 +11,7 @@ namespace Cache
     {
         private IPAddress _serverAddress;
         private int _serverPort;
+        private string _selectFileName;
 
         public CacheForm()
         {
@@ -443,11 +444,42 @@ namespace Cache
 
         }
 
+        //显示我选中的文件名
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1) //确保有一个选定的项
+            {
+                _selectFileName = listBox1.SelectedItem.ToString();
+            }
+        }
+
         //更新日志
         private void UpdateLog(string message)
         {
             BeginInvoke(new Action(() => textBox1.AppendText(message + Environment.NewLine)));
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            // 获取文件完整路径
+            string folderPath = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\CacheData");
+            folderPath = Path.GetFullPath(folderPath);
+            string filePath = Path.Combine(folderPath, _selectFileName);
+
+            // 读取文件内容
+            byte[] fileContent = File.ReadAllBytes(filePath);
+
+            // 将文件内容转换为16进制字符串
+            StringBuilder hexString = new StringBuilder(fileContent.Length * 2);
+            foreach (byte b in fileContent)
+            {
+                hexString.AppendFormat("{0:X2}", b);
+            }
+
+            // 在文本框中显示16进制字符串
+            textBox2.Text = hexString.ToString();
+        }
+       
     }
 }

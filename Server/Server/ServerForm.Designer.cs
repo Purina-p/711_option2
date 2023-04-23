@@ -28,110 +28,111 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label4 = new Label();
-            listBox1 = new ListBox();
-            label3 = new Label();
-            listBox2 = new ListBox();
-            button1 = new Button();
-            label5 = new Label();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(38, 22);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Server info";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Server info";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(190, 22);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(64, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Cache info";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(190, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Cache info";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(431, 74);
-            label4.Name = "label4";
-            label4.Size = new Size(62, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Client files";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(431, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 15);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Client files";
             // 
             // listBox1
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(38, 101);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(216, 229);
-            listBox1.TabIndex = 4;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(38, 101);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(216, 229);
+            this.listBox1.TabIndex = 4;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(38, 74);
-            label3.Name = "label3";
-            label3.Size = new Size(67, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Admin files";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(38, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Admin files";
             // 
             // listBox2
             // 
-            listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 15;
-            listBox2.Location = new Point(431, 101);
-            listBox2.Name = "listBox2";
-            listBox2.Size = new Size(229, 229);
-            listBox2.TabIndex = 5;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 15;
+            this.listBox2.Location = new System.Drawing.Point(431, 101);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(229, 229);
+            this.listBox2.TabIndex = 5;
             // 
             // button1
             // 
-            button1.Location = new Point(260, 200);
-            button1.Name = "button1";
-            button1.Size = new Size(165, 23);
-            button1.TabIndex = 6;
-            button1.Text = "Authorize";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.Location = new System.Drawing.Point(260, 200);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Authorize";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(307, 182);
-            label5.Name = "label5";
-            label5.Size = new Size(25, 15);
-            label5.TabIndex = 7;
-            label5.Text = "File";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(307, 182);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 15);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "File";
             // 
             // ServerForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(698, 390);
-            Controls.Add(label5);
-            Controls.Add(button1);
-            Controls.Add(listBox2);
-            Controls.Add(listBox1);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Name = "ServerForm";
-            Text = "ServerForm";
-            Load += ServerForm_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(698, 390);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "ServerForm";
+            this.Text = "ServerForm";
+            this.Load += new System.EventHandler(this.ServerForm_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

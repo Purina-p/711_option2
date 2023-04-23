@@ -582,8 +582,6 @@ namespace Server
             }
             return int.Parse(numberStr);
         }
-
-
     }
 
 }

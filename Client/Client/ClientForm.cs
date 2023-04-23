@@ -20,18 +20,6 @@ namespace Client
         }
 
 
-        //显示我想下载的文件名
-        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            if (listBox1.SelectedIndex != -1) //确保有一个选定的项
-            {
-                _selectFileName = listBox1.SelectedItem.ToString();
-                label2.Text = _selectFileName;
-
-            }
-        }
-
-
         //申请文件列表
         private void button1_Click(object sender, EventArgs e)
         {
@@ -218,12 +206,16 @@ namespace Client
             }
         }
 
-        private void ClientForm_Load(object sender, EventArgs e)
+        //显示我想下载的文件名
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listBox1.SelectedIndex != -1) //确保有一个选定的项
+            {
+                _selectFileName = listBox1.SelectedItem.ToString();
+                label2.Text = _selectFileName;
 
+            }
         }
-
-
 
     }
 }
